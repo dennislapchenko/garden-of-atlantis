@@ -2,8 +2,8 @@ name: Deploy to Pages
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -24,17 +24,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: yarn
-
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: Build
         run: yarn build
-      # 👆 Build steps
 
       - name: Setup Pages
         uses: actions/configure-pages@v1
