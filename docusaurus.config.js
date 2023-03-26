@@ -8,8 +8,8 @@ const projectName = "garden-of-wiki";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Garden Of Wiki',
-  tagline: '  tagline: \'My Digital Garden of Wikipedia: all I know, practice and aspire to.',
+  title: 'Garden of Wiki',
+  tagline: 'My Digital Garden of Wikipedia: all I know, practice and aspire to.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -57,74 +57,44 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        respectPrefersColorScheme: true,
+        disableSwitch: true,
+      },
       navbar: {
-        title: 'My Site',
+        title: 'Garden of Wiki',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'garden-of-wiki',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
+            href: "https://www.instagram.com/ootekai/",
+            position: "right",
+            label: "insta",
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
+            href: "https://github.com/dennislapchenko",
+            position: "right",
+            label: "gh",
           },
           {
-            title: 'More',
-            items: [
-               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              }
-            ],
+            href: `https://github.com/${organizationName}/${projectName}`,
+            position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
           },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        ]
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
+      }
+      // algolia: {
+      //   appId: "",
+      //   apiKey: "",
+      //   indexName: "",
+      // },
     }),
 };
 
