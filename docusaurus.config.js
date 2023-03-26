@@ -9,7 +9,7 @@ const projectName = "garden-of-wiki";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Garden Of Wiki',
-  tagline: 'My Digital Garden of Wikipedia: all I know and practice',
+  tagline: '  tagline: \'My Digital Garden of Wikipedia: all I know, practice and aspire to.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
