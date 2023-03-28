@@ -4,7 +4,7 @@ repos:
     rev: v2.7.1
     hooks:
       - id: prettier
-        types_or: [yaml]
+        types_or: [yaml, markdown]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
     hooks:
@@ -19,3 +19,15 @@ repos:
       - id: check-yaml
         args:
           - "--allow-multiple-documents"
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.4
+    hooks:
+      - id: codespell
+        args:
+          - --ignore-words-list="Lions Mane"
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.33.0
+    hooks:
+      - id: markdownlint
+        args:
+          - --disable=MD001

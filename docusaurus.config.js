@@ -42,8 +42,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: "/",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          sidebarCollapsed: false,
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         blog: false,
@@ -59,24 +58,19 @@ const config = {
     ({
       colorMode: {
         respectPrefersColorScheme: true,
-        disableSwitch: true,
+        disableSwitch: false,
       },
       navbar: {
         title: 'Garden of Wiki',
         logo: {
           alt: 'garden-of-wiki',
-          src: 'img/logo.svg',
+          src: 'img/dl-logo.svg',
         },
         items: [
           {
             href: "https://www.instagram.com/ootekai/",
             position: "right",
-            label: "insta",
-          },
-          {
-            href: "https://github.com/dennislapchenko",
-            position: "right",
-            label: "gh",
+            className: "header-instagram-link"
           },
           {
             href: `https://github.com/${organizationName}/${projectName}`,
