@@ -1,3 +1,9 @@
+---
+tags:
+- Seed
+---
+
+
 # Yoga
 
 Internal science that is abused by the West's commercialisation and reductionism.

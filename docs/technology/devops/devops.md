@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # DevOps
 
 The misnomer job title aka culture aka way of thinking.

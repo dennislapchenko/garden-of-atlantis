@@ -1,3 +1,8 @@
+---
+tags:
+    - Seed
+---
+
 # Agriculture
 
 Contrary to the digital garden here, I would love to have a real garden.

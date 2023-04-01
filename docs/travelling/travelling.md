@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Travelling
 
 As much as I like seeing new places, new faces and new experiences - currently all travelling

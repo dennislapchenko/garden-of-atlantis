@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Gaia
 
 Earth is no doubt a living organism. With all life connected through water, soil and ether.

@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Bali
 
 Beautiful nature on this island. Delicious fruit. Ever-warm and wavey ocean.

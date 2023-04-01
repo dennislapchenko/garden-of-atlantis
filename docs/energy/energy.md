@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Energy
 
 It is increasingly more evident even for the reductionist part of society that

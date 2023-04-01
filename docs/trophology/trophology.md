@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Trophology
 
 ### The science of food combining

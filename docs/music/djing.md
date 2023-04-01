@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # DJing
 
 One of the most enjoyable experiences those sick DJ sets that I had.

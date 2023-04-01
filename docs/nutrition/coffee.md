@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Coffee
 
 A controversial drug! A mood booster, a depression alleviator, a mineral deprivator?

@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Music Theory
 
 This is something that I resistend learning while at university (studying Creative Music Technology).

@@ -1,3 +1,8 @@
+---
+tags:
+- Seed
+---
+
 # Nutrition
 
 What diet is king? Can there even be a king diet?
