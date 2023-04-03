@@ -72,6 +72,11 @@ const config = {
         },
         items: [
           {
+            href: "https://t.me/zhora_velosiped",
+            position: "right",
+            className: "header-telegram-link"
+          },
+          {
             href: "https://www.instagram.com/ootekai/",
             position: "right",
             className: "header-instagram-link"
