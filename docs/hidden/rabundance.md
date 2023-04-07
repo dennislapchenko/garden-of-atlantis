@@ -48,7 +48,9 @@ especially among health-conscious consumers. - NOT YET)
 
 #### Amazon.DE
 
-Used a scraper python script, where I added chatGPT to translate many titles from german and extract weight
+:::info
+Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) script, updated it, also added ChatGPT invocation to translate titles from german and extract weight
+:::
 
 | Title                              | Weight | Price  | Rank | Ratings | Stars |
 | ---------------------------------- | ------ | ------ | ---- | ------- | ----- |
@@ -94,6 +96,21 @@ without spoiling.
 - [Forlong](https://www.gellerteng.com/CRYO-300#forlong)
   - Loading volume: 40-60KG+
   - Price starting: Requested a quote for 100KG loading volume machines - the price is 200,000EUR...
+
+#### Some more options as per GPT3.5 (not checked this yet)
+
+| Company             | Flagship Model                                                                                                         | Flagship Model Price | Cheapest Model                                                                                                     | Cheapest Model Price |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| Telstar             | [LyoBeta 2-85](https://www.telstar.com/en/products/freeze-dryers/lyobeta-2-85/)                                        | €60,000              | [LyoQuest](https://www.telstar.com/en/products/freeze-dryers/lyoquest/)                                            | €40,000              |
+| Christ              | [Alpha 1-4 LDplus](https://www.christ.de/en/products/freeze-dryers/alpha-1-4-ldplus/)                                  | €50,000              | [Alpha 1-2 LDplus](https://www.christ.de/en/products/freeze-dryers/alpha-1-2-ldplus/)                              | €30,000              |
+| Martin Christ       | [Alpha 2-4 LDplus](https://www.martinchrist.de/en/products/freeze-dryers/alpha-2-4-ldplus/)                            | €60,000              | [Alpha 1-2 LDplus](https://www.martinchrist.de/en/products/freeze-dryers/alpha-1-2-ldplus/)                        | €30,000              |
+| Labconco            | [FreeZone Triad](https://www.labconco.com/product/freezone-triad-benchtop-lyophilizer)                                 | €70,000              | [FreeZone 1](https://www.labconco.com/product/freezone-1-liter-benchtop-freeze-dry-system)                         | €20,000              |
+| SP Scientific       | [Lyostar 3](https://www.spscientific.com/Products/Lyophilization_and_Freeze_Drying/Lyostar_3_Laboratory_Freeze_Dryer/) | €100,000             | [Benchtop Pro](https://www.spscientific.com/Products/Lyophilization_and_Freeze_Drying/Benchtop_Pro_Freeze_Dryers/) | €10,000              |
+| IMA Life            | [Lyobliss](https://www.ima.it/pharma/product/lyobliss/)                                                                | €100,000             | [Lyomega](https://www.ima.it/pharma/product/lyomega/)                                                              | €50,000              |
+| Hull                | [Lyovac GT2](https://www.hulldts.com/lyovac-gt2-freeze-dryer/)                                                         | €80,000              | [MicroFD](https://www.hulldts.com/microfd/)                                                                        | €10,000              |
+| LTE Scientific      | [Alpha 2-4 LDplus](https://www.lte-scientific.co.uk/products/freeze-drying-systems/alpha-2-4-ldplus)                   | €60,000              | [Alpha 1-2 LDplus](https://www.lte-scientific.co.uk/products/freeze-drying-systems/alpha-1-2-ldplus)               | €30,000              |
+| Millrock Technology | [Sublimator](https://millrocktech.com/sublimator/)                                                                     | €70,000              | [Mini FD](https://millrocktech.com/mini-freeze-dryer/)                                                             | €10,000              |
+| Zirbus Technology   | [Freeze Dryer LyoDry Compact](https://www.zirbus.com/en/products/freeze-drying/lyodry-compact.html)                    | €40,000              | [Freeze Dryer LyoDry Mini](https://www.zirbus.com/en/products/freeze-drying/lyodry-mini.html)                      | €20,000              |
 
 ### Research on drying methods:
 
