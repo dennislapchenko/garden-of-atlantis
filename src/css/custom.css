@@ -91,3 +91,7 @@
 [class*=iconExternalLink] {
   display: none;
 }
+
+.hidden {
+  display: none !important;
+}
