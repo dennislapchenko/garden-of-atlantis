@@ -1,5 +1,6 @@
 ---
 slug: /
+sidebar_position: 1
 title: My Digital Garden Wiki
 tags:
 - Seed
