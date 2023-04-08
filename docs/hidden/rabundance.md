@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 'RAbundance Nutrition' Business Plan
 
 :::note
@@ -139,27 +142,29 @@ without spoiling.
     - [Research on Pros and Cons of PEF processing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7847884/)
       - `Blueberry fruits (Vaccinium myrtillus L.) Increasing the juice yield (+ 28%) compared to the untreated sample. The juice obtained had a significantly higher total phenolic content (+ 43%), total anthocyanin content (+ 60%) and antioxidant activity (+ 31%)`
 - [Dude makes a freeze drier. lots of science](https://freezedryer.rcasteel.com) - can get interesting insights on how freeze-drying actually works
--
+
 
 ### Contacted organizations:
 
-Message I am sending:
-
-```text
-Hello!
-I hope this message finds you well. I am writing to inquire about your produce drying methods.
-I have heard great things about your company from Paul Chek and I am eager to learn more about your expertise in this area.
-While I unfortunately cannot try your products firsthand as I reside in the EU, I am interested in starting a dried powdered fruit business in Northern Europe and I am currently researching the best drying methods.
-With so many options available, it can be difficult to determine which methods are truly effective and safe.  Some are advertised as "next generation," like vacuum microwave, but only few actually know that microwaves aren't beneficial for living organisms.
-I would greatly appreciate any insight you could provide on this subject, as well as a brief explanation of your own drying method, if possible.
-Thank you for your time and expertise.
-
-Regards,
-Dennis
-```
+<details>
+  <summary>Message I am sending:</summary>
+  <div>
+      Hello!
+      
+      I hope this message finds you well. I am writing to inquire about your produce drying methods.
+      I have heard great things about your company from Paul Chek and I am eager to learn more about your expertise in this area.
+      While I unfortunately cannot try your products firsthand as I reside in the EU, I am interested in starting a dried powdered fruit business in Northern Europe and I am currently researching the best drying methods.
+      With so many options available, it can be difficult to determine which methods are truly effective and safe.  Some are advertised as "next generation," like vacuum microwave, but only few actually know that microwaves aren't beneficial for living organisms.
+      I would greatly appreciate any insight you could provide on this subject, as well as a brief explanation of your own drying method, if possible.
+      Thank you for your time and expertise.
+      
+      Regards,
+      Dennis
+  </div>
+</details>
 
 - [PaleoValley](paleovalley.com)
-- [Organifi](organifi.com) - got shit generic reply
+- [Organifi](organifi.com) - got generic reply with no info, only that they use their own patented no-heat technique
 
 ## Space Rental and Equipment Purchase
 
@@ -242,26 +247,41 @@ Source to package calculation:
 | 2    | 220,000EUR | 24,000EUR      | 196,000EUR   | 26,700EUR          | 9,840EUR        | 0EUR             | **159,460EUR** (+100%) |
 
 ## Food Certification Acquirement
+### Certificate and permit options
+<Tabs>
+<TabItem value="b2b" label="B2B Wholesale">
 
-### Local sale
+  `BRC or ISO9001`
+  
+  ```text
+    BRC (British Retail Consortium) food certification is a globally recognized standard for food safety and quality management. 
+    It is a certification that demonstrates that a company has implemented a food safety management system that meets the requirements of the BRC Global Standard for Food Safety.
+    To get BRC food certification, a company needs to undergo an audit by an accredited certification body. 
+    The audit assesses the company's food safety management system, including its policies, procedures, and practices. 
+    The audit also evaluates the company's compliance with legal and regulatory requirements, as well as its ability to manage food safety risks.
+    The cost of BRC food certification varies depending on the size and complexity of the company's operations. 
+    It typically involves an initial certification fee, as well as ongoing fees for surveillance audits and recertification. 
+    The cost can range from a few thousand to tens of thousands of euros.
+    To sell B2B food products in Europe, it is not always necessary to have BRC food certification. 
+    However, many retailers and food service companies require their suppliers to have BRC certification as a condition of doing business. 
+    Therefore, having BRC certification can be a competitive advantage in the European food market.
+  ```
+</TabItem>
+<TabItem value="local" label="Local sale" default>
 
-```
-PVD
-```
+- PVD
+  - [How to get PVD](https://latvija.lv/DzivesSituacijas/uznemejdarbiba/5_Razosana_majas#show7)
+  - [PVD cenradis](https://likumi.lv/ta/id/311568-noteikumi-par-kartibu-kada-aprekina-un-veic-maksajumus-par-partikas-un-veterinara-dienesta-valsts-uzraudzibas-un-kontroles)
 
-- [How to get PVD](https://latvija.lv/DzivesSituacijas/uznemejdarbiba/5_Razosana_majas#show7)
-- [PVD cenradis](https://likumi.lv/ta/id/311568-noteikumi-par-kartibu-kada-aprekina-un-veic-maksajumus-par-partikas-un-veterinara-dienesta-valsts-uzraudzibas-un-kontroles)
+</TabItem>
+<TabItem value="worldwide" label="Worldwide e-comm">
 
-### B2B Wholesale: BRC or ISO9001
+- What, if any, certs are required to sell on Amazon?
 
-```
-BRC (British Retail Consortium) food certification is a globally recognized standard for food safety and quality management. It is a certification that demonstrates that a company has implemented a food safety management system that meets the requirements of the BRC Global Standard for Food Safety.
-To get BRC food certification, a company needs to undergo an audit by an accredited certification body. The audit assesses the company's food safety management system, including its policies, procedures, and practices. The audit also evaluates the company's compliance with legal and regulatory requirements, as well as its ability to manage food safety risks.
-The cost of BRC food certification varies depending on the size and complexity of the company's operations. It typically involves an initial certification fee, as well as ongoing fees for surveillance audits and recertification. The cost can range from a few thousand to tens of thousands of euros.
-To sell B2B food products in Europe, it is not always necessary to have BRC food certification. However, many retailers and food service companies require their suppliers to have BRC certification as a condition of doing business. Therefore, having BRC certification can be a competitive advantage in the European food market.
-```
+</TabItem>
+</Tabs>
 
-### Lab Testing for nutrients and nutritional value
+### Lab Testing for nutrients and full nutritional value composition
 
 - Where
 - What price
@@ -301,13 +321,14 @@ brand and reputation.
 | 1    | 1,000EUR  |
 | 2    | 2,000EUR  |
 
-## Collaborators and leads.
+## Collaborators and leads
 
 | Title                    | Got contact? |
 |--------------------------|--------------|
 | Food technician          | ✅            |
 | VC                       | ✅            |
-| Mentor in drying process |              |
+| Drying process mento     |              |
+| Food commerce mentor     |              |
 | E-Comm developer         |              |
 | Social media + marketing |              |
 | Source material leads    |              |
