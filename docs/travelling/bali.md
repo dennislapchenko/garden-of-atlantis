@@ -9,10 +9,40 @@ Beautiful nature on this island. Delicious fruit. Ever-warm and wavey ocean.
 Some of the waterfalls possess great power, after some ceremonies was shaking with energy vibrantly.
 
 ### Uluwatu
+Out of all places Uluwatu feels the most relaxed and that summerhouse vibe,
+and does have some fancy places if one needs.
+Ocean is really close and the beaches are really 
+
+Pros:
+- Very green everywhere. A lot of construction like everywhere else, but for now quite green, especially Pecatu area.
+- Not many pompous tourists around, as mosty its a surfer destination
+- Ocean is very close, with nice caves and bright sand beaches. Pantai (beach) Suluban is a cave with unique swimming experience, semi diving with goggles is very fun. However, during low tides the ocean goes too far back. Made a mistake once trying to get to water barefeet, walking on coral... dangerous mistake, feet full of circular punctures. Coral spores in wounds can be quite dangerous.
+- Overall homey feel as Pecatu area seems somewhat secluded from everything
+- In Pecatu - no traffic issues
+
+Cons:
+- Not as many health/organic shops to choose from. In fact impossible to find organic fruits and vegetables
+- Is at the very end of the archipelago, getting to other islands destinations is painful
 
 ### Canggu
 
+Pros:
+- Many health/organic stores, with fruits and vegetables
+- Options for authentic, Russian banya influenced, sauna experiences
+- Closer to Ubud and other destinations
+- Pererenan the next village, is very quiet in places, almost like Uluwatu
+
+Cons:
+- Full of pompous tourists
+- Silly traffic
+
+
 ### Ubud
+
+Pros:
+- Numerous waterfalls are close. Some offer ceremonial experiences, which are very energetically potent
+- More temples per square km than anywhere else
+
 
 ### Kuta/Denpasar
 
