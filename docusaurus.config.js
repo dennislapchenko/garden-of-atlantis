@@ -84,7 +84,7 @@ const config = {
           {
             href: "https://soundcloud.com/ootekai",
             position: "right",
-            text: "🔊"
+            label: "🔊"
           },
           {
             href: `https://github.com/${organizationName}/${projectName}`,
