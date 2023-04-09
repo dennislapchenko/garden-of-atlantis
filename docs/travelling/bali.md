@@ -1,6 +1,6 @@
 ---
 tags:
-  - Seed
+  - Sprout
 ---
 
 # Bali

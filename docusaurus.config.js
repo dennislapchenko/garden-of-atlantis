@@ -43,9 +43,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: "/",
           sidebarCollapsed: false,
-          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`
         },
         blog: false,
         theme: {
