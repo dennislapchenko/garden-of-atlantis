@@ -82,6 +82,11 @@ const config = {
             className: "header-instagram-link"
           },
           {
+            href: "https://soundcloud.com/ootekai",
+            position: "right",
+            text: "🔊"
+          },
+          {
             href: `https://github.com/${organizationName}/${projectName}`,
             position: "right",
             className: "header-github-link",
