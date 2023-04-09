@@ -44,6 +44,8 @@ const config = {
           routeBasePath: "/",
           sidebarCollapsed: false,
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true
         },
         blog: false,
         theme: {
