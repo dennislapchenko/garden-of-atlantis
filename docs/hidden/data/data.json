@@ -16,5 +16,42 @@
       "kg_price": 3,
       "amount_in_kg": 3000
     }
+  },
+  "seasonal": {
+    "Lab testing": {
+      "amount": 4,
+      "unit": "test",
+      "price_per_unit": 500
+    },
+    "Packaging": {
+       "amount": 5000,
+      "unit": "pouch",
+      "price_per_unit": 0.20
+    },
+    "Electricity": {
+       "amount": 1080,
+      "unit": "kW",
+      "price_per_unit": 0.14
+    },
+    "Water":{
+       "amount": 100,
+      "unit": "liter",
+      "price_per_unit": 20
+    },
+    "Logistics":{
+       "amount": 10,
+      "unit": "delivery",
+      "price_per_unit": 50
+    },
+    "Staff": {
+       "amount": 40,
+      "unit": "part-time day",
+      "price_per_unit": 100
+    },
+    "Marketing": {
+       "amount": 5,
+      "unit": "campaign",
+      "price_per_unit": 250
+    }
   }
 }
