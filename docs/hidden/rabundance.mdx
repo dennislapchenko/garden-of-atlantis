@@ -307,15 +307,15 @@ export const monthlies_data = Object.entries(data.monthly).flatMap(([key, value]
 
 export const sources_data = Object.entries(data.sources).flatMap(([key, value]) => [
   key,
-  value.amount_per_unit+"/"+value.unit,
+  value.price_per_unit+"/"+value.unit,
   value.amount.toLocaleString(),
-  (value.amount_per_unit * value.amount).toLocaleString()+data.currency,
+  (value.price_per_unit * value.amount).toLocaleString()+data.currency,
 ]);
 
 <CheekyTable headers={["Source","Price", "Quantity","Total"]} data={[
   ...sources_data,
   "", "", "", "",
-  "Total Annual", "", "", Object.values(data.sources).reduce((a, b) => a + (b.amount*b.amount_per_unit), 0).toLocaleString()+data.currency
+  "Total Annual", "", "", Object.values(data.sources).reduce((a, b) => a + (b.amount*b.price_per_unit), 0).toLocaleString()+data.currency
 ]}/>
 
 #### Operating expanses
