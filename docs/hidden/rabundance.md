@@ -11,6 +11,7 @@ A lot is still WorkInProgress
 
 :::info
 Current plan:
+
 - [ ] Do more research on +/- of various drying methods
 - [ ] Decide if initially a 'pilot' option of machinary (smaller scale) should be used
 - [ ] Finalize drying method and select a model
@@ -20,20 +21,17 @@ Current plan:
 - [ ] Sketch package design
 - [ ] Understand how to calculate local and global demand
 - [ ] Narrow down possible locations where to manufacture
-- [ ] ??? 
-- [ ] ??? 
-- [ ] ??? 
-- [ ] ??? 
+- [ ] ???
+- [ ] ???
+- [ ] ???
+- [ ] ???
 - [ ] Random thought: Maybe all kinds of secondary products can be done with powders... mixing with honey, for example.
 - [ ] Random thought: Maybe this production can be done in the same place where cafe can be? Then maybe cafe should be done first?
-:::
+      :::
 
 ## Summary
 
-In this business plan, we propose a business that will help elderly people (or their mafiozi bosses, lol)
-in Latvia to sell their wild forest berries directly to us.
-We plan to buy approximately 4000 liters of blueberries per season, freeze-dry and powder them, then package them as
-sublimated berry powder. We will sell these berries online as well as locally, and market them on social media.
+The business idea is to create a company that collects seasonal wild forest berries (blueberries, lingonberries), processes them through freeze-drying and milling, and sells the resulting powdered products. The target market is health-conscious consumers in Europe, with a focus on the German market. The sales channels will be an e-commerce website and Amazon Germany. The business will also emphasize environmentally-friendly packaging and practices.
 
 #### Alternative source material
 
@@ -51,14 +49,14 @@ sublimated berry powders can meet.
 especially among health-conscious consumers. - NOT YET)
 
 - Who consumes powdered berries? (age, social group)
-  - Yet to investigate
+- Yet to investigate
 - Where to sell?
-  - Amazon
-  - Own website
-  - Local stores?
-  - Food festivals?
+- Amazon
+- Own website
+- Local stores?
+- Food festivals?
 - How to market?
-  - Social media stories
+- Social media stories
 
 ### Competition
 
@@ -112,12 +110,12 @@ without spoiling.
 #### Options:
 
 - [Wave](https://wave.cc/product/wave-fd260/?show=explanation)
-  - Loading volume: 115L
-  - Price starting: 23,700EUR
-  - Energy consumption: 1.5kW/h (24hrs per batch = 24*1.5 * (115\*30 (batches)) = 1080kW = 100-180EUR (https://www.elektroenergija.lv/?kwh=1080))
+- Loading volume: 115L
+- Price starting: 23,700EUR
+- Energy consumption: 1.5kW/h (24hrs per batch = `24*1.5 * (115\*30 (batches)) = 1080kW = 100-180EUR` (https://www.elektroenergija.lv/?kwh=1080))
 - [Forlong](https://www.gellerteng.com/CRYO-300#forlong)
-  - Loading volume: 40-60KG+
-  - Price starting: Requested a quote for 100KG loading volume machines - the price is 200,000EUR...
+- Loading volume: 40-60KG+
+- Price starting: Requested a quote for 100KG loading volume machines - the price is 200,000EUR...
 
 #### Some more options as per GPT3.5 (not checked this yet)
 
@@ -138,29 +136,34 @@ without spoiling.
 
 - https://www.researchgate.net/publication/244603417_Drying_of_Fruits_and_Vegetables_Retention_of_NutritionalFunctional_Quality
 - [Effect of Selected Drying Methods and Emerging Drying Intensification Technologies on the Quality of Dried Fruit: A Review](https://www.mdpi.com/2227-9717/9/1/132)
-  - However, in comparison to other drying technologies, **freeze-drying has a high energy consumption** and prolonged processing time. However, this can be reduced by using PEF treatment. For instance, Lammerskitten et al. reported that PEF pretreatment of apple slices intensifies freeze-drying kinetics and thus reduces processing time by 57% in comparison to untreated samples.
-    - [Research on Pros and Cons of PEF processing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7847884/)
-      - `Blueberry fruits (Vaccinium myrtillus L.) Increasing the juice yield (+ 28%) compared to the untreated sample. The juice obtained had a significantly higher total phenolic content (+ 43%), total anthocyanin content (+ 60%) and antioxidant activity (+ 31%)`
+- However, in comparison to other drying technologies, **freeze-drying has a high energy consumption** and prolonged processing time. However, this can be reduced by using PEF treatment. For instance, Lammerskitten et al. reported that PEF pretreatment of apple slices intensifies freeze-drying kinetics and thus reduces processing time by 57% in comparison to untreated samples.
+- [Research on Pros and Cons of PEF processing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7847884/)
+- `Blueberry fruits (Vaccinium myrtillus L.) Increasing the juice yield (+ 28%) compared to the untreated sample. The juice obtained had a significantly higher total phenolic content (+ 43%), total anthocyanin content (+ 60%) and antioxidant activity (+ 31%)`
 - [Dude makes a freeze drier. lots of science](https://freezedryer.rcasteel.com) - can get interesting insights on how freeze-drying actually works
-
 
 ### Contacted organizations:
 
 <details>
-  <summary>Message I am sending:</summary>
-  <div>
-      Hello!
-      
-      I hope this message finds you well. I am writing to inquire about your produce drying methods.
-      I have heard great things about your company from Paul Chek and I am eager to learn more about your expertise in this area.
-      While I unfortunately cannot try your products firsthand as I reside in the EU, I am interested in starting a dried powdered fruit business in Northern Europe and I am currently researching the best drying methods.
-      With so many options available, it can be difficult to determine which methods are truly effective and safe.  Some are advertised as "next generation," like vacuum microwave, but only few actually know that microwaves aren't beneficial for living organisms.
-      I would greatly appreciate any insight you could provide on this subject, as well as a brief explanation of your own drying method, if possible.
-      Thank you for your time and expertise.
-      
-      Regards,
-      Dennis
-  </div>
+    <summary>Message I am sending:</summary>
+    <div>
+        Hello!
+
+        I hope this message finds you well. I am writing to inquire about your produce drying methods.
+        I have heard great things about your company from Paul Chek and I am eager to learn more about your expertise in
+        this area.
+        While I unfortunately cannot try your products firsthand as I reside in the EU, I am interested in starting a
+        dried powdered fruit business in Northern Europe and I am currently researching the best drying methods.
+        With so many options available, it can be difficult to determine which methods are truly effective and safe.
+        Some are advertised as "next generation," like vacuum microwave, but only few actually know that microwaves
+        aren't beneficial for living organisms.
+        I would greatly appreciate any insight you could provide on this subject, as well as a brief explanation of your
+        own drying method, if possible.
+        Thank you for your time and expertise.
+
+        Regards,
+        Dennis
+    </div>
+
 </details>
 
 - [PaleoValley](paleovalley.com)
@@ -224,7 +227,7 @@ All cost breakdown is below for - onetime, monthly and monthly-during-berry-seas
 
 Source to package calculation:
 
-> Formula: [source in liters] _ 0.8 _ 0.16 \* 10
+> Formula: `[source in liters] * 0.8 * 0.16 * 10`
 
 - Source: 4,000 liters of berries (3EUR/liter = 12,000EUR)
 - Source to kg: 4,000 \* 0.80 = 3,200kg
@@ -247,38 +250,48 @@ Source to package calculation:
 | 2    | 220,000EUR | 24,000EUR      | 196,000EUR   | 26,700EUR          | 9,840EUR        | 0EUR             | **159,460EUR** (+100%) |
 
 ## Food Certification Acquirement
+
 ### Certificate and permit options
+
 <Tabs>
-<TabItem value="b2b" label="B2B Wholesale">
+    <TabItem value="b2b" label="B2B Wholesale">
 
-  `BRC or ISO9001`
-  
-  ```text
-    BRC (British Retail Consortium) food certification is a globally recognized standard for food safety and quality management. 
-    It is a certification that demonstrates that a company has implemented a food safety management system that meets the requirements of the BRC Global Standard for Food Safety.
-    To get BRC food certification, a company needs to undergo an audit by an accredited certification body. 
-    The audit assesses the company's food safety management system, including its policies, procedures, and practices. 
-    The audit also evaluates the company's compliance with legal and regulatory requirements, as well as its ability to manage food safety risks.
-    The cost of BRC food certification varies depending on the size and complexity of the company's operations. 
-    It typically involves an initial certification fee, as well as ongoing fees for surveillance audits and recertification. 
-    The cost can range from a few thousand to tens of thousands of euros.
-    To sell B2B food products in Europe, it is not always necessary to have BRC food certification. 
-    However, many retailers and food service companies require their suppliers to have BRC certification as a condition of doing business. 
-    Therefore, having BRC certification can be a competitive advantage in the European food market.
-  ```
-</TabItem>
-<TabItem value="local" label="Local sale" default>
+        `BRC or ISO9001`
 
-- PVD
-  - [How to get PVD](https://latvija.lv/DzivesSituacijas/uznemejdarbiba/5_Razosana_majas#show7)
-  - [PVD cenradis](https://likumi.lv/ta/id/311568-noteikumi-par-kartibu-kada-aprekina-un-veic-maksajumus-par-partikas-un-veterinara-dienesta-valsts-uzraudzibas-un-kontroles)
+        ```text
+        BRC (British Retail Consortium) food certification is a globally recognized standard for food safety and quality
+        management.
+        It is a certification that demonstrates that a company has implemented a food safety management system that
+        meets the requirements of the BRC Global Standard for Food Safety.
+        To get BRC food certification, a company needs to undergo an audit by an accredited certification body.
+        The audit assesses the company's food safety management system, including its policies, procedures, and
+        practices.
+        The audit also evaluates the company's compliance with legal and regulatory requirements, as well as its ability
+        to manage food safety risks.
+        The cost of BRC food certification varies depending on the size and complexity of the company's operations.
+        It typically involves an initial certification fee, as well as ongoing fees for surveillance audits and
+        recertification.
+        The cost can range from a few thousand to tens of thousands of euros.
+        To sell B2B food products in Europe, it is not always necessary to have BRC food certification.
+        However, many retailers and food service companies require their suppliers to have BRC certification as a
+        condition of doing business.
+        Therefore, having BRC certification can be a competitive advantage in the European food market.
+        ```
+    </TabItem>
+    <TabItem value="local" label="Local sale" default>
 
-</TabItem>
-<TabItem value="worldwide" label="Worldwide e-comm">
+        - PVD
+        - [How to get PVD](https://latvija.lv/DzivesSituacijas/uznemejdarbiba/5_Razosana_majas#show7)
+        - [PVD
+        cenradis](https://likumi.lv/ta/id/311568-noteikumi-par-kartibu-kada-aprekina-un-veic-maksajumus-par-partikas-un-veterinara-dienesta-valsts-uzraudzibas-un-kontroles)
 
-- What, if any, certs are required to sell on Amazon?
+    </TabItem>
+    <TabItem value="worldwide" label="Worldwide e-comm">
 
-</TabItem>
+        - What, if any, certs are required to sell on Amazon?
+
+    </TabItem>
+
 </Tabs>
 
 ### Lab Testing for nutrients and full nutritional value composition
@@ -289,15 +302,15 @@ Source to package calculation:
 ## Risk assessment
 
 - Source material could be contaminated. Other than trusting the source dealer, methods like pre-treating before freeze-drying could be used.
-  - Both ultrasound and [PEF](https://www.researchgate.net/publication/341895817_Pulsed_Electric_Fields_PEF_as_pre-treatment_for_freeze-drying_of_plant_tissues) eliminate bacteria AND speedup drying, but there negative impact is yet to be determined
-  - Source can be thoroughly washed with vinegary water
-  - Source should be "perebran" to eliminate all spoiled
+- Both ultrasound and [PEF](https://www.researchgate.net/publication/341895817_Pulsed_Electric_Fields_PEF_as_pre-treatment_for_freeze-drying_of_plant_tissues) eliminate bacteria AND speedup drying, but there negative impact is yet to be determined
+- Source can be thoroughly washed with vinegary water
+- Source should be "perebran" to eliminate all spoiled
 - End result could not be in high demand
-  - Can improve marketing options
-    - Visit festivals
-    - Visit weekend farmers markets
-    - Try different targeting groups and/or social platforms
-  - Can decrease price
+- Can improve marketing options
+- Visit festivals
+- Visit weekend farmers markets
+- Try different targeting groups and/or social platforms
+- Can decrease price
 
 ## Marketing
 
@@ -312,7 +325,7 @@ brand and reputation.
 - Interests: fitness and wellness, longevity, life extension, yoga, exercise, beauty, health, smoothie
 - Geographic: Latvia, Lithuania, Estonia, Poland, Germany, France, Spain, Finland
 - Approx audience:
-  - Instagram: 26.9M - 31.6M
+- Instagram: 26.9M - 31.6M
 
 ### Marketing spend for the first 2 years:
 
@@ -324,9 +337,9 @@ brand and reputation.
 ## Collaborators and leads
 
 | Title                    | Got contact? |
-|--------------------------|--------------|
-| Food technician          | ✅            |
-| VC                       | ✅            |
+| ------------------------ | ------------ |
+| Food technician          | ✅           |
+| VC                       | ✅           |
 | Drying process mento     |              |
 | Food commerce mentor     |              |
 | E-Comm developer         |              |
@@ -334,7 +347,6 @@ brand and reputation.
 | Source material leads    |              |
 | ???                      |              |
 | ???                      |              |
-
 
 ## Conclusion
 

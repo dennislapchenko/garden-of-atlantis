@@ -23,7 +23,7 @@ I am a privileged white European, my lens is without doubt distorted.
 
 - Water: if you dont live near a freshwater source that you can collect and that is not contaminated - most likely drinking water will be coming out of 18 liter bottles. From what I've witnessed they are always transported in big trucks or motorcycles - problem is that it gets scorching sunlight heating and penetrating this water. Don't have to be a genious to see this is toxic.
   - Towards the end of our stay on Bali have found an excellent water source tho. [Okeara](https://okeara.com)! Structured AND hydrogenated water. Perfect.
-- Narrow roads and barely any traffic lights outside of main city of Denpasar
+- **Traffic.** Narrow roads and barely any traffic lights outside of main city of Denpasar
   - Some crossings are perma traffic-jammed, seldom with manual traffic officers, if driven through carefully - its all good. But overall its just crazy.. It is hard to imagine why the officials do not put traffic lights.
   - During heavy traffic, if riding a scooter, you will be inhaling LOTS of cheap petrol gas
 - Lots of plastic in the ocean, especially during-after rainy season
@@ -32,7 +32,7 @@ I am a privileged white European, my lens is without doubt distorted.
   - A lot of villas are ground floor and it can be dangerous to leave the door open to get some fresh air, even if you wanted to. Flow will be weak anyway because can't make a draft
   - A lot of shops and cafes will have a super low temperature A/C setting, it feels like walking into a fridge.. very annoying
   - A lot of A/C will have plenty of mold inside, which will be added to the not-very-refreshing air blowing
-  - Overall this forced way of A/C or sweat like a pig is infuriating. Wish clever drafting was implemented, especially in a place where you live
+  - **Overall this forced way of A/C or sweat like a pig is infuriating.** Wish clever drafting was implemented, especially in a place where you live
 - Due to the A/C problem mentioned above - in places where humidity is high - mold spreads like crazy. We have several horrid experiences living in wooden villas.. Clothes going moldy and overall the smell is nasty. So unless the place is ventilated well (meaning not all holes are plugged) - it will definitely be moldy. We decided we don't even want to risk this anymore so stopped staying at wooden places (shame).
 - Trash.. it is almost everywhere.. The government isn't helping locals, and locals dont have any desire to manage it well (some say 'they are surviving, thus can't pay for proper trash handling', but still feels like an excude and failure of the ethical system)
   - Locals are mostly disposing of trash in 3 ways:
