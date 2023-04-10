@@ -307,7 +307,7 @@ export const monthlies_data = Object.entries(data.monthly).flatMap(([key, value]
 
 export const sources_data = Object.entries(data.sources).flatMap(([key, value]) => [
   key,
-  value.price_per_unit+"/"+value.unit,
+  value.price_per_unit+data.currency"/"+value.unit,
   value.amount.toLocaleString(),
   (value.price_per_unit * value.amount).toLocaleString()+data.currency,
 ]);
