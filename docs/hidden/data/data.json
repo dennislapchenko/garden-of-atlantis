@@ -13,6 +13,9 @@
   },
   "sources": {
     "Blueberry": {
+      "amount": 3000,
+      "unit": "kg",
+      "price_per_unit": 3,
       "kg_price": 3,
       "amount_in_kg": 3000
     }
@@ -20,12 +23,12 @@
   "seasonal": {
     "Lab testing": {
       "amount": 4,
-      "unit": "test",
+      "unit": "tests",
       "price_per_unit": 500
     },
     "Packaging": {
        "amount": 5000,
-      "unit": "pouch",
+      "unit": "pouches",
       "price_per_unit": 0.20
     },
     "Electricity": {
@@ -35,22 +38,22 @@
     },
     "Water":{
        "amount": 100,
-      "unit": "liter",
+      "unit": "liters",
       "price_per_unit": 20
     },
     "Logistics":{
        "amount": 10,
-      "unit": "delivery",
+      "unit": "deliveries",
       "price_per_unit": 50
     },
     "Staff": {
        "amount": 40,
-      "unit": "part-time day",
+      "unit": "part-time days",
       "price_per_unit": 100
     },
     "Marketing": {
        "amount": 5,
-      "unit": "campaign",
+      "unit": "campaigns",
       "price_per_unit": 250
     }
   }
