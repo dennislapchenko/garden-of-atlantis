@@ -278,21 +278,24 @@ All cost breakdown is below for - onetime, monthly and monthly-during-berry-seas
 
 ### Onetime spend
 
+export const onetimes_data = Object.entries(data.onetime).flatMap(([key, value]) => [
+  key, value.toLocaleString()+data.currency
+]);
+
 <CheekyTable headers={["Item","Amount"]} data={[
-  "Freeze-drier", onetime.drier.toLocaleString()+data.currency,
-  "Grinder", onetime.grinder.toLocaleString()+data.currency,
-  "Packager", onetime.packager.toLocaleString()+data.currency,
-  "Food permit", onetime.food_permit.toLocaleString()+data.currency,
-  "E-Shop", onetime.e_shop.toLocaleString()+data.currency,
+  ...onetimes_data,
   "", "",
   "Total", Object.values(onetime).reduce((a, b) => a + b, 0).toLocaleString()+data.currency
 ]}/>
 
 ### Monthly spend
 
+export const monthlies_data = Object.entries(data.monthly).flatMap(([key, value]) => [
+  key, value.toLocaleString()+data.currency
+]);
+
 <CheekyTable headers={["Item","Amount"]} data={[
-  "Space rental", data.monthly.rent.toLocaleString()+data.currency,
-  "E-Shop hosting", data.monthly.hosting.toLocaleString()+data.currency,
+  ...monthlies_data,
   "", "",
   "Total Monthly", Object.values(data.monthly).reduce((a, b) => a + b, 0).toLocaleString()+data.currency,
   "Total Annual", (12*Object.values(data.monthly).reduce((a, b) => a + b, 0)).toLocaleString()+data.currency

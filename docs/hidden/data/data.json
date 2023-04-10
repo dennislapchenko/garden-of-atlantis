@@ -1,15 +1,15 @@
 {
   "currency": "EUR",
   "onetime": {
-    "drier": 20000,
-    "grinder": 2000,
-    "packager": 2000,
-    "food_permit": 500,
-    "e_shop": 500
+    "Freeze-drier": 20000,
+    "Grinder": 2000,
+    "Packaer": 2000,
+    "Food Permit": 500,
+    "E-Shop": 500
   },
   "monthly" : {
-    "rent" : 800,
-    "hosting": 20
+    "Space rent" : 800,
+    "E-Shop hosting": 20
   },
   "sources": {
     "Blueberry": {
