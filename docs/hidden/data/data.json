@@ -1,0 +1,20 @@
+{
+  "currency": "EUR",
+  "onetime": {
+    "drier": 20000,
+    "grinder": 2000,
+    "packager": 2000,
+    "food_permit": 500,
+    "e_shop": 500
+  },
+  "monthly" : {
+    "rent" : 800,
+    "hosting": 20
+  },
+  "sources": {
+    "Blueberry": {
+      "kg_price": 3,
+      "amount_in_kg": 3000
+    }
+  }
+}
