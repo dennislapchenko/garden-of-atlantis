@@ -82,9 +82,9 @@ MD013:
   # Include headings
   headers: true
   # Strict length checking
-  strict: false
+  strict: true
   # Stern length checking
-  stern: false
+  stern: true
 
 # MD014/commands-show-output - Dollar signs used before commands without showing output
 MD014: true
@@ -171,7 +171,7 @@ MD033:
     - div
 
 # MD034/no-bare-urls - Bare URL used
-MD034: true
+MD034: false
 
 # MD035/hr-style - Horizontal rule style
 MD035:

@@ -27,13 +27,26 @@ Current plan:
 - [ ] ???
 - [ ] Random thought: Maybe all kinds of secondary products can be done with powders... mixing with honey, for example.
 - [ ] Random thought: Maybe this production can be done in the same place where cafe can be? Then maybe cafe should be done first?
-      :::
+:::
 
 ## Summary
 
-The business idea is to create a company that collects seasonal wild forest berries (blueberries, lingonberries), processes them through freeze-drying and milling, and sells the resulting powdered products. The target market is health-conscious consumers in Europe, with a focus on the German market. The sales channels will be an e-commerce website and Amazon Germany. The business will also emphasize environmentally-friendly packaging and practices.
+The business idea is to create a company that collects seasonal wild forest berries (initially blueberries),
+processes them through freeze-drying and milling, and sells the resulting powdered products.
+The target market is health-conscious consumers in Europe, with a focus on the German market.
+The sales channels will be an e-commerce website and Amazon Germany.
+The business will also emphasize environmentally-friendly packaging and practices.
 
-#### Alternative source material
+### Objectives
+
+1. Establish partnerships with local berry collectors.
+2. Develop an efficient and high-quality freeze-drying and milling process.
+3. Design and launch an e-commerce website.
+4. List products on Amazon Germany.
+5. Develop a social media marketing campaign.
+6. Ensure compliance with food safety and quality regulations.
+
+### Alternative source material
 
 - Wild Lingonberry (брусника)
 - Wild Raspberry
@@ -107,32 +120,29 @@ any remaining water molecules are removed by raising the temperature of the prod
 This process ensures that the produce is completely dry and can be stored for a long time
 without spoiling.
 
-#### Options:
+#### Options
 
 - [Wave](https://wave.cc/product/wave-fd260/?show=explanation)
-- Loading volume: 115L
-- Price starting: 23,700EUR
-- Energy consumption: 1.5kW/h (24hrs per batch = `24*1.5 * (115\*30 (batches)) = 1080kW = 100-180EUR` (https://www.elektroenergija.lv/?kwh=1080))
+    - Loading volume: 115L
+    - Price starting: 23,700EUR
+    - Energy consumption: 1.5kW/h (24hrs per batch = `24*1.5 * (115\*30 (batches)) = 1080kW = 100-180EUR` (https://www.elektroenergija.lv/?kwh=1080))
 - [Forlong](https://www.gellerteng.com/CRYO-300#forlong)
-- Loading volume: 40-60KG+
-- Price starting: Requested a quote for 100KG loading volume machines - the price is 200,000EUR...
+    - Loading volume: 40-60KG+
+    - Price starting: Requested a quote for 100KG loading volume machines - the price is 200,000EUR...
 
 #### Some more options as per GPT3.5 (not checked this yet)
 
-| Company             | Flagship Model                                                                                                         | Flagship Model Price | Cheapest Model                                                                                                     | Cheapest Model Price |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------- |
-| Telstar             | [LyoBeta 2-85](https://www.telstar.com/en/products/freeze-dryers/lyobeta-2-85/)                                        | €60,000              | [LyoQuest](https://www.telstar.com/en/products/freeze-dryers/lyoquest/)                                            | €40,000              |
-| Christ              | [Alpha 1-4 LDplus](https://www.christ.de/en/products/freeze-dryers/alpha-1-4-ldplus/)                                  | €50,000              | [Alpha 1-2 LDplus](https://www.christ.de/en/products/freeze-dryers/alpha-1-2-ldplus/)                              | €30,000              |
-| Martin Christ       | [Alpha 2-4 LDplus](https://www.martinchrist.de/en/products/freeze-dryers/alpha-2-4-ldplus/)                            | €60,000              | [Alpha 1-2 LDplus](https://www.martinchrist.de/en/products/freeze-dryers/alpha-1-2-ldplus/)                        | €30,000              |
-| Labconco            | [FreeZone Triad](https://www.labconco.com/product/freezone-triad-benchtop-lyophilizer)                                 | €70,000              | [FreeZone 1](https://www.labconco.com/product/freezone-1-liter-benchtop-freeze-dry-system)                         | €20,000              |
-| SP Scientific       | [Lyostar 3](https://www.spscientific.com/Products/Lyophilization_and_Freeze_Drying/Lyostar_3_Laboratory_Freeze_Dryer/) | €100,000             | [Benchtop Pro](https://www.spscientific.com/Products/Lyophilization_and_Freeze_Drying/Benchtop_Pro_Freeze_Dryers/) | €10,000              |
-| IMA Life            | [Lyobliss](https://www.ima.it/pharma/product/lyobliss/)                                                                | €100,000             | [Lyomega](https://www.ima.it/pharma/product/lyomega/)                                                              | €50,000              |
-| Hull                | [Lyovac GT2](https://www.hulldts.com/lyovac-gt2-freeze-dryer/)                                                         | €80,000              | [MicroFD](https://www.hulldts.com/microfd/)                                                                        | €10,000              |
-| LTE Scientific      | [Alpha 2-4 LDplus](https://www.lte-scientific.co.uk/products/freeze-drying-systems/alpha-2-4-ldplus)                   | €60,000              | [Alpha 1-2 LDplus](https://www.lte-scientific.co.uk/products/freeze-drying-systems/alpha-1-2-ldplus)               | €30,000              |
-| Millrock Technology | [Sublimator](https://millrocktech.com/sublimator/)                                                                     | €70,000              | [Mini FD](https://millrocktech.com/mini-freeze-dryer/)                                                             | €10,000              |
-| Zirbus Technology   | [Freeze Dryer LyoDry Compact](https://www.zirbus.com/en/products/freeze-drying/lyodry-compact.html)                    | €40,000              | [Freeze Dryer LyoDry Mini](https://www.zirbus.com/en/products/freeze-drying/lyodry-mini.html)                      | €20,000              |
+| Machine Model        | Manufacturer          | Capacity (kg) | Price Range (EUR) | Energy Consumption (kW) | Time of Operation | Energy Cost per 1000 kg (EUR) |
+|----------------------|-----------------------|---------------|-------------------|-------------------------|-------------------|-------------------------------|
+| Harvest Right Large  | Harvest Right         | 5.4           | 6,000-9,000       | 2.5                     | 24-48 hours       | 270-405                       |
+| Cuddon FD5           | Cuddon Freeze Dry     | 5             | 15,000-25,000     | 3.5                     | 24-48 hours       | 378-567                       |
+| Cuddon FD80          | Cuddon Freeze Dry     | 80            | 40,000-60,000     | 15                      | 24-48 hours       | 1,620-2,430                   |
+| VirTis BenchTop Pro  | SP Scientific         | 2.5           | 8,000-14,000      | 1.5                     | 24-48 hours       | 162-243                       |
+| Freeze Dryer Epsilon | MechaTech Systems Ltd | 20            | 35,000-55,000     | 6                       | 24-48 hours       | 648-972                       |
+| Labconco FreeZone 12 | Labconco              | 12            | 25,000-40,000     | 4.5                     | 24-48 hours       | 486-729                       |
+| Zirbus Sublimator 3x | Zirbus Technology     | 3             | 10,000-20,000     | 1.8                     | 24-48 hours       | 194-291                       |
 
-### Research on drying methods:
+#### Research on drying methods
 
 - https://www.researchgate.net/publication/244603417_Drying_of_Fruits_and_Vegetables_Retention_of_NutritionalFunctional_Quality
 - [Effect of Selected Drying Methods and Emerging Drying Intensification Technologies on the Quality of Dried Fruit: A Review](https://www.mdpi.com/2227-9717/9/1/132)
@@ -141,33 +151,80 @@ without spoiling.
 - `Blueberry fruits (Vaccinium myrtillus L.) Increasing the juice yield (+ 28%) compared to the untreated sample. The juice obtained had a significantly higher total phenolic content (+ 43%), total anthocyanin content (+ 60%) and antioxidant activity (+ 31%)`
 - [Dude makes a freeze drier. lots of science](https://freezedryer.rcasteel.com) - can get interesting insights on how freeze-drying actually works
 
-### Contacted organizations:
+<details>
+<summary>Comparison of drying methods as per GPT4</summary>
+
+| Drying Method         | Advantages                                               | Disadvantages                                          | Price Range (USD) | Time of Operation      |
+|-----------------------|-----------------------------------------------------------|--------------------------------------------------------|-------------------|------------------------|
+| Freeze Drying         | Preserves nutritional value, color, and taste             | Expensive equipment, energy-intensive                  | 50,000-100,000    | 24-48 hours            |
+| Spray Drying          | Fast process, scalable                                    | High temperatures may affect nutrients, energy-intensive | 40,000-80,000     | 20-30 minutes          |
+| Vacuum Drying         | Retains some nutritional value, lower temperatures        | Slower process, expensive equipment                    | 20,000-50,000     | 12-24 hours            |
+| Air Drying            | Low-cost, low energy consumption                          | Longer drying time, potential loss of nutrients        | 5,000-10,000      | 1-5 days               |
+| Dehydration (Oven)    | Accessible, relatively low-cost                           | High temperatures may affect nutrients, energy-intensive | 500-2,000         | 6-12 hours             |
+| Solar Drying          | Low-cost, environmentally friendly                        | Slow, dependent on weather conditions                  | 1,000-3,000       | 2-10 days (weather dependent) |
+
+</details>
+
+#### Contacted organizations
 
 <details>
-    <summary>Message I am sending:</summary>
-    <div>
-        Hello!
+<summary>Message I am sending:</summary>
+Hello!
 
-        I hope this message finds you well. I am writing to inquire about your produce drying methods.
-        I have heard great things about your company from Paul Chek and I am eager to learn more about your expertise in
-        this area.
-        While I unfortunately cannot try your products firsthand as I reside in the EU, I am interested in starting a
-        dried powdered fruit business in Northern Europe and I am currently researching the best drying methods.
-        With so many options available, it can be difficult to determine which methods are truly effective and safe.
-        Some are advertised as "next generation," like vacuum microwave, but only few actually know that microwaves
-        aren't beneficial for living organisms.
-        I would greatly appreciate any insight you could provide on this subject, as well as a brief explanation of your
-        own drying method, if possible.
-        Thank you for your time and expertise.
+I hope this message finds you well. I am writing to inquire about your produce drying methods.
+I have heard great things about your company from Paul Chek and I am eager to learn more about your expertise in
+this area.
+While I unfortunately cannot try your products firsthand as I reside in the EU, I am interested in starting a
+dried powdered fruit business in Northern Europe and I am currently researching the best drying methods.
+With so many options available, it can be difficult to determine which methods are truly effective and safe.
+Some are advertised as "next generation," like vacuum microwave, but only few actually know that microwaves
+aren't beneficial for living organisms.
+I would greatly appreciate any insight you could provide on this subject, as well as a brief explanation of your
+own drying method, if possible.
+Thank you for your time and expertise.
 
-        Regards,
-        Dennis
-    </div>
+Regards,
+Dennis
 
 </details>
 
 - [PaleoValley](paleovalley.com)
 - [Organifi](organifi.com) - got generic reply with no info, only that they use their own patented no-heat technique
+
+### Powdering
+<details>
+<summary>Comparison of powdering methods as per GPT4</summary>
+
+| Milling Method       | Advantages                                               | Disadvantages                                          | Price Range (EUR) | Time of Operation      | Heat Generation |
+|----------------------|-----------------------------------------------------------|--------------------------------------------------------|-------------------|------------------------|----------------|
+| Stone Mill           | Traditional, low heat generation, preserves nutrients    | Slow, manual labor, less consistent particle size      | 500-2,000         | Slow (hours)           | Low            |
+| Hammer Mill          | Fast, versatile, adjustable particle size                 | High heat generation, noisy, potential nutrient loss   | 1,000-5,000       | Fast (minutes)         | High           |
+| Ball Mill            | Uniform particle size, low heat generation                | Slow, high energy consumption, large equipment         | 5,000-25,000      | Slow (hours)           | Low            |
+| Pin Mill             | Fast, uniform particle size, low heat generation          | Expensive equipment, potential clogging                | 5,000-20,000      | Fast (minutes)         | Low            |
+| Jet Mill             | No heat generation, ultrafine particle size               | Expensive equipment, high energy consumption           | 25,000-100,000    | Fast (minutes)         | None           |
+| Roller Mill          | Scalable, low heat generation, consistent particle size   | Expensive equipment, high energy consumption           | 10,000-50,000     | Medium (30-60 minutes) | Low            |
+| Mortar and Pestle    | Traditional, low-cost, no heat generation                 | Slow, manual labor, less consistent particle size      | 20-200            | Slow (hours)           | None           |
+| Cryogenic Mill       | Preserves nutrients, no heat generation, ultrafine size   | Expensive equipment, requires liquid nitrogen          | 15,000-80,000     | Fast (minutes)         | None           |
+
+</details>
+
+### Packaging
+
+<details>
+<summary>Comparison of packaging methods as per GPT4</summary>
+
+| Packaging Type      | Packaging Machine                  | Advantages                                              | Disadvantages                                      | Machine Price Range (EUR) | Time of Operation    | Environmental Friendliness | Price per Package (EUR)               |
+|---------------------|------------------------------------|---------------------------------------------------------|----------------------------------------------------|---------------------------|----------------------|----------------------------|---------------------------------------|
+| Plastic Bags        | Vertical Form Fill Seal (VFFS)     | Low-cost, widely available, customizable                | Not biodegradable, potential leaching of chemicals | 3,500-15,000              | Fast (30-60 sec/bag) | Low                        | 0.01-0.03 (1,000) / 0.01-0.02 (2,000) |
+| Paper Bags          | Vertical Form Fill Seal (VFFS)     | Biodegradable, lower environmental impact, customizable | Less durable, less protective                      | 3,500-15,000              | Fast (30-60 sec/bag) | High                       | 0.02-0.04 (1,000) / 0.01-0.03 (2,000) |
+| Stand-up Pouches    | Stand-up Pouch Filling Machine     | Convenient, resealable, customizable                    | Not easily biodegradable, plastic content          | 7,000-35,000              | Medium (1-2 min/bag) | Medium                     | 0.03-0.07 (1,000) / 0.02-0.06 (2,000) |
+| Compostable Pouches | Stand-up Pouch Filling Machine     | Biodegradable, lower environmental impact, customizable | Less durable, higher cost                          | 7,000-35,000              | Medium (1-2 min/bag) | High                       | 0.05-0.09 (1,000) / 0.04-0.08 (2,000) |
+| Glass Jars          | Rotary Filling and Capping Machine | Reusable, no leaching of chemicals, premium appearance  | Heavy, fragile, higher cost                        | 15,000-70,000             | Slow (2-5 min/jar)   | Medium                     | 0.25-0.40 (1,000) / 0.20-0.35 (2,000) |
+| Metal Tins          | Rotary Filling and Capping Machine | Reusable, durable, premium appearance                   | Higher cost, potential for corrosion               | 15,000-70,000             | Slow (2-5 min/tin)   | Medium                     | 0.20-0.35 (1,000) / 0.15-0.30 (2,000) |
+
+</details>
+
+
 
 ## Space Rental and Equipment Purchase
 
@@ -249,85 +306,125 @@ Source to package calculation:
 | 1    | 110,000EUR | 12,000EUR      | 98,000EUR    | 13,350EUR          | 9,840EUR        | 25,000EUR        | **48,810EUR**          |
 | 2    | 220,000EUR | 24,000EUR      | 196,000EUR   | 26,700EUR          | 9,840EUR        | 0EUR             | **159,460EUR** (+100%) |
 
+<details>
+<summary>All foreseeable and unforeseeable costs as per GPT4</summary>
+
+| Type of Cost                  | Description                                                        | Foreseeable | Unforeseeable |
+|-------------------------------|--------------------------------------------------------------------|-------------|---------------|
+| Equipment Purchase            | Freeze-drying, milling, and packaging machines                     | Yes         | No            |
+| Equipment Maintenance         | Regular maintenance and repairs of machines                        | Yes         | Yes           |
+| Raw Material Costs            | Purchase of berries from suppliers                                 | Yes         | No            |
+| Labor Costs                   | Salaries for employees involved in berry collection and processing | Yes         | No            |
+| Utilities                     | Electricity, water, gas, etc.                                      | Yes         | No            |
+| Rent or Mortgage              | Costs for the facility where the operations take place             | Yes         | No            |
+| Licensing and Permits         | Obtaining necessary licenses and permits for the business          | Yes         | No            |
+| Insurance                     | Insurance coverage for the business, equipment, and employees      | Yes         | No            |
+| Marketing and Advertising     | Expenses related to promoting the product                          | Yes         | No            |
+| E-commerce and Amazon Fees    | Fees associated with selling on e-commerce platforms               | Yes         | No            |
+| Lab Testing and Certification | Costs for lab testing and certification of the product             | Yes         | No            |
+| Transportation and Logistics  | Costs for transporting berries and shipping the final product      | Yes         | Yes           |
+| Unexpected Downtime           | Losses due to unforeseen circumstances (e.g. equipment failure)    | No          | Yes           |
+| Currency Fluctuations         | Changes in exchange rates affecting costs                          | No          | Yes           |
+| Natural Disasters             | Losses due to natural disasters (e.g. floods, fires)               | No          | Yes           |
+
+</details>
+
 ## Food Certification Acquirement
 
 ### Certificate and permit options
 
 <Tabs>
-    <TabItem value="b2b" label="B2B Wholesale">
+<TabItem value="b2b" label="B2B Wholesale">
 
-        `BRC or ISO9001`
+    BRC or ISO9001
 
-        ```text
-        BRC (British Retail Consortium) food certification is a globally recognized standard for food safety and quality
-        management.
-        It is a certification that demonstrates that a company has implemented a food safety management system that
-        meets the requirements of the BRC Global Standard for Food Safety.
-        To get BRC food certification, a company needs to undergo an audit by an accredited certification body.
-        The audit assesses the company's food safety management system, including its policies, procedures, and
-        practices.
-        The audit also evaluates the company's compliance with legal and regulatory requirements, as well as its ability
-        to manage food safety risks.
-        The cost of BRC food certification varies depending on the size and complexity of the company's operations.
-        It typically involves an initial certification fee, as well as ongoing fees for surveillance audits and
-        recertification.
-        The cost can range from a few thousand to tens of thousands of euros.
-        To sell B2B food products in Europe, it is not always necessary to have BRC food certification.
-        However, many retailers and food service companies require their suppliers to have BRC certification as a
-        condition of doing business.
-        Therefore, having BRC certification can be a competitive advantage in the European food market.
-        ```
-    </TabItem>
-    <TabItem value="local" label="Local sale" default>
+BRC (British Retail Consortium) food certification is a globally recognized standard for food safety and quality
+management.
+It is a certification that demonstrates that a company has implemented a food safety management system that
+meets the requirements of the BRC Global Standard for Food Safety.
+To get BRC food certification, a company needs to undergo an audit by an accredited certification body.
+The audit assesses the company's food safety management system, including its policies, procedures, and
+practices.
+The audit also evaluates the company's compliance with legal and regulatory requirements, as well as its ability
+to manage food safety risks.
+The cost of BRC food certification varies depending on the size and complexity of the company's operations.
+It typically involves an initial certification fee, as well as ongoing fees for surveillance audits and
+recertification.
+The cost can range from a few thousand to tens of thousands of euros.
+To sell B2B food products in Europe, it is not always necessary to have BRC food certification.
+However, many retailers and food service companies require their suppliers to have BRC certification as a
+condition of doing business.
+Therefore, having BRC certification can be a competitive advantage in the European food market.
+</TabItem>
+<TabItem value="local" label="Local sale" default>
 
-        - PVD
-        - [How to get PVD](https://latvija.lv/DzivesSituacijas/uznemejdarbiba/5_Razosana_majas#show7)
-        - [PVD
-        cenradis](https://likumi.lv/ta/id/311568-noteikumi-par-kartibu-kada-aprekina-un-veic-maksajumus-par-partikas-un-veterinara-dienesta-valsts-uzraudzibas-un-kontroles)
+    PVD
+- [How to get PVD](https://latvija.lv/DzivesSituacijas/uznemejdarbiba/5_Razosana_majas#show7)
+- [PVD cenradis](https://likumi.lv/ta/id/311568-noteikumi-par-kartibu-kada-aprekina-un-veic-maksajumus-par-partikas-un-veterinara-dienesta-valsts-uzraudzibas-un-kontroles)
 
-    </TabItem>
-    <TabItem value="worldwide" label="Worldwide e-comm">
+</TabItem>
+<TabItem value="worldwide" label="Worldwide e-comm">
 
-        - What, if any, certs are required to sell on Amazon?
+    - What, if any, certs are required to sell on Amazon?
 
-    </TabItem>
-
+</TabItem>
 </Tabs>
 
 ### Lab Testing for nutrients and full nutritional value composition
 
 - Where
-- What price
+  - Europe labs: Eurofins, SGS, and Intertek
+- Standards:
+  - ISO/IEC 17025
+- Prices?
 
 ## Risk assessment
 
 - Source material could be contaminated. Other than trusting the source dealer, methods like pre-treating before freeze-drying could be used.
-- Both ultrasound and [PEF](https://www.researchgate.net/publication/341895817_Pulsed_Electric_Fields_PEF_as_pre-treatment_for_freeze-drying_of_plant_tissues) eliminate bacteria AND speedup drying, but there negative impact is yet to be determined
-- Source can be thoroughly washed with vinegary water
-- Source should be "perebran" to eliminate all spoiled
+  - Both ultrasound and [PEF](https://www.researchgate.net/publication/341895817_Pulsed_Electric_Fields_PEF_as_pre-treatment_for_freeze-drying_of_plant_tissues) eliminate bacteria AND speedup drying, but there negative impact is yet to be determined
+  - Source can be thoroughly washed with vinegary water
+  - Source should be "perebran" to eliminate all spoiled
 - End result could not be in high demand
-- Can improve marketing options
-- Visit festivals
-- Visit weekend farmers markets
-- Try different targeting groups and/or social platforms
-- Can decrease price
+  - Can improve marketing options
+  - Visit festivals
+  - Visit weekend farmers markets
+  - Try different targeting groups and/or social platforms
+  - Can decrease price
 
-## Marketing
+<details>
+<summary>All risks and mitigations as per GPT4</summary>
 
-Our target clients are health-conscious consumers who are looking for high-quality, convenient, and healthy food
-products. We plan to start with a small number of clients and gradually increase our client count as we establish our
-brand and reputation.
+| Risk                        | Description                                                | Mitigation Strategies                                            |
+|-----------------------------|------------------------------------------------------------|------------------------------------------------------------------|
+| Equipment Failure           | Breakdown or malfunction of machines                       | Regular maintenance, invest in high-quality equipment            |
+| Supplier Reliability        | Difficulty in sourcing quality berries from suppliers      | Establish long-term relationships, diversify suppliers           |
+| Product Quality             | Inconsistent or poor product quality                       | Implement strict quality control processes, lab testing          |
+| Market Competition          | Competition from other berry powder producers              | Unique selling points, effective marketing strategies            |
+| Regulatory Compliance       | Ensuring compliance with food safety and other regulations | Stay informed on regulations, obtain necessary certifications    |
+| Seasonal Variability        | Variability in berry availability due to seasonal factors  | Diversify berry types, plan inventory accordingly                |
+| Natural Disasters           | Impact of natural disasters on business operations         | Adequate insurance coverage, emergency response plan             |
+| Employee Turnover           | Loss of key employees or high turnover rate                | Competitive compensation, fostering a positive work environment  |
+| Currency Fluctuations       | Unfavorable changes in exchange rates                      | Monitor exchange rates, use financial instruments to hedge risks |
+| E-commerce Platform Changes | Changes in e-commerce platforms' policies or fees          | Stay informed, diversify sales channels                          |
 
-### Demographic:
+</details>
+
+## Marketing Strategy
+
+1. Develop a social media marketing campaign targeting health-conscious consumers in Europe, with a focus on the German market. Use platforms like Instagram, Facebook, and Twitter to share product information, recipes, and health benefits.
+2. Collaborate with influencers and bloggers in the health and wellness niche to promote the products.
+3. Offer free samples, discounts, and promotions to attract new customers and encourage repeat purchases.
+
+### Demographic
 
 - Age: 18 - 40
 - Gender: Male, Female
 - Interests: fitness and wellness, longevity, life extension, yoga, exercise, beauty, health, smoothie
 - Geographic: Latvia, Lithuania, Estonia, Poland, Germany, France, Spain, Finland
 - Approx audience:
-- Instagram: 26.9M - 31.6M
+  - Instagram: 26.9M - 31.6M
 
-### Marketing spend for the first 2 years:
+### Marketing spend for the first 2 years
 
 | Year | Marketing |
 | ---- | --------- |
@@ -337,16 +434,32 @@ brand and reputation.
 ## Collaborators and leads
 
 | Title                    | Got contact? |
-| ------------------------ | ------------ |
-| Food technician          | ✅           |
-| VC                       | ✅           |
+|--------------------------|--------------|
+| Food technician          | ✅            |
+| VC                       | ✅            |
 | Drying process mento     |              |
 | Food commerce mentor     |              |
 | E-Comm developer         |              |
 | Social media + marketing |              |
+| Bloggers                 |              |
 | Source material leads    |              |
 | ???                      |              |
 | ???                      |              |
+
+<details>
+<summary>Where to find mentors, as per GPT4</summary>
+
+1. **Industry associations and organizations**: Reach out to organizations related to the food industry, agriculture, or organic products in your region. These organizations often have experienced professionals who may be willing to mentor aspiring entrepreneurs.
+2. **Networking events**: Attend industry-specific conferences, trade shows, and networking events. These events provide an excellent opportunity to meet experienced professionals, potential mentors, and other entrepreneurs in your industry.
+3. **Online communities**: Join online forums, discussion boards, or social media groups related to your industry. You can connect with professionals and seek mentorship from experienced individuals who share your interests.
+4. **Entrepreneurship programs**: Many universities, colleges, and organizations offer entrepreneurship programs, incubators, or accelerators that connect aspiring entrepreneurs with experienced mentors. Look for programs in your area or within your industry.
+5. **Local business organizations**: Reach out to your local Chamber of Commerce or similar business organizations, as they often have mentorship programs or can connect you with potential mentors.
+6. **Professional connections**: Ask for referrals from your professional network, such as colleagues, friends, or family members. They may know someone with experience in your industry who would be willing to mentor you.
+7. **LinkedIn**: Use LinkedIn to search for professionals in your industry and send personalized connection requests. Explain your goals and ask if they would be interested in mentoring you or if they can recommend someone who might be.
+Remember that mentorship is a two-way relationship. Be respectful of your mentor's time, come prepared with thoughtful questions, and show genuine interest in learning from their experience. As you develop a relationship with your mentor, you'll be better equipped to navigate the challenges and opportunities in your business.
+
+</details>
+
 
 ## Conclusion
 
@@ -355,13 +468,3 @@ In conclusion, we believe that our business has significant potential to succeed
 ~~We have conducted thorough market research and developed a solid business plan and financial model. We are confident that with
 our hard work and dedication, we can establish a successful brand and provide high-quality, convenient, and healthy food
 products to our clients.~~ (NOT YET)
-
-## Plan to follow for business plan / fin model writing (generated by GPT3.5)
-
-1. Business Overview: Provide an overview of your food supplement business, including its mission, vision, and values. Describe the products you will offer, the target market, and the competitive landscape.
-2. Market Analysis: Conduct a thorough analysis of the market for food supplements. Include information on your target customer demographics, market size, and growth potential. Identify and analyze your competition, highlighting their strengths and weaknesses.
-3. Marketing and Sales Strategy: Describe your marketing and sales strategies, including the channels and tactics you will use to promote your products. Outline your pricing strategy and explain how you will differentiate your products from those of your competitors.
-4. Operations and Management: Describe the day-to-day operations of your business, including the production process, supply chain management, and distribution channels. Outline the organizational structure of your business and describe the responsibilities of each team member.
-5. Financial Plan: Develop a comprehensive financial plan that includes revenue projections, expense forecasts, and cash flow projections. Include financial statements, such as a balance sheet, income statement, and cash flow statement. Provide a detailed breakdown of your startup costs and explain how you will finance your business.
-6. Risk Assessment: Identify and assess the risks associated with your business. Develop a plan for mitigating and managing these risks.
-7. Conclusion: Summarize your business plan and highlight the key takeaways. Provide a clear action plan for next steps, including timelines and milestones.
