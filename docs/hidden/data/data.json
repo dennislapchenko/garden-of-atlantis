@@ -7,54 +7,60 @@
     "Food Permit": 500,
     "E-Shop": 500
   },
-  "monthly" : {
-    "Space rent" : 800,
+  "monthly": {
+    "Space rent": 800,
     "E-Shop hosting": 20
+  },
+  "operation": {
+    "Lab testing": {
+      "amount": 4,
+      "unit": "analysis",
+      "price_per_unit": 500
+    },
+    "Packaging": {
+      "amount": 5000,
+      "unit": "pouch",
+      "price_per_unit": 0.05
+    },
+    "Electricity": {
+      "amount": 1080,
+      "unit": "kW",
+      "price_per_unit": 0.14
+    },
+    "Water": {
+      "amount": 100,
+      "unit": "liter",
+      "price_per_unit": 0.5
+    },
+    "Logistics": {
+      "amount": 10,
+      "unit": "delivery",
+      "price_per_unit": 100
+    },
+    "Staff": {
+      "amount": 40,
+      "unit": "part-time day",
+      "price_per_unit": 100
+    },
+    "Marketing": {
+      "amount": 5,
+      "unit": "campaign",
+      "price_per_unit": 200
+    }
   },
   "sources": {
     "Blueberry": {
       "amount": 3000,
       "unit": "kg",
-      "price_per_unit": 3,
-      "kg_price": 3,
-      "amount_in_kg": 3000
+      "price_per_unit": 3
     }
   },
-  "seasonal": {
-    "Lab testing": {
-      "amount": 4,
-      "unit": "tests",
-      "price_per_unit": 500
-    },
-    "Packaging": {
-       "amount": 5000,
-      "unit": "pouches",
-      "price_per_unit": 0.20
-    },
-    "Electricity": {
-       "amount": 1080,
-      "unit": "kW",
-      "price_per_unit": 0.14
-    },
-    "Water":{
-       "amount": 100,
-      "unit": "liters",
-      "price_per_unit": 20
-    },
-    "Logistics":{
-       "amount": 10,
-      "unit": "deliveries",
-      "price_per_unit": 50
-    },
-    "Staff": {
-       "amount": 40,
-      "unit": "part-time days",
-      "price_per_unit": 100
-    },
-    "Marketing": {
-       "amount": 5,
-      "unit": "campaigns",
-      "price_per_unit": 250
-    }
+  "source_processing": {
+    "dry_percent": 0.16,
+    "testing_percent": 0.025,
+    "g100_packs_percent": 0.90,
+    "g100_packs_price": 22,
+    "g250_packs_percent": 0.10,
+    "g250_packs_price": 49
   }
 }
