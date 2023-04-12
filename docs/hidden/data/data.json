@@ -34,6 +34,16 @@
       "unit": "liter",
       "price_per_unit": 0.5
     },
+    "Protective Gear": {
+      "amount": 10,
+      "unit": "pack",
+      "price_per_unit": 10
+    },
+    "Food containers": {
+      "amount": 10,
+      "unit": "container",
+      "price_per_unit": 20
+    },
     "Logistics": {
       "amount": 10,
       "unit": "delivery",
