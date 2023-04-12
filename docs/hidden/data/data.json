@@ -1,8 +1,8 @@
 {
   "currency": "EUR",
-  "onetime": {
+  "startup": {
     "Tables": 300,
-    "Freeze-drier": 20000,
+    "Freeze-drier": 50000,
     "Grinder": 2000,
     "Packager": 2000,
     "Food Permit": 500,
@@ -52,16 +52,17 @@
   },
   "sources": {
     "Blueberry": {
-      "amount": 3000,
+      "amount":  3000,
       "unit": "kg",
-      "price_per_unit": 2.5
+      "price_per_unit": 2
     }
   },
   "source_proc": {
     "drying": {
-      "batch_size_kg": 45,
+      "batch_size_kg": 60,
       "batch_time_hr": 24,
-      "energy_per_hour_kw": 1.5
+      "energy_per_hour_kw": 1.5,
+      "energy_per_hour_price": 0.14
     },
     "grinder": {
       "energy_per_hour_kw": 1

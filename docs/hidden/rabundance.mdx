@@ -7,22 +7,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import data from "./data/data.json";
 
-export const currency = data.currency;
-const money = (amt) => {
-  return Math.round(amt).toLocaleString() + currency;
-}
-const getFinalSourceAmt = (amt) => {
-  return amt * data.source_proc.dry_percent * (1 - data.source_proc.testing_percent);
-}
-const arraySum = (arraychik) => {
-  return Object.values(arraychik).reduce((accum, curr) => accum + curr, 0);
-}
-const arraySumWithPricePerUnit = (arraychik) => {
-  return Object.values(arraychik).reduce((accum, curr) => accum + (curr.amount * curr.price_per_unit), 0);
-}
-const emptyRow = (headers) => {
-  return Object.fromEntries(headers.map((key) => [key, ""]))
-}
+import {spend, revenue, source_proc, sources_revenue_total, package_info, money, emptyRow } from "./data/data.js"
 
 # Business Plan
 
@@ -176,9 +161,9 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 
 - https://www.researchgate.net/publication/244603417_Drying_of_Fruits_and_Vegetables_Retention_of_NutritionalFunctional_Quality
 - [Effect of Selected Drying Methods and Emerging Drying Intensification Technologies on the Quality of Dried Fruit: A Review](https://www.mdpi.com/2227-9717/9/1/132)
-- However, in comparison to other drying technologies, **freeze-drying has a high energy consumption** and prolonged processing time. However, this can be reduced by using PEF treatment. For instance, Lammerskitten et al. reported that PEF pretreatment of apple slices intensifies freeze-drying kinetics and thus reduces processing time by 57% in comparison to untreated samples.
-- [Research on Pros and Cons of PEF processing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7847884/)
-- `Blueberry fruits (Vaccinium myrtillus L.) Increasing the juice yield (+ 28%) compared to the untreated sample. The juice obtained had a significantly higher total phenolic content (+ 43%), total anthocyanin content (+ 60%) and antioxidant activity (+ 31%)`
+  - However, in comparison to other drying technologies, **freeze-drying has a high energy consumption** and prolonged processing time. However, this can be reduced by using PEF treatment. For instance, Lammerskitten et al. reported that PEF pretreatment of apple slices intensifies freeze-drying kinetics and thus reduces processing time by 57% in comparison to untreated samples.
+  - [Research on Pros and Cons of PEF processing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7847884/)
+  - `Blueberry fruits (Vaccinium myrtillus L.) Increasing the juice yield (+ 28%) compared to the untreated sample. The juice obtained had a significantly higher total phenolic content (+ 43%), total anthocyanin content (+ 60%) and antioxidant activity (+ 31%)`
 - [Dude makes a freeze drier. lots of science](https://freezedryer.rcasteel.com) - can get interesting insights on how freeze-drying actually works
 
 <details>
@@ -186,18 +171,12 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 
   | Drying Method | Advantages | Disadvantages | Price Range (USD) | Time of Operation |
   |-----------------------|-----------------------------------------------------------|--------------------------------------------------------|-------------------|------------------------|
-  | Freeze Drying | Preserves nutritional value, color, and taste | Expensive equipment, energy-intensive |
-  50,000-100,000 | 24-48 hours |
-  | Spray Drying | Fast process, scalable | High temperatures may affect nutrients, energy-intensive | 40,000-80,000 |
-  20-30 minutes |
-  | Vacuum Drying | Retains some nutritional value, lower temperatures | Slower process, expensive equipment |
-  20,000-50,000 | 12-24 hours |
-  | Air Drying | Low-cost, low energy consumption | Longer drying time, potential loss of nutrients | 5,000-10,000 | 1-5
-  days |
-  | Dehydration (Oven) | Accessible, relatively low-cost | High temperatures may affect nutrients, energy-intensive |
-  500-2,000 | 6-12 hours |
-  | Solar Drying | Low-cost, environmentally friendly | Slow, dependent on weather conditions | 1,000-3,000 | 2-10 days
-  (weather dependent) |
+  | Freeze Drying | Preserves nutritional value, color, and taste | Expensive equipment, energy-intensive | 50,000-100,000 | 24-48 hours |
+  | Spray Drying | Fast process, scalable | High temperatures may affect nutrients, energy-intensive | 40,000-80,000 | 20-30 minutes |
+  | Vacuum Drying | Retains some nutritional value, lower temperatures | Slower process, expensive equipment | 20,000-50,000 | 12-24 hours |
+  | Air Drying | Low-cost, low energy consumption | Longer drying time, potential loss of nutrients | 5,000-10,000 | 1-5 days |
+  | Dehydration (Oven) | Accessible, relatively low-cost | High temperatures may affect nutrients, energy-intensive | 500-2,000 | 6-12 hours |
+  | Solar Drying | Low-cost, environmentally friendly | Slow, dependent on weather conditions | 1,000-3,000 | 2-10 days (weather dependent) |
 
 </details>
 
@@ -251,8 +230,7 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 <details>
   <summary>Comparison of packaging methods as per GPT4</summary>
 
-  | Packaging Type | Packaging Machine | Advantages | Disadvantages | Machine Price Range (EUR) | Time of Operation |
-  Environmental Friendliness | Price per Package (EUR) |
+  | Packaging Type | Packaging Machine | Advantages | Disadvantages | Machine Price Range (EUR) | Time of Operation | Environmental Friendliness | Price per Package (EUR) |
   |---------------------|------------------------------------|---------------------------------------------------------|----------------------------------------------------|---------------------------|----------------------|----------------------------|---------------------------------------|
   | Plastic Bags | Vertical Form Fill Seal (VFFS) | Low-cost, widely available, customizable | Not biodegradable, potential leaching of chemicals | 3,500-15,000 | Fast (30-60 sec/bag) | Low | 0.01-0.03 (1,000) / 0.01-0.02 (2,000) |
   | Paper Bags | Vertical Form Fill Seal (VFFS) | Biodegradable, lower environmental impact, customizable | Less durable, less protective | 3,500-15,000 | Fast (30-60 sec/bag) | High | 0.02-0.04 (1,000) / 0.01-0.03 (2,000) |
@@ -324,15 +302,6 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 
 </details>
 
-## Sourcing conditions
-Wild berry seasons' beginning, end and yield vary in many factors. Primarily it is weather conditions.
-
-| Year type | Start of season          | End of season | Approximate number of days |
-|-----------|--------------------------|---------------|----------------------------|
-| Warm      | Mid-July to early August | Early October | 60 to 80 days              |
-| Cold      | Early August             | Mid-September | 40 to 50 days              |
-
-
 ## Space Rental and Equipment Purchase
 
 We will rent a space for our production and packaging operations. We will also purchase the necessary equipment for
@@ -345,52 +314,12 @@ All values are coming from a [single JSON data file](./data/data.json)
 
 :::
 
-export const spend = {
-  onetime: {
-    headers: ["item", "total"],
-    data: Object.entries(data.onetime).flatMap(([key, value]) => ({
-      item: key,
-      total: money(value)
-    })),
-    total: arraySum(data.onetime)
-  },
-  monthly: {
-    headers: ["item", "total"],
-    data: Object.entries(data.monthly).flatMap(([key, value]) => ({
-      item: key,
-      total: money(value)
-    })),
-    total: arraySum(data.monthly),
-    total_annual: arraySum(data.monthly) * 12
-  },
-  operation: {
-    headers: ["item", "price", "quantity", "total"],
-    data: Object.entries(data.operation).flatMap(([key, value]) => ({
-      item: key,
-      price: `${value.price_per_unit} ${currency}/${value.unit}`,
-      quantity: value.amount.toLocaleString(),
-      total: money(value.price_per_unit * value.amount)
-    })),
-    total: arraySumWithPricePerUnit(data.operation)
-  },
-  source: {
-    headers: ["item", "price", "quantity", "total"],
-    data: Object.entries(data.sources).flatMap(([key, value]) => ({
-      item: key,
-      price: `${value.price_per_unit} ${currency}/${value.unit}`,
-      quantity: value.amount.toLocaleString(),
-      total: money(value.price_per_unit * value.amount)
-    })),
-    total: arraySumWithPricePerUnit(data.sources)
-  }
-}
-
 ### Onetime spend
 
-<CheekyTable headers={spend.onetime.headers} data={[
-  ...spend.onetime.data,
-  emptyRow(spend.onetime.headers),
-  {item: "Total", total: money(spend.onetime.total)}
+<CheekyTable headers={spend.startup.headers} data={[
+  ...spend.startup.data,
+  emptyRow(spend.startup.headers),
+  {item: "Total", total: money(spend.startup.total)}
 ]}/>
 
 ### Monthly spend
@@ -420,13 +349,46 @@ export const spend = {
   {...emptyRow(spend.source.headers), item: "Total Annual", total: money(spend.source.total)}
 ]}/>
 
+## Sourcing conditions and processing time
+Wild berry seasons' beginning, end and yield vary by many factors. Primarily it is weather conditions.
+
+| Year type | Start of season          | End of season | Approximate number of days |
+|-----------|--------------------------|---------------|----------------------------|
+| Warm      | Mid-July to early August | Early October | 60 to 80 days              |
+| Cold      | Early August             | Mid-September | 40 to 50 days              |
+
+:::info
+Lets use upper cold season value for our calculations: **50days**
+<hr/>This is the number of days where we can purchase source and immediately process
+:::
+
+<CheekyTable headers={["total_source", "batch_size_kg", "batch_time_hr", "hours_to_dry", "days_to_dry"]}
+ data={[{
+   "total_source": source_proc.total_amount_in_kg,
+   "batch_size_kg": data.source_proc.drying.batch_size_kg,
+   "batch_time_hr": data.source_proc.drying.batch_time_hr,
+   "hours_to_dry": source_proc.hours_to_dry,
+   "days_to_dry": (source_proc.hours_to_dry/24).toFixed(1)
+ }]}/>
+
+:::warning
+This is the biggest issue at the moment.
+Calculating realistic source amount possible and freeze-drier capacity, to be able to process everything during season without buying overly expensive and large drier,
+and **at least break even during the first year.**
+:::
+
+<CheekyTable headers={["kw_per_hour", "total_kw", "price_per_kw", "total"]}
+ data={[{
+   "kw_per_hour": data.source_proc.drying.energy_per_hour_kw,
+   "total_kw": source_proc.hours_to_dry * data.source_proc.drying.energy_per_hour_kw,
+   "price_per_kw": data.source_proc.drying.energy_per_hour_price,
+   "total": money(source_proc.hours_to_dry * data.source_proc.drying.energy_per_hour_kw * data.source_proc.drying.energy_per_hour_price)
+ }]}/>
+
+
 ## Revenue calculation
 
 ### Source to package calculation
-export const package_info = data.source_proc.packages.map(({ size, percent }) => ({
-  size: `${size}g`,
-  percentage: `${percent * 100}%`
-}));
 
 <code>
   - From raw source, dry source is: <b>{data.source_proc.dry_percent * 100}%</b> <br/>
@@ -436,82 +398,6 @@ export const package_info = data.source_proc.packages.map(({ size, percent }) =>
 Package sizes and their percentage from the workable remaining dry source:
 <CheekyTable headers={["size", "percentage"]} data={package_info}/>
 
-export const packageHeaders = data.source_proc.packages.flatMap(({ size }) => ([
-`g${size}`,
-`g${size}_total`,
-]));
-
-export const source_proc = {
-  headers: ["source", "raw_kg", "dry_kg", "testing_kg", ...packageHeaders, "total"],
-  data: Object.entries(data.sources).map(([source, { amount }]) => {
-    const dry_kg = amount * data.source_proc.dry_percent;
-    const testing_kg = dry_kg * data.source_proc.testing_percent;
-    const final_available_amount_in_grams = getFinalSourceAmt(amount) * 1000;
-    const packageData = data.source_proc.packages.reduce((acc, { size, percent, price }) => {
-      const packageCount = final_available_amount_in_grams * percent / size;
-      const packageTotal = packageCount * price;
-      return {
-        ...acc,
-        [`g${size}`]: `${packageCount.toLocaleString()} packages`,
-        [`g${size}_total`]: money(packageTotal),
-      };
-    }, {});
-    const packageTotal = data.source_proc.packages.reduce((acc, { size }) => {
-      const key = `g${size}_total`;
-      return key in packageData ? acc + parseFloat(packageData[key].replace("$", "").replace(/,/g, "")) : acc;
-    }, 0);
-    return {
-      source,
-      raw_kg: amount.toLocaleString(),
-      dry_kg: dry_kg.toLocaleString(),
-      testing_kg: testing_kg.toLocaleString(),
-      ...packageData,
-      total: money(packageTotal),
-    };
-  })
-}
-export const sources_revenue_total = source_proc.data.reduce((acc, { source, ...rest }) => {
-  const packageTotal = data.source_proc.packages.reduce((total, { size }) => {
-  const key = `g${size}_total`;
-    return key in rest ? total + parseFloat(rest[key].replace("$", "").replace(/,/g, "")) : total;
-  }, 0);
-  return acc + packageTotal;
-}, 0);
-
-export const revenue = {
-  headers: ["year", "revenue", "cost_of_source", "gross_profit", "operating_expenses", "annual_expenses", "startup_expenses", "net_profit"],
-  data: [{
-    year: 1,
-    revenue: money(sources_revenue_total * (1 - data.revenue_proc.amazon_fee_percent)) + ` (after Amazon fee of ${money(sources_revenue_total * data.revenue_proc.amazon_fee_percent)})`,
-    cost_of_source: money(spend.source.total),
-    gross_profit: money(sources_revenue_total - spend.source.total),
-    operating_expenses: money(spend.operation.total),
-    annual_expenses: money(spend.monthly.total_annual),
-    startup_expenses: money(spend.onetime.total),
-    net_profit: money(sources_revenue_total - spend.source.total - spend.operation.total - spend.monthly.total_annual - spend.onetime.total),
-  },
-  {
-    year: 2,
-    revenue: money(sources_revenue_total*1.5 * (1 - data.revenue_proc.amazon_fee_percent)) + ` (after Amazon fee of ${money(sources_revenue_total * 1.5 * data.revenue_proc.amazon_fee_percent)})`,
-    cost_of_source: money(spend.source.total*1.5),
-    gross_profit: money(sources_revenue_total*1.5 - spend.source.total*1.5),
-    operating_expenses: money(spend.operation.total*1.5),
-    annual_expenses: money(spend.monthly.total_annual*1.5),
-    startup_expenses: money(spend.onetime.total*0),
-    net_profit: money((sources_revenue_total - spend.source.total - spend.operation.total - spend.monthly.total_annual - spend.onetime.total)*1.5)+" (+50%)",
-  },
-  {
-    year: 3,
-    revenue: money(sources_revenue_total*2 * (1 - data.revenue_proc.amazon_fee_percent)) + ` (after Amazon fee of ${money(sources_revenue_total * 2 * data.revenue_proc.amazon_fee_percent)})`,
-    cost_of_source: money(spend.source.total*2),
-    gross_profit: money(sources_revenue_total*2 - spend.source.total*2),
-    operating_expenses: money(spend.operation.total*2),
-    annual_expenses: money(spend.monthly.total_annual*2),
-    startup_expenses: money(spend.onetime.total*0),
-    net_profit: money((sources_revenue_total - spend.source.total - spend.operation.total - spend.monthly.total_annual - spend.onetime.total)*2)+" (+50%)",
-  }]
-}
-
 <CheekyTable headers={source_proc.headers} data={[
   ...source_proc.data,
   emptyRow(source_proc.headers),
@@ -520,8 +406,7 @@ export const revenue = {
 
 ### Annual financials
 <code>
-  - Amazon fees (referral + variable closing. NOT including
-  fulfillment): <b>{data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
+  - Amazon fees (referral + variable closing. NOT including fulfillment): <b>{data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
 </code>
 
 <CheekyTable headers={revenue.headers} data={revenue.data}/>
