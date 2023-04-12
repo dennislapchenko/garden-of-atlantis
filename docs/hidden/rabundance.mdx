@@ -7,7 +7,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import data from "./data/data.json";
 
-import {spend, revenue, source_proc, sources_revenue_total, package_info, money, emptyRow } from "./data/data.js"
+import {spend, revenue, source_proc, sources_revenue_total, package_info, source_proc_time_energy_cost, money, emptyRow } from "./data/data.js"
 
 # Business Plan
 
@@ -17,7 +17,7 @@ import {spend, revenue, source_proc, sources_revenue_total, package_info, money,
 Current plan:
 
 - [ ] Do more research on +/- of various drying methods
-- [ ] Decide if initially a 'pilot' option of machinary (smaller scale) should be used
+- [ ] Decide if initially a 'pilot' option of machinery (smaller scale) should be used
 - [ ] Finalize drying method and select a model
 - [ ] Decide on grinding process and model. Possibly a stone mill? (2 stone circle slabs, oldskool) Maybe this can be used for marketing.
 - [ ] Understand packaging options. Where is the balance between environmentally friendly and cost
@@ -226,6 +226,8 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 </details>
 
 ### Packaging
+- [stroebel.de](https://stroebel.de/en/bags-pouches.html?pk_campaign=01_Konfektion_Beutel_ENG__!!&pk_kwd=desiccant%20pouch&pk_source=googleAds&pk_medium=Konf_Beut_-_Allgemein_-_ENG&pk_content=652583844611&gclid=CjwKCAjwrdmhBhBBEiwA4Hx5g1ZAcRBPV_hHzbpegYTaFSOMfhL1sX9LJfYSa8_ZdKrQEZHq-WswfhoCFtwQAvD_BwE)
+  - [Mono-line recyclable](https://stroebel.de/en/bags-pouches/mono-line-recyclable.html)
 
 <details>
   <summary>Comparison of packaging methods as per GPT4</summary>
@@ -362,29 +364,14 @@ Lets use upper cold season value for our calculations: **50days**
 <hr/>This is the number of days where we can purchase source and immediately process
 :::
 
-<CheekyTable headers={["total_source", "batch_size_kg", "batch_time_hr", "hours_to_dry", "days_to_dry"]}
- data={[{
-   "total_source": source_proc.total_amount_in_kg,
-   "batch_size_kg": data.source_proc.drying.batch_size_kg,
-   "batch_time_hr": data.source_proc.drying.batch_time_hr,
-   "hours_to_dry": source_proc.hours_to_dry,
-   "days_to_dry": (source_proc.hours_to_dry/24).toFixed(1)
- }]}/>
+<CheekyTable headers={source_proc_time_energy_cost.headers}
+             data={source_proc_time_energy_cost.data} />
 
 :::warning
 This is the biggest issue at the moment.
 Calculating realistic source amount possible and freeze-drier capacity, to be able to process everything during season without buying overly expensive and large drier,
 and **at least break even during the first year.**
 :::
-
-<CheekyTable headers={["kw_per_hour", "total_kw", "price_per_kw", "total"]}
- data={[{
-   "kw_per_hour": data.source_proc.drying.energy_per_hour_kw,
-   "total_kw": source_proc.hours_to_dry * data.source_proc.drying.energy_per_hour_kw,
-   "price_per_kw": data.source_proc.drying.energy_per_hour_price,
-   "total": money(source_proc.hours_to_dry * data.source_proc.drying.energy_per_hour_kw * data.source_proc.drying.energy_per_hour_price)
- }]}/>
-
 
 ## Revenue calculation
 

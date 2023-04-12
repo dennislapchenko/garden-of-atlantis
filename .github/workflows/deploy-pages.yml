@@ -46,4 +46,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "New garden version is up! 🥷"
+          message: "New garden version is up! 🥷 https://dennislapchenko.github.io/garden-of-wiki"
