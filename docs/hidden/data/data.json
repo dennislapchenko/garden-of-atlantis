@@ -81,13 +81,18 @@
     "packages": [
       {
         "size": 100,
-        "percent": 0.9,
+        "percent": 0.8,
         "price": 22
       },
       {
         "size": 250,
         "percent": 0.1,
         "price": 49
+      },
+      {
+        "size": 500,
+        "percent": 0.1,
+        "price": 89
       }
     ]
   },
