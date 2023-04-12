@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const remarkKroki =  import('remark-kroki');
+
 const organizationName = "dennislapchenko";
 const projectName = "garden-of-wiki";
 
@@ -43,7 +45,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: "/",
           sidebarCollapsed: false,
-          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+          remarkPlugins: [remarkKroki, {alias: ['plantuml']}],
         },
         blog: false,
         theme: {
@@ -56,6 +59,8 @@ const config = {
       }),
     ],
   ],
+
+
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

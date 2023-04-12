@@ -1,15 +1,17 @@
 {
   "currency": "EUR",
   "onetime": {
+    "Tables": 300,
     "Freeze-drier": 20000,
     "Grinder": 2000,
-    "Packaer": 2000,
+    "Packager": 2000,
     "Food Permit": 500,
     "E-Shop": 500
   },
   "monthly": {
     "Space rent": 800,
-    "E-Shop hosting": 20
+    "E-Shop hosting": 20,
+    "Equipment maintenance": 100
   },
   "operation": {
     "Lab testing": {
@@ -52,15 +54,37 @@
     "Blueberry": {
       "amount": 3000,
       "unit": "kg",
-      "price_per_unit": 3
+      "price_per_unit": 2.5
     }
   },
-  "source_processing": {
+  "source_proc": {
+    "drying": {
+      "batch_size_kg": 45,
+      "batch_time_hr": 24,
+      "energy_per_hour_kw": 1.5
+    },
+    "grinder": {
+      "energy_per_hour_kw": 1
+    },
+    "packager": {
+      "energy_per_hour_kw": 1
+    },
     "dry_percent": 0.16,
     "testing_percent": 0.025,
-    "g100_packs_percent": 0.90,
-    "g100_packs_price": 22,
-    "g250_packs_percent": 0.10,
-    "g250_packs_price": 49
+    "packages":[
+      {
+        "size": 100,
+        "percent": 0.90,
+        "price": 22
+      },
+      {
+        "size": 250,
+        "percent": 0.10,
+        "price": 49
+      }
+    ]
+  },
+  "revenue_proc" : {
+    "amazon_fee_percent": 0.15
   }
 }
