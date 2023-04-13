@@ -26,11 +26,13 @@ No page is a finished post and is always work in progress. Just like us :)
   - Artificial Intelligence
     - [LLM (GPT)](./technology/ai/llm.md)
 
-## Tags
+## [Tags](tags)
 
 Tags represent at which stage each particular post is.
 Initial drafts are just a `Seed`, more content shape and structure make them a `Sprout` and up it goes.
 Final stage, `Harvested` is when the post is considered fully completed, there is nothing else to tend to. (a very unlikely stage..)
+
+Additionally some tags mark content like `Books`, `Podcasts` or `Products`
 
 ## Inspiration
 

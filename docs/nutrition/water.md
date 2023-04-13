@@ -1,6 +1,8 @@
 ---
 tags:
   - Seed
+  - Podcasts
+  - Products
 ---
 
 # Water

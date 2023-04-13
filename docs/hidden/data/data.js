@@ -131,7 +131,7 @@ export const spend = {
       .concat({
         item: "Electricity",
         price: `${data.utility_prices.energy_per_kw} ${currency}/kW`,
-        quantity: Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.total_kw), 0),
+        quantity: parseFloat(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.total_kw), 0).toFixed(2)).toLocaleString(),
         total: money(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.price.replace(/,/g, "")), 0))
       }),
     total: arraySumWithPricePerUnit(data.operation)
