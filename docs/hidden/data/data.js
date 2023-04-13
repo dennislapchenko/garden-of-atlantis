@@ -1,4 +1,4 @@
-import data from "./data-small.json";
+import data from "./data.json";
 
 export const currency = data.currency;
 export const money = (amt) => {
