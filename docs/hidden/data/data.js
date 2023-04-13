@@ -1,4 +1,4 @@
-import data from "./data.json";
+import data from "./data-small.json";
 
 export const currency = data.currency;
 export const money = (amt) => {
@@ -134,7 +134,7 @@ export const spend = {
         quantity: parseFloat(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.total_kw), 0).toFixed(2)).toLocaleString(),
         total: money(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.price.replace(/,/g, "")), 0))
       }),
-    total: arraySumWithPricePerUnit(data.operation)
+    total: arraySumWithPricePerUnit(data.operation)+Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.price.replace(/,/g, "")), 0)
   },
   source: {
     headers: ["item", "price", "quantity", "total"],

@@ -5,7 +5,7 @@ title: RAbundance Nutrition
 import CheekyTable from '@site/src/components/table.js';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import data from "./data/data.json";
+import data from "./data/data-small.json";
 
 
 import {spend, revenue, source_proc, sources_revenue_total, package_info, source_proc_time_energy_cost, money, emptyRow } from "./data/data.js"
@@ -314,7 +314,7 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 
 </details>
 
-## Space Rental and Equipment Purchase
+## Equipment Purchase, Monthly and Operational Costs
 
 We will rent a space for our production and packaging operations. We will also purchase the necessary equipment for
 freeze-drying, grinding, and packaging our sublimated berries.
@@ -361,6 +361,7 @@ All values are coming from a [single JSON data file](./data/data.json)
   {...emptyRow(spend.source.headers), item: "Total Annual", total: money(spend.source.total)}
 ]}/>
 
+
 ## Sourcing conditions and processing time
 Wild berry seasons' beginning, end and yield vary by many factors. Primarily it is weather conditions.
 
@@ -401,7 +402,7 @@ Package sizes and their percentage from the workable remaining dry source:
   {...emptyRow(source_proc.headers), source: "Total Annual", total: money(sources_revenue_total)}
 ]}/>
 
-### Annual financials
+### Annual revenue
 <code>
   - Amazon fees (referral + variable closing. NOT including fulfillment): <b>{data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
 </code>
