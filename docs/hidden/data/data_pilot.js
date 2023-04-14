@@ -1,4 +1,4 @@
-import data from "./data.json";
+import data from "./data_pilot.json";
 
 export const currency = data.currency;
 export const money = (amt) => {

@@ -87,3 +87,6 @@ Same as with the above parameters - the further the temperature is from our bloo
 - [Paul Chek's Living 4D Podcast: Dolf Zantinge](https://chekinstitute.com/blog/podcast-episodes/episode-170-dolf-zantinge-water-health-and-our-future/) - Must listen. Depth of water and life intelligence. Guest is former AI researcher and fiber-optics pioneer.
 - [The Secret of Water](https://www.amazon.co.uk/Secret-Water-Saida-Medvedeva-Rysavy/dp/B06WD3LFXV/ref=sr_1_3?adgrpid=52558833559&hvadid=259052314026&hvdev=c&hvlocint=9045061&hvlocphy=9074336&hvnetw=g&hvqmt=e&hvrand=16954003918301717336&hvtargid=kwd-493418125432&hydadcr=24405_1816066&keywords=the+secret+of+water&qid=1681038724&sr=8-3) - documentary (a lot of M.Emoto info)
 - [Hydronik Plus](https://lifeenergy-europe.eu/hydronik-plus) - affordable ionizer
+- [Leela Quantum Tech](https://leelaq.com/leela-quantum-bloc/) - Water structuring (and more) products from Emoto Masaru studies.
+- [Analemma Water Wand](https://analemma-water.com)
+- [ARK Crystals](https://arkcrystals.com/blogs/explore/how-research-created-the-ark-crystal) - Wearable, but also water structuring

@@ -1,17 +1,19 @@
 ---
 title: RAbundance Nutrition
+toc_max_heading_level: 3
+unlisted: true
 ---
 
 import CheekyTable from '@site/src/components/table.js';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import data from "./data/data.json";
+import * as data_pilot  from "./data/data_pilot.js";
 
-
-import {spend, revenue, source_proc, sources_revenue_total, package_info, source_proc_time_energy_cost, money, emptyRow } from "./data/data.js"
+import * as data from "./data/data.js"
+import {money, emptyRow } from "./data/data.js"
 
 # "RAbundance Nutrition" Business Plan
-![bb-powder](images/bb-powder-square.png)
+![bb-powder](./images/bb-powder-square.png)
 
 :::info
 Current plan:
@@ -21,10 +23,11 @@ Current plan:
 - [ ] Finalize drying method and select a model
 - [ ] Decide on grinding process and model. Possibly a stone mill? (2 stone circle slabs, oldskool) Maybe this can be used for marketing.
 - [ ] Understand packaging options. Where is the balance between environmentally friendly and cost
-- [ ] Decide what package sizes there will be. Only 100g? Maybe 500g too?
+- [ ] Decide what package sizes there will be.
 - [ ] Sketch package design
 - [ ] Understand how to calculate local and global demand
-- [ ] Narrow down possible locations where to manufacture
+- [ ] Narrow down possible locations where to process the source
+- [ ] Decide if berries can be fermented before freeze-drying. This would super-charge this product, making it probiotic.
 - [ ] ???
 - [ ] ???
 - [ ] ???
@@ -158,7 +161,7 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 - http://www.criofarma.it - sent email asking for brochure
 - https://leosmak.com - asked about 25kg and 100kg machine size prices
 - [Freezedryfood.de](https://www.freezedryfood.de/wp-content/uploads/2022/01/LIO20_FP_TechicaldataSheet_FreezeDry.pdf) - Asked about 20kg price
-- https://sublimat.lv/power.html - TO BE CONTACTED
+  - https://sublimat.lv/power.html - Asked about the prices for smaller (up to 20kg) models
 
 #### Some more options as per GPT4 (removing from here as i check them)
 
@@ -188,32 +191,6 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
   | Solar Drying | Low-cost, environmentally friendly | Slow, dependent on weather conditions | 1,000-3,000 | 2-10 days (weather dependent) |
 
 </details>
-
-#### Contacted organizations for their production insight
-
-<details>
-  <summary>Message I am sending:</summary>
-  Hello!
-
-  I hope this message finds you well. I am writing to inquire about your produce drying methods.
-  I have heard great things about your company from Paul Chek and I am eager to learn more about your expertise in
-  this area.
-  While I unfortunately cannot try your products firsthand as I reside in the EU, I am interested in starting a
-  dried powdered fruit business in Northern Europe and I am currently researching the best drying methods.
-  With so many options available, it can be difficult to determine which methods are truly effective and safe.
-  Some are advertised as "next generation," like vacuum microwave, but only few actually know that microwaves
-  aren't beneficial for living organisms.
-  I would greatly appreciate any insight you could provide on this subject, as well as a brief explanation of your
-  own drying method, if possible.
-  Thank you for your time and expertise.
-
-  Regards,
-  Dennis
-
-</details>
-
-- [PaleoValley](paleovalley.com)
-- [Organifi](organifi.com) - got generic reply with no info, only that they use their own patented no-heat technique
 
 ### Grinding
 
@@ -261,7 +238,7 @@ Companies:
 
 </details>
 
-#### Design
+### Design
 <details>
   <summary>Design description</summary>
 
@@ -322,6 +299,11 @@ Companies:
 
 </details>
 
+<details>
+<summary>Cool stable-diffusion prompts for logos</summary>
+- Soft pastel image of bright sky blue and purple blueberry, teonanacatl glyph, glagolitic glyph, leviathan cross, symmetrical die cut sticker, hieroglyph, runic etching, latvian runes, imperial symbol, inspired by Kōno Michisei, haida, infinity glyph, stylized forest berries
+</details>
+
 ## Equipment Purchase, Monthly and Operational Costs
 
 We will rent a space for our production and packaging operations. We will also purchase the necessary equipment for
@@ -329,45 +311,90 @@ freeze-drying, grinding, and packaging our sublimated berries.
 All cost breakdown is below for - startup, monthly and operational (monthly-during-berry-season).
 
 :::info
-
-All values are coming from a [single JSON data file](./data/data.json)
-
+All values are coming from json files
+  - [Large scale](./data/data.json)
+  - [Pilot scale](./data/data_pilot.json)
 :::
 
 ### Startup spend
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data.spend.startup.headers} data={[
+      ...data.spend.startup.data,
+      emptyRow(data.spend.startup.headers),
+      {item: "Total", total: money(data.spend.startup.total)}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.startup.headers} data={[
+      ...data_pilot.spend.startup.data,
+      emptyRow(data_pilot.spend.startup.headers),
+      {item: "Total", total: money(data_pilot.spend.startup.total)}
+    ]}/>
+  </TabItem>
+</Tabs>
 
-<CheekyTable headers={spend.startup.headers} data={[
-  ...spend.startup.data,
-  emptyRow(spend.startup.headers),
-  {item: "Total", total: money(spend.startup.total)}
-]}/>
 
 ### Monthly spend
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data.spend.monthly.headers} data={[
+      ...data.spend.monthly.data,
+      emptyRow(data.spend.monthly.headers),
+      {item: "Total", total: money(data.spend.monthly.total)},
+      {item: "Total Annual", total: money(data.spend.monthly.total_annual)}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.monthly.headers} data={[
+      ...data_pilot.spend.monthly.data,
+      emptyRow(data_pilot.spend.monthly.headers),
+      {item: "Total", total: money(data_pilot.spend.monthly.total)},
+      {item: "Total Annual", total: money(data_pilot.spend.monthly.total_annual)}
+    ]}/>
+  </TabItem>
+</Tabs>
 
-<CheekyTable headers={spend.monthly.headers} data={[
-  ...spend.monthly.data,
-  emptyRow(spend.monthly.headers),
-  {item: "Total", total: money(spend.monthly.total)},
-  {item: "Total Annual", total: money(spend.monthly.total_annual)}
-]}/>
 
 ### In-season spend (+-2 months)
 
 #### Operating expanses
 
-<CheekyTable headers={spend.operation.headers} data={[
-  ...spend.operation.data,
-  emptyRow(spend.source.headers),
-  {...emptyRow(spend.source.headers), item: "Total Annual", total: money(spend.operation.total)}
-]}/>
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data.spend.operation.headers} data={[
+      ...data.spend.operation.data,
+      emptyRow(data.spend.source.headers),
+      {...emptyRow(data.spend.source.headers), item: "Total Annual", total: money(data.spend.operation.total)}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.operation.headers} data={[
+      ...data_pilot.spend.operation.data,
+      emptyRow(data_pilot.spend.source.headers),
+      {...emptyRow(data_pilot.spend.source.headers), item: "Total Annual", total: money(data_pilot.spend.operation.total)}
+    ]}/>
+  </TabItem>
+</Tabs>
 
 #### Source
 
-<CheekyTable headers={spend.source.headers} data={[
-  ...spend.source.data,
-  emptyRow(spend.source.headers),
-  {...emptyRow(spend.source.headers), item: "Total Annual", total: money(spend.source.total)}
-]}/>
+<Tabs groupId="scale" queryString className="unique-tabs" >
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data.spend.source.headers} data={[
+      ...data.spend.source.data,
+      emptyRow(data.spend.source.headers),
+      {...emptyRow(data.spend.source.headers), item: "Total Annual", total: money(data.spend.source.total)}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.source.headers} data={[
+      ...data_pilot.spend.source.data,
+      emptyRow(data_pilot.spend.source.headers),
+      {...emptyRow(data_pilot.spend.source.headers), item: "Total Annual", total: money(data_pilot.spend.source.total)}
+    ]}/>
+  </TabItem>
+</Tabs>
 
 
 ## Sourcing conditions and processing time
@@ -383,8 +410,15 @@ Lets use upper cold season value for our season length expectations: **50days**
 <hr/>This is the number of days where we can purchase source and immediately process
 :::
 
-<CheekyTable headers={source_proc_time_energy_cost.headers}
-             data={source_proc_time_energy_cost.data} />
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data.source_proc_time_energy_cost.headers} data={data.source_proc_time_energy_cost.data} />
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.source_proc_time_energy_cost.headers} data={data_pilot.source_proc_time_energy_cost.data} />
+  </TabItem>
+</Tabs>
+
 
 :::warning
 This is the biggest issue at the moment.
@@ -397,25 +431,47 @@ and **at least break even during the first year.**
 ### Source to package calculation
 
 <code>
-  - From raw source, dry source is: <b>{data.source_proc.dry_percent * 100}%</b> <br/>
-  - From dry source, for testing, marketing and wastage is: <b>{data.source_proc.testing_percent * 100}%</b> <br/>
+  - From raw source, dry source is: <b>{data.orig_data.source_proc.dry_percent * 100}%</b> <br/>
+  - From dry source, for testing, marketing and wastage is: <b>{data.orig_data.source_proc.testing_percent * 100}%</b> <br/>
 </code>
 
 Package sizes and their percentage from the workable remaining dry source:
-<CheekyTable headers={["size", "percentage"]} data={package_info}/>
 
-<CheekyTable headers={source_proc.headers} data={[
-  ...source_proc.data,
-  emptyRow(source_proc.headers),
-  {...emptyRow(source_proc.headers), source: "Total Annual", total: money(sources_revenue_total)}
-]}/>
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={["size", "percentage"]} data={data.package_info}/>
+    <CheekyTable headers={data.source_proc.headers} data={[
+    ...data.source_proc.data,
+    emptyRow(data.source_proc.headers),
+    {...emptyRow(data.source_proc.headers), source: "Total Annual", total: money(data.sources_revenue_total)}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={["size", "percentage"]} data={data_pilot.package_info}/>
+    <CheekyTable headers={data_pilot.source_proc.headers} data={[
+    ...data_pilot.source_proc.data,
+    emptyRow(data_pilot.source_proc.headers),
+    {...emptyRow(data_pilot.source_proc.headers), source: "Total Annual", total: money(data_pilot.sources_revenue_total)}
+    ]}/>
+  </TabItem>
+</Tabs>
+
+
 
 ### Annual revenue
 <code>
-  - Amazon fees (referral + variable closing. NOT including fulfillment): <b>{data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
+  - Amazon fees (referral + variable closing. NOT including fulfillment): <b>{data.orig_data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
 </code>
 
-<CheekyTable headers={revenue.headers} data={revenue.data}/>
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data.revenue.headers} data={data.revenue.data}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.revenue.headers} data={data_pilot.revenue.data}/>
+  </TabItem>
+</Tabs>
+
 
 <details>
   <summary>All foreseeable and unforeseeable costs as per GPT4</summary>
@@ -612,6 +668,7 @@ import FoodSafetyPlan from "./_docs/food_safety_plan.md";
 - Approx audience:
   - Instagram: 26.9M - 31.6M
 
+## [Standards and Operating Procedures (SOP)](./sop)
 
 ## Collaborators and leads
 
@@ -662,11 +719,7 @@ In conclusion, we believe that our business has significant potential to succeed
 our hard work and dedication, we can establish a successful brand and provide high-quality, convenient, and healthy food
 products to our clients.~~ (NOT YET)
 
-<details>
-  <summary></summary>
-</details>
-
-![ai_logo_1](./images/ai_logo_1.jpeg)
+![ai_logo_1](./images/rabundance.png)
 
 ## Notes
 - [Tips to succeed in a berry business](/business/food/berry-business-tips-to-succeed)
