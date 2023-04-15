@@ -445,7 +445,7 @@ Package sizes and their percentage from the workable remaining dry source:
 
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={["size", "percentage", "price"]} data={data_large.package_info}/>
+    <CheekyTable headers={data_large.package_info.headers} data={data_large.package_info.data}/>
     <CheekyTable headers={data_large.source_proc.headers} data={[
     ...data_large.source_proc.data,
     emptyRow(data_large.source_proc.headers),
@@ -453,7 +453,7 @@ Package sizes and their percentage from the workable remaining dry source:
     ]}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
-    <CheekyTable headers={["size", "percentage", "price"]} data={data_pilot.package_info}/>
+    <CheekyTable headers={data_pilot.package_info.headers} data={data_pilot.package_info.data}/>
     <CheekyTable headers={data_pilot.source_proc.headers} data={[
     ...data_pilot.source_proc.data,
     emptyRow(data_pilot.source_proc.headers),

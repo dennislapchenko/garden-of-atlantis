@@ -187,11 +187,16 @@ export class Datka {
       source_proc_time_energy_cost: source_proc_time_energy_cost,
       spend: spend,
 
-      package_info: data.source_proc.packages.map((pack) => ({
-        size: `${pack.size}g`,
-        percentage: `${pack.percent * 100}%`,
-        price: `${pack.price}${data.currency}`
-      })),
+      package_info: {
+        headers: ["size", "percentage", "price", "price_per_kg", "profit_per_gram"],
+        data: data.source_proc.packages.map((pack) => ({
+          size: `${pack.size}g`,
+          percentage: `${pack.percent * 100}%`,
+          price: `${pack.price}${data.currency}`,
+          price_per_kg: money(1000*pack.price/pack.size),
+          profit_per_gram: (((pack.price/pack.size)-(data.sources.Blueberry.price_per_unit/(1000*data_large.source_proc.dry_percent))) / (data.sources.Blueberry.price_per_unit/(1000*data_large.source_proc.dry_percent)) * 100).toLocaleString()+"%"
+        }))
+      },
 
       revenue: {
         headers: ["year", "revenue", "cost_of_source", "gross_profit", "operating_expenses", "annual_expenses", "startup_expenses", "net_profit"],
