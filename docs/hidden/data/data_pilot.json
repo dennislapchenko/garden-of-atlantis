@@ -6,10 +6,11 @@
     "Grinder": 1000,
     "Packager": 2000,
     "Food Permit": 500,
+    "Scales": 100,
     "E-Shop": 500
   },
   "monthly": {
-    "Space rent": 800,
+    "Space rent": 200,
     "E-Shop hosting": 20,
     "Equipment maintenance": 30
   },
@@ -20,12 +21,12 @@
       "price_per_unit": 200
     },
     "Packaging": {
-      "amount": 500,
+      "amount": "Math.ceil(packageCount * 1.10)",
       "unit": "pouch",
       "price_per_unit": 0.1
     },
     "Dessicants": {
-      "amount": 500,
+      "amount": "Math.ceil(packageCount * 1.10)",
       "unit": "pack",
       "price_per_unit": 0.05
     },
@@ -33,6 +34,11 @@
       "amount": 100,
       "unit": "liter",
       "price_per_unit": 0.5
+    },
+    "Electricity": {
+      "amount": "parseFloat(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.total_kw), 0).toFixed(2))",
+      "unit": "kW",
+      "price_per_unit": 0.14
     },
     "Protective Gear": {
       "amount": 10,
@@ -59,9 +65,6 @@
       "unit": "campaign",
       "price_per_unit": 100
     }
-  },
-  "utility_prices": {
-    "energy_per_kw": 0.14
   },
   "sources": {
     "Blueberry": {

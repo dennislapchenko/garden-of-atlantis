@@ -6,6 +6,7 @@
     "Grinder": 2000,
     "Packager": 2000,
     "Food Permit": 500,
+    "Scales": 100,
     "E-Shop": 500
   },
   "monthly": {
@@ -33,6 +34,11 @@
       "amount": 100,
       "unit": "liter",
       "price_per_unit": 0.5
+    },
+    "Electricity": {
+      "amount": "parseFloat(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.total_kw), 0).toFixed(2))",
+      "unit": "kW",
+      "price_per_unit": 0.14
     },
     "Protective Gear": {
       "amount": 10,

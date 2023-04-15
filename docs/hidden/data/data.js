@@ -19,9 +19,10 @@ export const emptyRow = (headers) => {
 
 export const orig_data = data
 
-export const package_info = data.source_proc.packages.map(({size, percent}) => ({
-  size: `${size}g`,
-  percentage: `${percent * 100}%`
+export const package_info = data.source_proc.packages.map((pack) => ({
+  size: `${pack.size}g`,
+  percentage: `${pack.percent * 100}%`,
+  price: `${pack.price}${data.currency}`
 }));
 
 export const packageHeaders = data.source_proc.packages.flatMap(({size}) => ([

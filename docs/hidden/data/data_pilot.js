@@ -1,4 +1,7 @@
-import data from "./data_pilot.json";
+import rawData from "./data.json";
+const data_large = rawData;
+import rawDataPilot from "./data_pilot.json";
+const data_pilot = rawDataPilot;
 
 export const currency = data.currency;
 export const money = (amt) => {
@@ -19,9 +22,23 @@ export const emptyRow = (headers) => {
 
 export const orig_data = data
 
-export const package_info = data.source_proc.packages.map(({size, percent}) => ({
-  size: `${size}g`,
-  percentage: `${percent * 100}%`
+export class Datka {
+ parse(use) {
+   const data = eval(use)
+   return {
+      package_info: data.source_proc.packages.map((pack) => ({
+        size: `${pack.size}g`,
+        percentage: `${pack.percent * 100}%`,
+        price: `${pack.price}${data.currency}`
+      }))
+    }
+ }
+}
+
+export const package_info = data.source_proc.packages.map((pack) => ({
+  size: `${pack.size}g`,
+  percentage: `${pack.percent * 100}%`,
+  price: `${pack.price}${data.currency}`
 }));
 
 export const packageHeaders = data.source_proc.packages.flatMap(({size}) => ([
@@ -68,6 +85,15 @@ export const source_proc = {
   hours_to_packaged: source_totals.dry_kg / data.source_proc.packaging.batch_size_kg * data.source_proc.packaging.batch_time_hr,
 }
 
+export const packageCount = Object.values(source_proc.data).reduce((acc, src) => {
+  let innerAcc = 0
+  for (let key in src) {
+    let matches = src[key].match(/(\d+) packages/)
+    innerAcc += matches !== null ? parseFloat(matches[1]) : 0
+  }
+  return acc + innerAcc
+}, 0);
+
 export const source_proc_time_energy_cost = {
   headers: ["process", "total_source", "batch_size_kg", "batch_time_hr", "hours_to_complete", "days_to_complete","kw_per_hr", "total_kw", "price"],
   data: [{
@@ -77,7 +103,7 @@ export const source_proc_time_energy_cost = {
     batch_time_hr: data.source_proc.drying.batch_time_hr,
     kw_per_hr: data.source_proc.drying.energy_per_hour_kw,
     total_kw: (data.source_proc.drying.energy_per_hour_kw * source_proc.hours_to_dry).toFixed(1),
-    price: money(data.source_proc.drying.energy_per_hour_kw * source_proc.hours_to_dry * data.utility_prices.energy_per_kw),
+    price: money(data.source_proc.drying.energy_per_hour_kw * source_proc.hours_to_dry * data.operation.Electricity.price_per_unit),
     hours_to_complete: source_proc.hours_to_dry.toLocaleString(),
     days_to_complete: (source_proc.hours_to_dry / 24).toFixed(1)
   }, {
@@ -87,7 +113,7 @@ export const source_proc_time_energy_cost = {
     batch_time_hr: data.source_proc.grinding.batch_time_hr,
     kw_per_hr: data.source_proc.grinding.energy_per_hour_kw,
     total_kw: (data.source_proc.grinding.energy_per_hour_kw * source_proc.hours_to_ground).toFixed(1),
-    price: money(data.source_proc.grinding.energy_per_hour_kw * source_proc.hours_to_ground * data.utility_prices.energy_per_kw),
+    price: money(data.source_proc.grinding.energy_per_hour_kw * source_proc.hours_to_ground * data.operation.Electricity.price_per_unit),
     hours_to_complete: source_proc.hours_to_ground.toFixed(1),
     days_to_complete: (source_proc.hours_to_ground / 24).toFixed(1)
   }, {
@@ -97,12 +123,11 @@ export const source_proc_time_energy_cost = {
     batch_time_hr: data.source_proc.packaging.batch_time_hr,
     kw_per_hr: data.source_proc.packaging.energy_per_hour_kw,
     total_kw: (data.source_proc.packaging.energy_per_hour_kw * source_proc.hours_to_packaged).toFixed(1),
-    price: money(data.source_proc.packaging.energy_per_hour_kw * source_proc.hours_to_packaged * data.utility_prices.energy_per_kw),
+    price: money(data.source_proc.packaging.energy_per_hour_kw * source_proc.hours_to_packaged * data.operation.Electricity.price_per_unit),
     hours_to_complete: source_proc.hours_to_packaged.toFixed(1),
     days_to_complete: (source_proc.hours_to_packaged / 24).toFixed(1)
   }]
 }
-
 
 export const spend = {
   startup: {
@@ -127,15 +152,9 @@ export const spend = {
     data: Object.entries(data.operation).flatMap(([key, value]) => ({
       item: key,
       price: `${value.price_per_unit} ${currency}/${value.unit}`,
-      quantity: value.amount.toLocaleString(),
-      total: money(value.price_per_unit * value.amount)
-    }))
-      .concat({
-        item: "Electricity",
-        price: `${data.utility_prices.energy_per_kw} ${currency}/kW`,
-        quantity: parseFloat(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.total_kw), 0).toFixed(2)).toLocaleString(),
-        total: money(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.price.replace(/,/g, "")), 0))
-      }),
+      quantity: (() => {        try { return eval(value.amount); } catch (e) { return value.amount; }  })().toLocaleString(),
+      total: money(value.price_per_unit * (() => { try { return eval(value.amount); } catch (e) { return value.amount; }})())
+    })),
     total: arraySumWithPricePerUnit(data.operation)+Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.price.replace(/,/g, "")), 0)
   },
   source: {
@@ -149,7 +168,6 @@ export const spend = {
     total: arraySumWithPricePerUnit(data.sources)
   }
 }
-
 
 export const sources_revenue_total = source_proc.data.reduce((acc, {source, ...rest}) => {
   const packageTotal = data.source_proc.packages.reduce((total, {size}) => {

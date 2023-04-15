@@ -10,10 +10,15 @@ import TabItem from '@theme/TabItem';
 import * as data_pilot  from "./data/data_pilot.js";
 
 import * as data from "./data/data.js"
-import {money, emptyRow } from "./data/data.js"
+import {money, emptyRow} from "./data/data.js"
+import { Datka } from "./data/data_pilot.js"
+
+export const datare = new Datka().parse("data");
 
 # "RAbundance Nutrition" Business Plan
 ![bb-powder](./images/bb-powder-square.png)
+
+<span>infoz {datare.package_info[0].percentage}</span>
 
 :::info
 Current plan:
@@ -439,7 +444,7 @@ Package sizes and their percentage from the workable remaining dry source:
 
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={["size", "percentage"]} data={data.package_info}/>
+    <CheekyTable headers={["size", "percentage", "price"]} data={data.package_info}/>
     <CheekyTable headers={data.source_proc.headers} data={[
     ...data.source_proc.data,
     emptyRow(data.source_proc.headers),
@@ -447,7 +452,7 @@ Package sizes and their percentage from the workable remaining dry source:
     ]}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
-    <CheekyTable headers={["size", "percentage"]} data={data_pilot.package_info}/>
+    <CheekyTable headers={["size", "percentage", "price"]} data={data_pilot.package_info}/>
     <CheekyTable headers={data_pilot.source_proc.headers} data={[
     ...data_pilot.source_proc.data,
     emptyRow(data_pilot.source_proc.headers),
