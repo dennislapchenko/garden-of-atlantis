@@ -7,6 +7,7 @@
     "Packager": 2000,
     "Food Permit": 500,
     "Scales": 100,
+    "Fridge": 0,
     "E-Shop": 500
   },
   "monthly": {
@@ -36,7 +37,7 @@
       "price_per_unit": 0.5
     },
     "Electricity": {
-      "amount": "parseFloat(Object.values(source_proc_time_energy_cost.data).reduce((accum, val) => accum + parseFloat(val.total_kw), 0).toFixed(2))",
+      "amount": "totalElectricityByAllInstruments",
       "unit": "kW",
       "price_per_unit": 0.14
     },

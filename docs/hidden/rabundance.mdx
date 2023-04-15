@@ -1,24 +1,20 @@
 ---
 title: RAbundance Nutrition
-toc_max_heading_level: 3
+toc_max_heading_level: 4
 unlisted: true
 ---
 
 import CheekyTable from '@site/src/components/table.js';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import * as data_pilot  from "./data/data_pilot.js";
 
-import * as data from "./data/data.js"
-import {money, emptyRow} from "./data/data.js"
-import { Datka } from "./data/data_pilot.js"
+import { money, emptyRow, Datka } from "./data/data.js"
 
-export const datare = new Datka().parse("data");
+export const data_large = new Datka().parse("data_large");
+export const data_pilot = new Datka().parse("data_pilot");
 
 # "RAbundance Nutrition" Business Plan
 ![bb-powder](./images/bb-powder-square.png)
-
-<span>infoz {datare.package_info[0].percentage}</span>
 
 :::info
 Current plan:
@@ -98,13 +94,13 @@ especially among health-conscious consumers.~~ - NOT YET)
 
 ### Competition
 
-#### Latvia
+##### Latvia
 
 | Title                                                                       | Weight | Price | Rank | Ratings | Stars | Comment          |
 | --------------------------------------------------------------------------- | ------ | ----- | ---- | ------- | ----- | ---------------- |
 | [Absoluts Ed](https://cikade.lv/produkts/absoluts-ed-mellenu-pulveris-60g/) | 60 g   | €5.80 | N/A  | N/A     | N/A   | not freeze-dried |
 
-#### Amazon.DE
+##### Amazon.DE
 
 :::info
 Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) script, updated it, also added ChatGPT invocation to translate titles from german and extract weight
@@ -154,7 +150,7 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 
 </details>
 
-#### Options
+##### Options
 
 | Freeze Dryer                                                                                                                                                                                                             | Batch size  | Price                         | Energy Consumption | Batch time | Notes                                                                                                                                                                              |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|-------------------------------|--------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -168,13 +164,14 @@ Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) scri
 - [Freezedryfood.de](https://www.freezedryfood.de/wp-content/uploads/2022/01/LIO20_FP_TechicaldataSheet_FreezeDry.pdf) - Asked about 20kg price
   - https://sublimat.lv/power.html - Asked about the prices for smaller (up to 20kg) models
 
-#### Some more options as per GPT4 (removing from here as i check them)
+##### Some more options as per GPT4 (removing from here as i check them)
 
 | Machine Model        | Manufacturer          | Capacity (kg) | Price Range (EUR) | Energy Consumption (kW) | Time of Operation | Energy Cost per 1000 kg (EUR) |
 |----------------------|-----------------------|---------------|-------------------|-------------------------|-------------------|-------------------------------|
 | VirTis BenchTop Pro  | SP Scientific         | 2.5           | 8,000-14,000      | 1.5                     | 24-48 hours       | 162-243                       |
 | Freeze Dryer Epsilon | MechaTech Systems Ltd | 20            | 35,000-55,000     | 6                       | 24-48 hours       | 648-972                       |
-#### Research on drying methods
+
+##### Research on drying methods
 
 - https://www.researchgate.net/publication/244603417_Drying_of_Fruits_and_Vegetables_Retention_of_NutritionalFunctional_Quality
 - [Effect of Selected Drying Methods and Emerging Drying Intensification Technologies on the Quality of Dried Fruit: A Review](https://www.mdpi.com/2227-9717/9/1/132)
@@ -317,24 +314,24 @@ All cost breakdown is below for - startup, monthly and operational (monthly-duri
 
 :::info
 All values are coming from json files
-  - [Large scale](./data/data.json)
+  - [Large scale](./data/data_large.json)
   - [Pilot scale](./data/data_pilot.json)
 :::
 
 ### Startup spend
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={data.spend.startup.headers} data={[
-      ...data.spend.startup.data,
-      emptyRow(data.spend.startup.headers),
-      {item: "Total", total: money(data.spend.startup.total)}
+    <CheekyTable headers={data_large.spend.startup.headers} data={[
+      ...data_large.spend.startup.data,
+      emptyRow(data_large.spend.startup.headers),
+      {item: <b>Total</b>, total: <b>{money(data_large.spend.startup.total)}</b>}
     ]}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
     <CheekyTable headers={data_pilot.spend.startup.headers} data={[
       ...data_pilot.spend.startup.data,
       emptyRow(data_pilot.spend.startup.headers),
-      {item: "Total", total: money(data_pilot.spend.startup.total)}
+      {item: <b>Total</b>, total: <b>{money(data_pilot.spend.startup.total)}</b>}
     ]}/>
   </TabItem>
 </Tabs>
@@ -343,19 +340,19 @@ All values are coming from json files
 ### Monthly spend
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={data.spend.monthly.headers} data={[
-      ...data.spend.monthly.data,
-      emptyRow(data.spend.monthly.headers),
-      {item: "Total", total: money(data.spend.monthly.total)},
-      {item: "Total Annual", total: money(data.spend.monthly.total_annual)}
+    <CheekyTable headers={data_large.spend.monthly.headers} data={[
+      ...data_large.spend.monthly.data,
+      emptyRow(data_large.spend.monthly.headers),
+      {item: <b>Total</b>, total: <b>{money(data_large.spend.monthly.total)}</b>},
+      {item: <b>Total Annual</b>, total: <b>{money(data_large.spend.monthly.total_annual)}</b>}
     ]}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
     <CheekyTable headers={data_pilot.spend.monthly.headers} data={[
       ...data_pilot.spend.monthly.data,
       emptyRow(data_pilot.spend.monthly.headers),
-      {item: "Total", total: money(data_pilot.spend.monthly.total)},
-      {item: "Total Annual", total: money(data_pilot.spend.monthly.total_annual)}
+      {item: <b>Total</b>, total: <b>{money(data_pilot.spend.monthly.total)}</b>},
+      {item: <b>Total Annual</b>, total: <b>{money(data_pilot.spend.monthly.total_annual)}</b>}
     ]}/>
   </TabItem>
 </Tabs>
@@ -367,36 +364,40 @@ All values are coming from json files
 
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={data.spend.operation.headers} data={[
-      ...data.spend.operation.data,
-      emptyRow(data.spend.source.headers),
-      {...emptyRow(data.spend.source.headers), item: "Total Annual", total: money(data.spend.operation.total)}
+    <CheekyTable headers={data_large.spend.operation.headers} data={[
+      ...data_large.spend.operation.data,
+      emptyRow(data_large.spend.source.headers),
+      {...emptyRow(data_large.spend.source.headers), 
+      item: <b>Total Annual</b>, total: <b>{money(data_large.spend.operation.total)}</b>}
     ]}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
     <CheekyTable headers={data_pilot.spend.operation.headers} data={[
       ...data_pilot.spend.operation.data,
       emptyRow(data_pilot.spend.source.headers),
-      {...emptyRow(data_pilot.spend.source.headers), item: "Total Annual", total: money(data_pilot.spend.operation.total)}
+      {...emptyRow(data_pilot.spend.source.headers), 
+      item: <b>Total Annual</b>, total: <b>{money(data_pilot.spend.operation.total)}</b>}
     ]}/>
   </TabItem>
 </Tabs>
 
-#### Source
+#### Source purchase
 
 <Tabs groupId="scale" queryString className="unique-tabs" >
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={data.spend.source.headers} data={[
-      ...data.spend.source.data,
-      emptyRow(data.spend.source.headers),
-      {...emptyRow(data.spend.source.headers), item: "Total Annual", total: money(data.spend.source.total)}
+    <CheekyTable headers={data_large.spend.source.headers} data={[
+      ...data_large.spend.source.data,
+      emptyRow(data_large.spend.source.headers),
+      {...emptyRow(data_large.spend.source.headers),
+      item: <b>Total Annual</b>, total: <b>{money(data_large.spend.source.total)}</b>}
     ]}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
     <CheekyTable headers={data_pilot.spend.source.headers} data={[
       ...data_pilot.spend.source.data,
       emptyRow(data_pilot.spend.source.headers),
-      {...emptyRow(data_pilot.spend.source.headers), item: "Total Annual", total: money(data_pilot.spend.source.total)}
+      {...emptyRow(data_pilot.spend.source.headers), 
+      item: <b>Total Annual</b>, total: <b>{money(data_pilot.spend.source.total)}</b>}
     ]}/>
   </TabItem>
 </Tabs>
@@ -417,7 +418,7 @@ Lets use upper cold season value for our season length expectations: **50days**
 
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={data.source_proc_time_energy_cost.headers} data={data.source_proc_time_energy_cost.data} />
+    <CheekyTable headers={data_large.source_proc_time_energy_cost.headers} data={data_large.source_proc_time_energy_cost.data} />
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
     <CheekyTable headers={data_pilot.source_proc_time_energy_cost.headers} data={data_pilot.source_proc_time_energy_cost.data} />
@@ -436,19 +437,19 @@ and **at least break even during the first year.**
 ### Source to package calculation
 
 <code>
-  - From raw source, dry source is: <b>{data.orig_data.source_proc.dry_percent * 100}%</b> <br/>
-  - From dry source, for testing, marketing and wastage is: <b>{data.orig_data.source_proc.testing_percent * 100}%</b> <br/>
+  - From raw source, dry source is: <b>{data_large.data.source_proc.dry_percent * 100}%</b> <br/>
+  - From dry source, for testing, marketing and wastage is: <b>{data_large.data.source_proc.testing_percent * 100}%</b> <br/>
 </code>
 
 Package sizes and their percentage from the workable remaining dry source:
 
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={["size", "percentage", "price"]} data={data.package_info}/>
-    <CheekyTable headers={data.source_proc.headers} data={[
-    ...data.source_proc.data,
-    emptyRow(data.source_proc.headers),
-    {...emptyRow(data.source_proc.headers), source: "Total Annual", total: money(data.sources_revenue_total)}
+    <CheekyTable headers={["size", "percentage", "price"]} data={data_large.package_info}/>
+    <CheekyTable headers={data_large.source_proc.headers} data={[
+    ...data_large.source_proc.data,
+    emptyRow(data_large.source_proc.headers),
+    {...emptyRow(data_large.source_proc.headers), source: <b>Total Annual</b>, total: money(data_large.sources_revenue_total)}
     ]}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
@@ -456,7 +457,7 @@ Package sizes and their percentage from the workable remaining dry source:
     <CheekyTable headers={data_pilot.source_proc.headers} data={[
     ...data_pilot.source_proc.data,
     emptyRow(data_pilot.source_proc.headers),
-    {...emptyRow(data_pilot.source_proc.headers), source: "Total Annual", total: money(data_pilot.sources_revenue_total)}
+    {...emptyRow(data_pilot.source_proc.headers), source: <b>Total Annual</b>, total: money(data_pilot.sources_revenue_total)}
     ]}/>
   </TabItem>
 </Tabs>
@@ -465,12 +466,12 @@ Package sizes and their percentage from the workable remaining dry source:
 
 ### Annual revenue
 <code>
-  - Amazon fees (referral + variable closing. NOT including fulfillment): <b>{data.orig_data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
+  - Amazon fees (referral + variable closing. NOT including fulfillment): <b>{data_large.data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
 </code>
 
 <Tabs groupId="scale" queryString className="unique-tabs">
   <TabItem value="large_scale" label="Large scale">
-    <CheekyTable headers={data.revenue.headers} data={data.revenue.data}/>
+    <CheekyTable headers={data_large.revenue.headers} data={data_large.revenue.data}/>
   </TabItem>
   <TabItem value="pilot_scale" label="Pilot scale">
     <CheekyTable headers={data_pilot.revenue.headers} data={data_pilot.revenue.data}/>
@@ -504,7 +505,7 @@ Package sizes and their percentage from the workable remaining dry source:
 ## Legal
 ### Food Certification
 
-#### Certificate and permit options
+##### Certificate and permit options
 
 <Tabs>
   <TabItem value="b2b" label="B2B Wholesale">
