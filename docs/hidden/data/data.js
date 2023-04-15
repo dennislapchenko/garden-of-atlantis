@@ -4,12 +4,12 @@ import rawDataPilot from "./data_pilot.json";
 const data_large = rawDataLarge;
 const data_pilot = rawDataPilot;
 
-export const currency = data_large.currency;
+export const currency = "€";
 export const money = (amt) => {
-  return Math.round(amt).toLocaleString() + currency;
+  return currency+Math.round(amt).toLocaleString();
 }
 export const demoney = (amtFormatted) => {
-  return parseFloat(amtFormatted.replace("$", "").replace(/,/g, ""))
+  return parseFloat(amtFormatted.replace(currency, "").replace(/,/g, ""))
 }
 export const capitalize = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -55,7 +55,7 @@ export class Datka {
           const packageTotal = packageCount * price;
           return {
             ...acc,
-            [`g${size}`]: `${packageCount.toLocaleString()} packages`,
+            [`g${size}`]: `📦${packageCount.toLocaleString()}`,
             [`g${size}_total`]: money(packageTotal),
           };
         }, {});
@@ -110,7 +110,7 @@ export class Datka {
       let innerAcc = 0
       for (let key in src) {
         let pkgs = src[key]
-        innerAcc += pkgs.includes("packages") ? parseFloat(pkgs.replace(/,/g, "").replace(" packages", "")) : 0
+        innerAcc += pkgs.includes("📦") ? parseFloat(pkgs.replace(/,/g, "").replace("📦", "")) : 0
       }
       return acc + innerAcc
     }, 0)
@@ -172,7 +172,7 @@ export class Datka {
     const sources_revenue_total = source_proc.data.reduce((acc, {source, ...rest}) => {
       const packageTotal = data.source_proc.packages.reduce((total, {size}) => {
         const key = `g${size}_total`;
-        return key in rest ? total + parseFloat(rest[key].replace("$", "").replace(/,/g, "")) : total;
+        return key in rest ? total + demoney(rest[key]) : total;
       }, 0);
       return acc + packageTotal;
     }, 0)
@@ -192,7 +192,7 @@ export class Datka {
         data: data.source_proc.packages.map((pack) => ({
           size: `${pack.size}g`,
           percentage: `${pack.percent * 100}%`,
-          selling_price: `${pack.price}${data.currency}`,
+          selling_price: `${currency}${pack.price}`,
           price_per_kg: money(1000*pack.price/pack.size),
           profit_per_gram: (((pack.price/pack.size)-(data.sources.Blueberry.price_per_unit/(1000*data_large.source_proc.dry_percent))) / (data.sources.Blueberry.price_per_unit/(1000*data_large.source_proc.dry_percent)) * 100).toLocaleString()+"%"
         }))

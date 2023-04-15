@@ -1,5 +1,5 @@
 {
-  "currency": "EUR",
+  "currency": "€",
   "startup": {
     "Tables": 200,
     "Freeze-drier": 5000,
