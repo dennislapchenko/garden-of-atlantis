@@ -101,17 +101,7 @@
       {
         "size": 100,
         "percent": 1.0,
-        "price": 22
-      },
-      {
-        "size": 250,
-        "percent": 0.0,
-        "price": 49
-      },
-      {
-        "size": 500,
-        "percent": 0.0,
-        "price": 89
+        "price": 23.50
       }
     ]
   },
