@@ -6,7 +6,7 @@ tags:
 # DevOps
 
 The misnomer job title aka culture aka way of thinking.
-Currently is my main bread and butter, so here I will be able to add content, me thinks.
+Currently is my main bread and butter, bridging tech stacks and flows for developers. So here I will be able to add content, me thinks.
 
 ### What does it take to be a good devops engineer?
 

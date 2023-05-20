@@ -40,6 +40,11 @@ I am a privileged white European, my lens is without doubt distorted.
     - Throwing into the back yard
     - Throwing into the rivers... There seems to be efforts of cleaning the rivers, but I guess this will not stop until the ethical system itself evolves, individuals cannot be at fault..
 
+### Good saunas (banyas)
+
+- Canggu: Pura8Ocho
+- Uluwatu: Uluwatu Jungle Villa, Istana
+
 ## Uluwatu
 
 Out of all places Uluwatu feels the most relaxed and that summerhouse vibe,

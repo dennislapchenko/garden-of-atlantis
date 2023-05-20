@@ -1,5 +1,5 @@
 {
-  "currency": "€",
+  "currency": "\u20ac",
   "startup": {
     "Tables": 200,
     "Freeze-drier": 5000,
@@ -95,13 +95,13 @@
       "batch_time_hr": 1,
       "energy_per_hour_kw": 1
     },
-    "dry_percent": 0.16,
+    "dry_percent": 0.129,
     "testing_percent": 0.025,
     "packages": [
       {
         "size": 100,
         "percent": 1.0,
-        "price": 23.50
+        "price": 23.5
       }
     ]
   },
