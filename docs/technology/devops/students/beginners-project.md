@@ -479,6 +479,7 @@ test-flight
 - **Security**: The security group restricts access to only your IP for SSH and the VPC CIDR for HTTP, ensuring a secure setup.
 - **Testing**: Use an AWS free-tier account to test the setup. Replace placeholders (e.g., `YOUR_PUBLIC_IP`, `YOUR_AWS_ACCOUNT_ID`, AMI IDs) with actual values.
 - **Diagram**: Before implementing, draw a diagram to visualize the components (VPC, EC2, ECR, S3, GitHub Actions, Ansible) and their interactions. This helps clarify the architecture.
+- **Completion**: Not every file's contents are added here, so some thinking will have to be done :)
 
 ## Conclusion
 
