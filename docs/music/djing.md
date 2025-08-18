@@ -11,3 +11,8 @@ Here I will document my path, my experimentation, my approaches and evolution.
 ### Mix transitions
 
 ### Prep: Track exploration
+
+
+### Brilliant mixing "tutorials"
+
+- Tim Reaper live: https://www.youtube.com/watch?v=OfhVr22zgcI
