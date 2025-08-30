@@ -1,0 +1,10 @@
+version: "3"
+services:
+  docusaurus:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    command: sh -c "npm install && npm run start -- --host 0.0.0.0 --poll 1000"

@@ -1,18 +1,20 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const remarkKroki =  import('remark-kroki');
+import { themes } from "prism-react-renderer";
+import { remarkKroki } from "remark-kroki";
 
 const organizationName = "dennislapchenko";
 const projectName = "garden-of-wiki";
 
+console.log("remarkKroki is:", remarkKroki);
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Garden of Wiki',
-  tagline: 'My Digital Garden of Wikipedia: all I know, practice and aspire to.',
-  favicon: 'img/favicon.ico',
+  title: "Garden of Wiki",
+  tagline:
+    "My Digital Garden of Wikipedia: all I know, practice and aspire to.",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
   url: `https://${organizationName}.github.io`,
@@ -25,32 +27,32 @@ const config = {
   organizationName,
   projectName,
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
           sidebarCollapsed: false,
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
-          remarkPlugins: [remarkKroki, {alias: ['plantuml']}],
+          remarkPlugins: [[remarkKroki, { alias: ["plantuml"] }]],
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
           trackingID: "G-6XYWE26Y5J",
@@ -60,8 +62,6 @@ const config = {
     ],
   ],
 
-
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -70,26 +70,26 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: 'Garden of Wiki',
+        title: "Garden of Wiki",
         logo: {
-          alt: 'garden-of-wiki',
-          src: 'img/dl-logo.svg',
+          alt: "garden-of-wiki",
+          src: "img/dl-logo.svg",
         },
         items: [
           {
             href: "https://t.me/zhora_velosiped",
             position: "right",
-            className: "header-telegram-link"
+            className: "header-telegram-link",
           },
           {
             href: "https://www.instagram.com/ootekai/",
             position: "right",
-            className: "header-instagram-link"
+            className: "header-instagram-link",
           },
           {
             href: "https://soundcloud.com/ootekai",
             position: "right",
-            label: "🔊"
+            label: "🔊",
           },
           {
             href: `https://github.com/${organizationName}/${projectName}`,
@@ -97,12 +97,12 @@ const config = {
             className: "header-github-link",
             "aria-label": "GitHub repository",
           },
-        ]
+        ],
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      }
+        theme: themes.github,
+        darkTheme: themes.dracula,
+      },
       // algolia: {
       //   appId: "",
       //   apiKey: "",
