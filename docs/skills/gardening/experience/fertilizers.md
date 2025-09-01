@@ -1,3 +1,9 @@
+---
+tags:
+  - Skill
+  - Gardening
+---
+
 # Fertilizers
 
 - **Eggshells:** Eggshells are high in calcium, a nutrient that plants need for cell growth. Grind up eggshells into a fine powder and mix them into your soil to provide a calcium boost.

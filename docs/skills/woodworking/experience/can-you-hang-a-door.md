@@ -1,3 +1,9 @@
+---
+tags:
+  - Skill
+  - Woodworking
+---
+
 # Can you hang a door?
 
 ### Door hanging tips, which at the moment of pasting I am unable to comprehend

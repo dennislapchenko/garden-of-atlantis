@@ -1,3 +1,9 @@
+---
+tags:
+  - Skill
+  - Woodworking
+---
+
 # Jigs
 
 Various jigs help with tool accuracy and precision.

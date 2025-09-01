@@ -1,7 +1,7 @@
 ---
 slug: /
 sidebar_position: 1
-title: My Digital Garden Wiki
+title: Garden of Atlantis
 tags:
   - Seed
   - Sprout
@@ -10,11 +10,6 @@ tags:
   - Mature
   - Harvested
 ---
-
-# Garden of Wiki
-
-This is my [digital garden](<(https://joelhooks.com/digital-garden)>) where I am nurturing my ideas, thoughts, concepts, ignorances, cheatsheets and everything in-between.
-No page is a finished post and is always work in progress. Just like us :)
 
 ## Contents
 

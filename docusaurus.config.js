@@ -5,15 +5,14 @@ import { themes } from "prism-react-renderer";
 import { remarkKroki } from "remark-kroki";
 
 const organizationName = "dennislapchenko";
-const projectName = "garden-of-wiki";
+const projectName = "garden-of-atlantis";
 
 console.log("remarkKroki is:", remarkKroki);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Garden of Wiki",
-  tagline:
-    "My Digital Garden of Wikipedia: all I know, practice and aspire to.",
+  title: "Garden of Atlantis",
+  tagline: "Garden of Atlantis: all my skills, all my knowledge, all my quests",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -70,9 +69,9 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: "Garden of Wiki",
+        title: "Garden of Atlantis",
         logo: {
-          alt: "garden-of-wiki",
+          alt: "garden-of-atlantis",
           src: "img/dl-logo.svg",
         },
         items: [

@@ -1,6 +1,7 @@
 ---
 tags:
-  - Seed
+  - Skill
+  - Programming
 ---
 
 # Useful Snippets in Go

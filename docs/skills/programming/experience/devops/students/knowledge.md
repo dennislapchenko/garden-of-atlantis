@@ -1,3 +1,10 @@
+---
+tags:
+  - Skill
+  - Programming
+  - Devops
+---
+
 # Knowledge
 
 This guide introduces key DevOps concepts, focusing on infrastructure as code (IaC) using Terraform, networking with Virtual Private Clouds (VPCs), and storage with AWS S3. Expanding in the future as people whom I help request more :)

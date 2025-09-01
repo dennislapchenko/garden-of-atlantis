@@ -1,14 +1,20 @@
 ---
 tags:
-    - Seed
+  - Skill
+  - Gardening
 ---
 
-# Agriculture
+# Gardening
 
-Contrary to the digital garden here, I would love to have a real garden.
+::::tip[Level]
+1 / 99
+:::info[Experience]
+XXX
+::::
 
 ## Why
 
+Contrary to the digital garden here, I would love to have a real garden.
 I think it's especially important in our times. Food quality is all-time low, processed food everywhere, sugar laden foods everywhere,
 preservative, pesticide, herbicide, and fungicide laden foods everywhere.
 Best what we can eat is organic food from our own garden.

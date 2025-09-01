@@ -1,3 +1,10 @@
+---
+tags:
+  - Skill
+  - Programming
+  - Devops
+---
+
 # Beginners project
 
 ## Building a Complete Infrastructure with Terraform, AWS, and Docker

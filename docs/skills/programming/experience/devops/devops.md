@@ -1,6 +1,8 @@
 ---
 tags:
-  - Seed
+  - Skill
+  - Programming
+  - Devops
 ---
 
 # DevOps
