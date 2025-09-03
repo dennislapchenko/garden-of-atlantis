@@ -49,7 +49,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          routeBasePath: "/",
           sidebarCollapsed: true,
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
           remarkPlugins: [[remarkKroki, { alias: ["plantuml"] }]],
