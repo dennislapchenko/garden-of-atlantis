@@ -239,7 +239,10 @@ export default function Home() {
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <img
-                  src={iconPath}
+                  src={
+                    require("@site/static/img/skills-icons/" + s.title + ".png")
+                      .default
+                  }
                   width={64}
                   height={64}
                   alt={s.title}

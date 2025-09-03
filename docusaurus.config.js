@@ -35,7 +35,7 @@ const config = {
     locales: ["en"],
   },
 
-  staticDirectories: ["public", "static"],
+  // staticDirectories: ["public", "static"],
 
   plugins: [
     // path.resolve(__dirname, "plugins/skills-levels.js"),
