@@ -76,28 +76,28 @@ function getAllMdxFiles(dir) {
   return results;
 }
 
-const OpenAI = require("openai");
+// const OpenAI = require("openai");
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// const openai = new OpenAI({
+//   apiKey: process.env.OPENAI_API_KEY,
+// });
 
-async function generateSkillIcon(skillName) {
-  const dir = path.join(__dirname, "..", "static", "skills-icons");
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+// async function generateSkillIcon(skillName) {
+//   const dir = path.join(__dirname, "..", "static", "skills-icons");
+//   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-  const filePath = path.join(dir, `${skillName}.png`);
-  if (fs.existsSync(filePath)) return; // skip if already exists
+//   const filePath = path.join(dir, `${skillName}.png`);
+//   if (fs.existsSync(filePath)) return; // skip if already exists
 
-  const prompt = `Small 64x64 RPG skill icon for skill "${skillName}", pixel art, fantasy style, colorful, game icon`;
+//   const prompt = `Small 64x64 RPG skill icon for skill "${skillName}", pixel art, fantasy style, colorful, game icon`;
 
-  const response = await openai.images.generate({
-    model: "gpt-image-1",
-    prompt,
-    size: "auto",
-  });
+//   const response = await openai.images.generate({
+//     model: "gpt-image-1",
+//     prompt,
+//     size: "auto",
+//   });
 
-  const image_base64 = response.data[0].b64_json;
-  const buffer = Buffer.from(image_base64, "base64");
-  fs.writeFileSync(filePath, buffer);
-}
+//   const image_base64 = response.data[0].b64_json;
+//   const buffer = Buffer.from(image_base64, "base64");
+//   fs.writeFileSync(filePath, buffer);
+// }
