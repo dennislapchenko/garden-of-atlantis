@@ -133,3 +133,9 @@
 .epic[aria-selected="true"] {
     border-bottom-color: #a335ee;
 }
+
+img[alt="exploring"] {
+    width: 40%;
+    display: block;
+    margin: auto;
+}

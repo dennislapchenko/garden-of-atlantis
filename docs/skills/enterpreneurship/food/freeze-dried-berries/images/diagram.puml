@@ -1,0 +1,33 @@
+@startuml
+title Food Processing Business
+
+rectangle "Seasonal Wild Forest Berries" {
+    rectangle "Collection\n(partnerships with local berry collectors)" as partnership
+}
+
+rectangle "Freeze-drying and Milling" {
+    rectangle "Efficient and High-quality Process Development" as process
+}
+
+rectangle "Sales Channels" {
+    rectangle "E-commerce Website\n(Design and Launch)" as website
+    rectangle "Amazon Germany\n(Product Listing)" as amazon
+}
+
+rectangle "Marketing" {
+    rectangle "Social Media Campaign\n(Develop)" as social_media
+}
+
+rectangle "Compliance" {
+    rectangle "Food Safety and Quality Regulations\n(Ensure Compliance)" as regulations
+}
+
+rectangle "Powdered Products" {
+    partnership -down-> process
+    process -down-> website
+    process -down-> amazon
+    website -down-> social_media
+    regulations -down-> process
+}
+
+@enduml

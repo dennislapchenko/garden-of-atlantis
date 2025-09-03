@@ -7,7 +7,7 @@ tags:
 # Programming
 
 ::::tip[Level]
-42 / 99
+42/99
 :::info[Experience]
 XXX
 ::::

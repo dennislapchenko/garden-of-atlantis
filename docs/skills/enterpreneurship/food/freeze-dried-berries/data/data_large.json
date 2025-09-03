@@ -1,0 +1,119 @@
+{
+  "currency": "\u20ac",
+  "startup": {
+    "Tables": 300,
+    "Freeze-drier": 20600,
+    "Grinder": 2000,
+    "Packager": 2000,
+    "Food Permit": 500,
+    "Scales": 100,
+    "Fridge": 0,
+    "E-Shop": 500
+  },
+  "monthly": {
+    "Space rent": 800,
+    "E-Shop hosting": 20,
+    "Equipment maintenance": 100
+  },
+  "operation": {
+    "Lab testing": {
+      "amount": 4,
+      "unit": "analysis",
+      "price_per_unit": 500
+    },
+    "Packaging": {
+      "amount": "Math.ceil(packageCount * 1.10)",
+      "unit": "pouch",
+      "price_per_unit": 0.1
+    },
+    "Dessicants": {
+      "amount": "Math.ceil(packageCount * 1.10)",
+      "unit": "pack",
+      "price_per_unit": 0.05
+    },
+    "Water": {
+      "amount": 100,
+      "unit": "liter",
+      "price_per_unit": 0.5
+    },
+    "Electricity": {
+      "amount": "totalElectricityByAllInstruments",
+      "unit": "kW",
+      "price_per_unit": 0.14
+    },
+    "Protective Gear": {
+      "amount": 10,
+      "unit": "pack",
+      "price_per_unit": 10
+    },
+    "Food containers": {
+      "amount": 10,
+      "unit": "container",
+      "price_per_unit": 20
+    },
+    "Logistics": {
+      "amount": 10,
+      "unit": "delivery",
+      "price_per_unit": 100
+    },
+    "Staff": {
+      "amount": 40,
+      "unit": "part-time day",
+      "price_per_unit": 100
+    },
+    "Marketing": {
+      "amount": 5,
+      "unit": "campaign",
+      "price_per_unit": 200
+    }
+  },
+  "utility_prices": {
+    "energy_per_kw": 0.14
+  },
+  "sources": {
+    "Blueberry": {
+      "amount": 2700,
+      "unit": "kg",
+      "price_per_unit": 2
+    }
+  },
+  "source_proc": {
+    "drying": {
+      "batch_size_kg": 60,
+      "batch_time_hr": 24,
+      "energy_per_hour_kw": 3
+    },
+    "grinding": {
+      "batch_size_kg": 5,
+      "batch_time_hr": 0.3,
+      "energy_per_hour_kw": 1
+    },
+    "packaging": {
+      "batch_size_kg": 20,
+      "batch_time_hr": 1,
+      "energy_per_hour_kw": 1
+    },
+    "dry_percent": 0.129,
+    "testing_percent": 0.025,
+    "packages": [
+      {
+        "size": 100,
+        "percent": 0.8,
+        "price": 22
+      },
+      {
+        "size": 250,
+        "percent": 0.1,
+        "price": 49
+      },
+      {
+        "size": 500,
+        "percent": 0.1,
+        "price": 89
+      }
+    ]
+  },
+  "revenue_proc": {
+    "amazon_fee_percent": 0.15
+  }
+}

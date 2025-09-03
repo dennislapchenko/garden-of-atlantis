@@ -3,6 +3,7 @@
 
 import { themes } from "prism-react-renderer";
 import { remarkKroki } from "remark-kroki";
+import path from "path";
 
 const organizationName = "dennislapchenko";
 const projectName = "garden-of-atlantis";
@@ -37,15 +38,20 @@ const config = {
     locales: ["en"],
   },
 
+  plugins: [
+    // path.resolve(__dirname, "plugins/skills-levels.js"),
+    path.resolve(__dirname, "plugins/skills-levels-plugin.js"),
+  ],
+
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
-          sidebarCollapsed: false,
+          sidebarCollapsed: true,
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
           remarkPlugins: [[remarkKroki, { alias: ["plantuml"] }]],
         },
@@ -72,7 +78,7 @@ const config = {
         title: "Garden of Atlantis",
         logo: {
           alt: "garden-of-atlantis",
-          src: "img/dl-logo.svg",
+          src: "img/alchemical-sun.svg",
         },
         items: [
           {

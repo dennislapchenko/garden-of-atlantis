@@ -1,0 +1,786 @@
+---
+title: RAbundance Nutrition
+toc_max_heading_level: 4
+unlisted: true
+---
+
+import CheekyTable from '@site/src/components/table.js';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { money, emptyRow, Datka } from "./data/data.js"
+
+export const data_large = new Datka().parse("data_large");
+export const data_pilot = new Datka().parse("data_pilot");
+
+# "RAbundance Nutrition" Business Plan
+![bb-powder](./images/bb-powder-square.png)
+
+:::info
+Current plan:
+
+- [ ] Do more research on +/- of various drying methods
+- [ ] Decide if initially a 'pilot' option of machinery (smaller scale) should be used
+- [ ] Finalize drying method and select a model
+- [ ] Decide on grinding process and model. Possibly a stone mill? (2 stone circle slabs, oldskool) Maybe this can be used for marketing.
+- [ ] Understand packaging options. Where is the balance between environmentally friendly and cost
+- [ ] Decide what package sizes there will be.
+- [ ] Sketch package design
+- [ ] Understand how to calculate local and global demand
+- [ ] Narrow down possible locations where to process the source
+- [ ] Decide if berries can be fermented before freeze-drying. This would super-charge this product, making it probiotic.
+- [ ] ???
+- [ ] ???
+- [ ] ???
+- [ ] Random thought: Maybe doing a pilot run will be more beneficial? Rent equipment, buy smaller amounts of source and test print packages
+- [ ] Random thought: Maybe all kinds of secondary products can be done with powders... mixing with honey, for example.
+- [ ] Random thought: Maybe this production can be done in the same place where cafe can be? Then maybe cafe should be done first?
+:::
+
+## Summary
+
+The business idea is to create a company that collects seasonal wild forest berries (initially blueberries),
+processes them through freeze-drying and grinding, and sells the resulting powdered products.
+The target market is health-conscious consumers in Europe, with a focus on the German market.
+The sales channels will be an e-commerce website and Amazon Germany.
+The business will also emphasize environmentally-friendly packaging and practices.
+
+### Objectives
+
+1. Establish partnerships with local berry collectors.
+2. Develop an efficient and high-quality freeze-drying and grinding process.
+3. Design and launch an e-commerce website.
+4. List products on Amazon Germany.
+5. Develop a social media marketing campaign.
+6. Ensure compliance with food safety and quality regulations.
+
+### Values
+
+- Maximum health oriented
+  - Wild and/or Organic source material only
+  - Processing in ways that keeps all nutrition as much as possible
+  - Lab tested nutrition contents
+- As much as sensibly possible environmentally friendly
+  - Biodegradable or easily recycled packaging, dessicants and labels
+  - Best attempts to use as little utility (electricity, water) as possible
+- Hipster Online presence
+
+### [Flow Diagram](./images/diagram.png)
+
+### Alternative source material
+
+- [Many more forest berries](./images/forest_berry_season.png)
+  - Wild Lingonberry (брусника)
+  - Wild Raspberry ![malinka](./images/malinka.png)
+  - Wild Strawberry (земляника)
+- В ПРИНЦИПЕ - after diligent research and production process setup - any food category can be processed.
+
+## Market Research and Demand
+
+The market for wild forest berries in Latvia is significant (no proof yet), with many elderly people collecting and selling them at
+local markets. However, there is a growing demand for high-quality, convenient, and healthy food products, which our
+sublimated berry powders can meet.
+(~~We have conducted market research and found that there is a demand for such products,
+especially among health-conscious consumers.~~ - NOT YET)
+
+- Who consumes powdered berries? (age, social group)
+  - Yet to investigate
+- Where to sell?
+  - Amazon (15% selling fee, 15% more if amazon stores and fulfills the orders)
+  - Own website
+  - Local stores?
+  - Food festivals?
+  - B2B Shops
+
+### Competition
+
+##### Latvia
+
+| Title                                                                       | Weight | Price | Rank | Ratings | Stars | Comment          |
+| --------------------------------------------------------------------------- | ------ | ----- | ---- | ------- | ----- | ---------------- |
+| [Absoluts Ed](https://cikade.lv/produkts/absoluts-ed-mellenu-pulveris-60g/) | 60 g   | €5.80 | N/A  | N/A     | N/A   | not freeze-dried |
+
+##### Amazon.DE
+
+:::info
+Used a [python amazon scraper](https://github.com/Moffi-bit/Amazon-Scraper) script, updated it, also added ChatGPT invocation to translate titles from german and extract weight
+:::
+
+| Title                              | Weight | Price  | Rank | Ratings | Stars |
+|------------------------------------|--------|--------|------|---------|-------|
+| LOOV Bio Wild Blueberry Powder     | 100g   | €17.9  | GOOD | 1347    | 4.6/5 |
+| LOOV Wild Blueberry Powder         | 171g   | €31.9  | GOOD | 1004    | 4.7/5 |
+| Wild Blueberry Powder              | 90g    | €17.9  | GOOD | 922     | 4.5/5 |
+| myfruits Wild Blueberry Powder     | 200g   | €19.9  | GOOD | 371     | 4.4/5 |
+| Bio Wild Blueberry Powder          | 250g   | €25.9  | GOOD | 210     | 4.4/5 |
+| Wild Blueberry Powder              | 250g   | €25.9  | GOOD | 210     | 4.4/5 |
+| Organic Wild Blueberry Powder      | 150g   | €17.9  | GOOD | 97      | 4.3/5 |
+| Wild Blueberries Organic Powder    | 200g   | €17.9  | GOOD | 92      | 4.2/5 |
+| Blueberry Powder                   | 50g    | €10.47 | GOOD | 22      | 4.7/5 |
+| Fitness Health Blueberry Powder    | 100g   | €21.76 | N/A  | NA      | NA    |
+| Kopp Vital Wild Blueberry Capsules | 54g    | €79.99 | N/A  | NA      | NA    |
+
+## Technology
+
+### Freeze drying
+
+> Freezing stage -> primary drying stage -> secondary drying stage
+
+<details>
+  <summary>All freeze-drying terminology</summary>
+
+  | Term | Synonyms | Description |
+  |------------------------------|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | Freeze-drying | Lyophilization, Cryodesiccation | A dehydration process that involves freezing a substance and then removing the ice by sublimation in a vacuum. |
+  | Sublimation | | The process where a solid (ice) changes directly into a vapor without going through a liquid phase. |
+  | Primary drying | Sublimation phase | The first stage of the freeze-drying process where the majority of the ice is removed through sublimation. |
+  | Secondary drying | Desorption phase | The second stage of the freeze-drying process where residual water is removed from the product to achieve the desired moisture content. |
+  | Freezing | | The process of cooling the substance to below its freezing point, forming ice crystals. |
+  | Annealing | | A controlled heating step during the freezing process that helps create larger ice crystals, which can speed up the sublimation process. |
+  | Eutectic temperature | | The temperature at which a mixture of substances (e.g., solutes and water) freezes as a whole. |
+  | Collapse temperature | Tc | The temperature at which the structure of the freeze-dried product begins to break down or lose its shape. |
+  | Glass transition temperature | Tg | The temperature at which an amorphous solid (such as a freeze-dried product) transitions from a glassy, brittle state to a rubbery, viscous state. |
+  | Vacuum | | A low-pressure environment created in the freeze-drying chamber to facilitate sublimation. |
+  | Condenser | Cold trap | A part of the freeze-drying system that collects the vaporized ice, preventing it from contaminating the vacuum pump. |
+  | Pirani gauge | | A device used to measure vacuum pressure during the freeze-drying process. |
+  | Manifold freeze-drying | | A type of freeze-drying where samples are placed on a manifold connected to the vacuum system, typically used for small-scale or laboratory applications. |
+  | Tray freeze-drying | Shelf freeze-drying | A type of freeze-drying where samples are placed on shelves in a chamber, allowing for more precise temperature control and larger-scale production. |
+  | Bulk freeze-drying | | A method where the product is freeze-dried in bulk form (e.g., in trays), as opposed to individually packaged items. |
+  | Stoppering | | The process of sealing a vial or container containing the freeze-dried product to maintain its stability and quality. |
+
+</details>
+
+##### Options
+
+| Freeze Dryer                                                                                                                                                                                                             | Batch size  | Price                         | Energy Consumption | Batch time | Notes                                                                                                                                                                              |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|-------------------------------|--------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Wave](https://wave.cc/product/wave-fd440-c/)                                                                                                                                                                            | 60kg        | 35,600EUR                     | 3kW/h              |            |                                                                                                                                                                                    |
+| [Zirbus](https://www.zirbus.com/freeze-dryer/foodfreezedryer/)                                                                                                                                                           | 45/75/100KG | Requested! awaiting response. | ? kW/h             |            |                                                                                                                                                                                    |
+| [FrostX 30](https://lifeenergy-europe.eu/freeze-dryer-frostx-30)                                                                                                                                                         | 30kg        | 37,440EUR                     | ? kW/h             |            | During blueberry season only ~1,500kg will be possible to process. This would leave at -18,000EUR net profit during Year 1, unless other sources are also processed out of season. |
+| [Harvest Right XL](https://harvestright.com/product/home-freeze-dryer/?attribute_pa_attribute-size=attribute-size-xlarge&attribute_pa_attribute-color=attribute-color-black&attribute_pa_attribute-pump=xl-premier-pump) | 15kg (x4 = 60kg)        | 4,400EUR (x4 = 17,600EUR)                     | ? kW/h             |            | Buying multiple can be cheaper than others. But possibly no delivery to Europe. Sent email |
+
+- http://www.criofarma.it - sent email asking for brochure
+- https://leosmak.com - asked about 25kg and 100kg machine size prices
+- [Freezedryfood.de](https://www.freezedryfood.de/wp-content/uploads/2022/01/LIO20_FP_TechicaldataSheet_FreezeDry.pdf) - Asked about 20kg price
+  - https://sublimat.lv/power.html - Asked about the prices for smaller (up to 20kg) models
+
+##### Some more options as per GPT4 (removing from here as i check them)
+
+| Machine Model        | Manufacturer          | Capacity (kg) | Price Range (EUR) | Energy Consumption (kW) | Time of Operation | Energy Cost per 1000 kg (EUR) |
+|----------------------|-----------------------|---------------|-------------------|-------------------------|-------------------|-------------------------------|
+| VirTis BenchTop Pro  | SP Scientific         | 2.5           | 8,000-14,000      | 1.5                     | 24-48 hours       | 162-243                       |
+| Freeze Dryer Epsilon | MechaTech Systems Ltd | 20            | 35,000-55,000     | 6                       | 24-48 hours       | 648-972                       |
+
+##### Research on drying methods
+
+- https://www.researchgate.net/publication/244603417_Drying_of_Fruits_and_Vegetables_Retention_of_NutritionalFunctional_Quality
+- [Effect of Selected Drying Methods and Emerging Drying Intensification Technologies on the Quality of Dried Fruit: A Review](https://www.mdpi.com/2227-9717/9/1/132)
+  - However, in comparison to other drying technologies, **freeze-drying has a high energy consumption** and prolonged processing time. However, this can be reduced by using PEF treatment. For instance, Lammerskitten et al. reported that PEF pretreatment of apple slices intensifies freeze-drying kinetics and thus reduces processing time by 57% in comparison to untreated samples.
+  - [Research on Pros and Cons of PEF processing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7847884/)
+  - `Blueberry fruits (Vaccinium myrtillus L.) Increasing the juice yield (+ 28%) compared to the untreated sample. The juice obtained had a significantly higher total phenolic content (+ 43%), total anthocyanin content (+ 60%) and antioxidant activity (+ 31%)`
+- [Dude makes a freeze drier. lots of science](https://freezedryer.rcasteel.com) - can get interesting insights on how freeze-drying actually works
+
+<details>
+  <summary>Comparison of drying methods as per GPT4</summary>
+
+  | Drying Method | Advantages | Disadvantages | Price Range (USD) | Time of Operation |
+  |-----------------------|-----------------------------------------------------------|--------------------------------------------------------|-------------------|------------------------|
+  | Freeze Drying | Preserves nutritional value, color, and taste | Expensive equipment, energy-intensive | 50,000-100,000 | 24-48 hours |
+  | Spray Drying | Fast process, scalable | High temperatures may affect nutrients, energy-intensive | 40,000-80,000 | 20-30 minutes |
+  | Vacuum Drying | Retains some nutritional value, lower temperatures | Slower process, expensive equipment | 20,000-50,000 | 12-24 hours |
+  | Air Drying | Low-cost, low energy consumption | Longer drying time, potential loss of nutrients | 5,000-10,000 | 1-5 days |
+  | Dehydration (Oven) | Accessible, relatively low-cost | High temperatures may affect nutrients, energy-intensive | 500-2,000 | 6-12 hours |
+  | Solar Drying | Low-cost, environmentally friendly | Slow, dependent on weather conditions | 1,000-3,000 | 2-10 days (weather dependent) |
+
+</details>
+
+### Grinding
+
+Companies:
+
+- OXO
+- Talsa
+- Fama
+- Risco
+- Tre Spade
+
+<details>
+  <summary>Comparison of grinding methods as per GPT4</summary>
+
+  | Milling Method | Advantages | Disadvantages | Price Range (EUR) | Time of Operation | Heat Generation |
+  |----------------------|-----------------------------------------------------------|--------------------------------------------------------|-------------------|------------------------|----------------|
+  | Stone Mill | Traditional, low heat generation, preserves nutrients | Slow, manual labor, less consistent particle size | 500-2,000 | Slow (hours) | Low |
+  | Hammer Mill | Fast, versatile, adjustable particle size | High heat generation, noisy, potential nutrient loss | 1,000-5,000 | Fast (minutes) | High |
+  | Ball Mill | Uniform particle size, low heat generation | Slow, high energy consumption, large equipment | 5,000-25,000 | Slow (hours) | Low |
+  | Pin Mill | Fast, uniform particle size, low heat generation | Expensive equipment, potential clogging | 5,000-20,000
+  | Fast (minutes) | Low |
+  | Jet Mill | No heat generation, ultrafine particle size | Expensive equipment, high energy consumption | 25,000-100,000 | Fast (minutes) | None |
+  | Roller Mill | Scalable, low heat generation, consistent particle size | Expensive equipment, high energy consumption
+  | 10,000-50,000 | Medium (30-60 minutes) | Low |
+  | Mortar and Pestle | Traditional, low-cost, no heat generation | Slow, manual labor, less consistent particle size | 20-200 | Slow (hours) | None |
+  | Cryogenic Mill | Preserves nutrients, no heat generation, ultrafine size | Expensive equipment, requires liquid nitrogen | 15,000-80,000 | Fast (minutes) | None |
+
+  Selection of equipment: Choose a suitable mill for grinding your freeze-dried berries. Some options to consider include:
+  a. Hammer Mill: These mills use hammers rotating at high speeds to pulverize the material. They are suitable for grinding a wide range of materials, including berries, and can produce a fine powder. However, they can generate heat, which might affect the quality of your freeze-dried berries.
+  b. Pin Mill: Pin mills utilize two counter-rotating disks with pins to grind materials into fine particles. They provide better temperature control and are more gentle on the product, making them a good option for grinding freeze-dried berries.
+  c. Jet Mill: Jet mills use compressed air or gas to create a high-velocity jet that grinds particles through impact and attrition. These mills produce ultrafine powders without generating heat, making them an excellent option for temperature-sensitive products like freeze-dried berries.
+  Cleaning and preparation: Before grinding, clean the equipment thoroughly to remove any residue from previous batches. Check the freeze-dried berries for any impurities or foreign objects, and remove them as needed.
+  Feeding: Load the freeze-dried berries into the mill's feed hopper, ensuring that they are fed at a consistent rate to prevent overloading or underloading. This helps maintain consistent grinding and avoids excessive heat generation.
+  Grinding: Adjust the mill settings to achieve the desired particle size for your powdered product. It's important to maintain a consistent particle size for a high-quality end product. You may need to run tests and make adjustments to find the optimal settings for your specific mill and berries.
+  Monitoring: Regularly inspect the grinding process to ensure that the equipment is functioning properly and that the berries are being ground into a fine powder. Check for any signs of overheating, clogging, or uneven grinding.
+  Product collection: Collect the powdered product in a suitable container, taking care to minimize exposure to air and moisture, as this can affect the quality of the powder.
+  Cleaning: After each batch, clean the mill and surrounding equipment to remove any residue or build-up. Pay special attention to areas where the freeze-dried berry powder might stick, such as the sides of the grinder, and use appropriate cleaning tools to remove residue gently.
+  Quality control: Perform quality control checks on the final product to ensure consistency in particle size, color, and taste. Make any necessary adjustments to the grinding process to maintain high-quality standards.
+  Choosing the right mill for your needs will depend on factors such as your budget, production capacity, and desired particle size. Jet mills are the most advanced option and provide excellent temperature control, but they can be more expensive than hammer or pin mills. Research different manufacturers and models to find the best fit for your specific requirements.
+
+</details>
+
+### Packaging
+- [stroebel.de](https://stroebel.de/en/bags-pouches.html?pk_campaign=01_Konfektion_Beutel_ENG__!!&pk_kwd=desiccant%20pouch&pk_source=googleAds&pk_medium=Konf_Beut_-_Allgemein_-_ENG&pk_content=652583844611&gclid=CjwKCAjwrdmhBhBBEiwA4Hx5g1ZAcRBPV_hHzbpegYTaFSOMfhL1sX9LJfYSa8_ZdKrQEZHq-WswfhoCFtwQAvD_BwE)
+  - [Mono-line recyclable](https://stroebel.de/en/bags-pouches/mono-line-recyclable.html)
+
+Machinery:
+- [VikingMasek](https://vikingmasek.com/packaging-machine-resources/packaging-machine-blog/machines-equipment/first-time-buyer-articles)
+-
+
+<details>
+  <summary>Comparison of packaging methods as per GPT4</summary>
+
+  | Packaging Type | Packaging Machine | Advantages | Disadvantages | Machine Price Range (EUR) | Time of Operation | Environmental Friendliness | Price per Package (EUR) |
+  |---------------------|------------------------------------|---------------------------------------------------------|----------------------------------------------------|---------------------------|----------------------|----------------------------|---------------------------------------|
+  | Plastic Bags | Vertical Form Fill Seal (VFFS) | Low-cost, widely available, customizable | Not biodegradable, potential leaching of chemicals | 3,500-15,000 | Fast (30-60 sec/bag) | Low | 0.01-0.03 (1,000) / 0.01-0.02 (2,000) |
+  | Paper Bags | Vertical Form Fill Seal (VFFS) | Biodegradable, lower environmental impact, customizable | Less durable, less protective | 3,500-15,000 | Fast (30-60 sec/bag) | High | 0.02-0.04 (1,000) / 0.01-0.03 (2,000) |
+  | Stand-up Pouches | Stand-up Pouch Filling Machine | Convenient, resealable, customizable | Not easily biodegradable, plastic content | 7,000-35,000 | Medium (1-2 min/bag) | Medium | 0.03-0.07 (1,000) / 0.02-0.06 (2,000) |
+  | Compostable Pouches | Stand-up Pouch Filling Machine | Biodegradable, lower environmental impact, customizable | Less durable, higher cost | 7,000-35,000 | Medium (1-2 min/bag) | High | 0.05-0.09 (1,000) / 0.04-0.08 (2,000) |
+  | Glass Jars | Rotary Filling and Capping Machine | Reusable, no leaching of chemicals, premium appearance | Heavy, fragile, higher cost | 15,000-70,000 | Slow (2-5 min/jar) | Medium | 0.25-0.40 (1,000) / 0.20-0.35 (2,000) |
+  | Metal Tins | Rotary Filling and Capping Machine | Reusable, durable, premium appearance | Higher cost, potential for corrosion | 15,000-70,000 | Slow (2-5 min/tin) | Medium | 0.20-0.35 (1,000) / 0.15-0.30 (2,000) |
+
+  Choosing packaging materials: Opt for environmentally friendly packaging materials, such as biodegradable or recyclable options. Some popular choices include:
+  a. Kraft paper pouches: Made from natural, unbleached kraft paper, these pouches are biodegradable and recyclable. They often come with a PLA (polylactic acid) lining, which provides a moisture barrier to protect the powdered berries.
+  b. PLA pouches: These pouches are made entirely from plant-based PLA material, which is compostable and derived from renewable resources like cornstarch.
+  c. Recyclable plastic pouches: Some plastic pouches are made from recyclable materials, such as PET or LDPE. While not biodegradable, they can be recycled and are lightweight, making them a more sustainable option than conventional plastics.
+  Label design and printing: Design your product labels with clear information about the product, its benefits, and your brand. Emphasize the environmentally friendly packaging and sustainable practices. Print the labels using eco-friendly inks, such as soy-based or water-based inks, and adhere them to the packaging material. Alternatively, you can choose direct package printing or digital printing methods to reduce label waste.
+  Filling and sealing: Once the packaging materials and labels are ready, follow these steps to fill and seal the packages:
+  a. Set up a filling station: Configure an automated filling machine or use a manual process, depending on your production scale and budget. Automated filling machines typically use volumetric or weight-based filling systems to dispense precise amounts of powder into the packages.
+  b. Load the powdered berries: Transfer the powdered berries from their collection container to the filling machine's hopper, ensuring that the powder remains free from contaminants and moisture.
+  c. Fill the packages: Adjust the filling machine settings to dispense the desired amount of powder (100g or 250g) into each package. The machine will fill the packages, either by weight or volume, with the precise amount of powdered berries.
+  d. Seal the packages: After the packages are filled, they need to be sealed to protect the product from air, moisture, and contamination. Automated packaging machines often include a sealing mechanism, such as heat sealing or impulse sealing, which closes the package after filling. Make sure the sealing process creates an airtight, secure closure.
+  Quality control and inspection: Perform quality control checks on the filled and sealed packages, looking for any defects, such as improper sealing or incorrect filling weights. Address any issues and make adjustments to the filling and sealing processes as needed.
+  Packing and storage: Pack the sealed pouches into secondary packaging, such as recyclable cardboard boxes, for storage and shipping. Store the packaged products in a cool, dry place, away from direct sunlight or heat sources.
+
+  Machinery:
+
+  Vertical Form Fill Seal (VFFS) Machines: VFFS machines are commonly used for filling and sealing pouches. They form the pouch, fill it with the product, and then seal it, all in a vertical orientation. These machines are suitable for a variety of packaging materials, including kraft paper pouches with PLA lining.
+  Some VFFS machine manufacturers include:
+  Bosch Packaging Technology (www.boschpackaging.com)
+  Matrix Packaging Machinery (www.matrixpm.com)
+  Viking Masek Global Packaging Technologies (www.vikingmasek.com)
+  Horizontal Form Fill Seal (HFFS) Machines: HFFS machines operate in a horizontal orientation and are also suitable for filling and sealing pouches made from various materials. They form the pouch, fill it with the product, and then seal it in a continuous process.
+  Some HFFS machine manufacturers include:
+  Ilapak (www.ilapak.com)
+  Mespack (www.mespack.com)
+  ROVEMA (www.rovema.com)
+  Pre-made Pouch Filling and Sealing Machines: These machines are designed for use with pre-made pouches, including kraft paper pouches with PLA lining. They can fill and seal pouches of various sizes and configurations, making them a versatile option.
+  Some manufacturers of pre-made pouch filling and sealing machines include:
+  All-Fill Inc. (www.all-fill.com)
+  Viking Masek Global Packaging Technologies (www.vikingmasek.com)
+  WeighPack Systems Inc. (www.weighpack.com)
+  To find the best machine for your specific needs, research the different manufacturers, and compare their offerings based on factors like production capacity, versatility, ease of use, and cost. Request quotes and, if possible, arrange for a demonstration to ensure that the machine meets your requirements and can handle kraft paper pouches with PLA lining effectively.
+
+</details>
+
+### Design
+<details>
+  <summary>Design description</summary>
+
+  1. **Background**: Use a subtle, light-colored seed of life pattern as the background, covering the entire A5 label
+  area.
+  2. **Forest Imagery**: Add an abstract or stylized illustration of a forest at the top or bottom of the label, using
+  shades of green for a vibrant appearance.
+  3. **Blueberry Powder Smudge**: Incorporate a smudge or splash of blueberry powder on one side of the label, using a
+  deep blue-purple color to represent the powder.
+  4. **Company Name**: Place the company name "RAbundance Nutrition" at the top or center of the label, using a modern
+  and stylish font. Possibly interweave the name with an orange circle, representing sun (RA).
+  5. **Product Title**: Add the product title, "Wild Organic Blueberry Powder," below the company name, using a slightly
+  smaller font size.
+  6. **Weight**: Indicate the weight of the product (e.g., "100g") below or beside the product title, using a smaller
+  font size.
+  7. **Benefits**: List the benefits of the product (e.g., "Rich in Antioxidants," "High in Vitamin C," "Supports Immune
+  System") in bullet points or short phrases, placed below the weight or beside the blueberry powder smudge.
+  8. **Drying Method**: Mention the drying method used (e.g., "Freeze-Dried") near the benefits section or near the
+  blueberry powder smudge.
+  9. **Catchy Slogan**: Add a catchy slogan or tagline (e.g., "Nature's Bounty, Unleashed") at the bottom of the label
+  or near the forest illustration, using a complementary font style.
+
+  **AI prompt to attempt logo generation:**
+  Design a supplement pouch label.
+
+  Background: Use a subtle, light-colored 'flower of life' pattern as the background.
+  Forest Imagery: Add an abstract or stylized illustration of a forest at the top or bottom of the label, using shades of green for a vibrant appearance.
+  Blueberry Smudge: Incorporate a smudge or splash of blueberry or blueberry powder, using a deep blue-purple color to represent it.
+  Add Orange stylized sun.
+
+</details>
+
+<details>
+  <summary>How to make this design stand out</summary>
+
+  1. Use **calming colors**: Choose a color palette that evokes feelings of calm and relaxation, while still being
+  vibrant. This can make consumers feel more connected to the product and its natural origins.
+  2. Add **certification logos**: If your product is certified organic, vegan, gluten-free, or has other notable
+  certifications, include the corresponding logos on the label. This can help build trust and credibility with
+  consumers.
+  3. Include a **short, compelling story**: Share a brief story about the origin of the berries, the company's mission,
+  or your commitment to sustainability. This can create an emotional connection and demonstrate your brand's
+  authenticity and transparency.
+  4. Highlight **key benefits**: Emphasize the most desirable benefits of the product, such as the health benefits,
+  taste, and quality. Use bold or highlighted text to draw attention to these features.
+  5. Use **high-quality images**: Incorporate high-quality, realistic images of blueberries and blueberry powder to
+  showcase the product's appearance and entice consumers.
+  6. Add **testimonials or reviews**: If possible, include a few short customer testimonials or positive reviews on the
+  label. This can help build social proof and trust in the product.
+  7. Emphasize **sustainability and eco-friendliness**: Highlight any environmentally friendly practices used in the
+  production or packaging of the product. This can appeal to eco-conscious consumers and demonstrate your brand's
+  commitment to sustainability.
+  8. Use clear and **easy-to-read fonts**: Ensure all text on the label is legible and easy to read. Consumers
+  appreciate clear communication and straightforward information about the product.
+  9. Add a **QR code**: Include a QR code that directs consumers to your website or a landing page with more information
+  about the product, company, and its values. This can help build trust by providing easy access to additional
+  information.
+
+</details>
+
+<details>
+<summary>Cool stable-diffusion prompts for logos</summary>
+- Soft pastel image of bright sky blue and purple blueberry, teonanacatl glyph, glagolitic glyph, leviathan cross, symmetrical die cut sticker, hieroglyph, runic etching, latvian runes, imperial symbol, inspired by Kōno Michisei, haida, infinity glyph, stylized forest berries
+</details>
+
+## Equipment Purchase, Monthly and Operational Costs
+
+We will rent a space for our production and packaging operations. We will also purchase the necessary equipment for
+freeze-drying, grinding, and packaging our sublimated berries.
+All cost breakdown is below for - startup, monthly and operational (monthly-during-berry-season).
+
+:::info
+All values are coming from json files
+  - [Large scale](./data/data_large.json)
+  - [Pilot scale](./data/data_pilot.json)
+:::
+
+### Startup spend
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data_large.spend.startup.headers} data={[
+      ...data_large.spend.startup.data,
+      emptyRow(data_large.spend.startup.headers),
+      {item: <b>Total</b>, total: <b>{money(data_large.spend.startup.total)}</b>}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.startup.headers} data={[
+      ...data_pilot.spend.startup.data,
+      emptyRow(data_pilot.spend.startup.headers),
+      {item: <b>Total</b>, total: <b>{money(data_pilot.spend.startup.total)}</b>}
+    ]}/>
+  </TabItem>
+</Tabs>
+
+
+### Monthly spend
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data_large.spend.monthly.headers} data={[
+      ...data_large.spend.monthly.data,
+      emptyRow(data_large.spend.monthly.headers),
+      {item: <b>Total</b>, total: <b>{money(data_large.spend.monthly.total)}</b>},
+      {item: <b>Total Annual</b>, total: <b>{money(data_large.spend.monthly.total_annual)}</b>}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.monthly.headers} data={[
+      ...data_pilot.spend.monthly.data,
+      emptyRow(data_pilot.spend.monthly.headers),
+      {item: <b>Total</b>, total: <b>{money(data_pilot.spend.monthly.total)}</b>},
+      {item: <b>Total Annual</b>, total: <b>{money(data_pilot.spend.monthly.total_annual)}</b>}
+    ]}/>
+  </TabItem>
+</Tabs>
+
+
+### In-season spend (+-2 months)
+
+#### Operating expanses
+
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data_large.spend.operation.headers} data={[
+      ...data_large.spend.operation.data,
+      emptyRow(data_large.spend.source.headers),
+      {...emptyRow(data_large.spend.source.headers),
+      item: <b>Total Annual</b>, total: <b>{money(data_large.spend.operation.total)}</b>}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.operation.headers} data={[
+      ...data_pilot.spend.operation.data,
+      emptyRow(data_pilot.spend.source.headers),
+      {...emptyRow(data_pilot.spend.source.headers),
+      item: <b>Total Annual</b>, total: <b>{money(data_pilot.spend.operation.total)}</b>}
+    ]}/>
+  </TabItem>
+</Tabs>
+
+#### Source purchase
+
+<Tabs groupId="scale" queryString className="unique-tabs" >
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data_large.spend.source.headers} data={[
+      ...data_large.spend.source.data,
+      emptyRow(data_large.spend.source.headers),
+      {...emptyRow(data_large.spend.source.headers),
+      item: <b>Total Annual</b>, total: <b>{money(data_large.spend.source.total)}</b>}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.spend.source.headers} data={[
+      ...data_pilot.spend.source.data,
+      emptyRow(data_pilot.spend.source.headers),
+      {...emptyRow(data_pilot.spend.source.headers),
+      item: <b>Total Annual</b>, total: <b>{money(data_pilot.spend.source.total)}</b>}
+    ]}/>
+  </TabItem>
+</Tabs>
+
+
+## Sourcing conditions and processing time
+Wild berry seasons' beginning, end and yield vary by many factors. Primarily it is weather conditions.
+
+| Year type | Start of season          | End of season | Approximate number of days |
+|-----------|--------------------------|---------------|----------------------------|
+| Warm      | Mid-July to early August | Early October | 60 to 80 days              |
+| Cold      | Early August             | Mid-September | 40 to 50 days              |
+
+:::info
+Lets use upper cold season value for our season length expectations: **50days**
+<hr/>This is the number of days where we can purchase source and immediately process
+:::
+
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data_large.source_proc_time_energy_cost.headers} data={data_large.source_proc_time_energy_cost.data} />
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.source_proc_time_energy_cost.headers} data={data_pilot.source_proc_time_energy_cost.data} />
+  </TabItem>
+</Tabs>
+
+
+:::warning
+This is the biggest issue at the moment.
+Calculating realistic source amount possible and freeze-drier capacity, to be able to process everything during season without buying overly expensive and large drier,
+and **at least break even during the first year.**
+:::
+
+## Revenue calculation
+
+### Source to package calculation
+
+<code>
+  - From raw source, dry source is: <b>{data_large.data.source_proc.dry_percent * 100}%</b> <br/>
+  - From dry source, for testing, marketing and wastage is: <b>{data_large.data.source_proc.testing_percent * 100}%</b> <br/>
+</code>
+
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    Package sizes and their percentage from the workable remaining dry source:
+    <CheekyTable headers={data_large.package_info.headers} data={data_large.package_info.data}/>
+    <CheekyTable headers={data_large.source_proc.headers} data={[
+    ...data_large.source_proc.data,
+    emptyRow(data_large.source_proc.headers),
+    {...emptyRow(data_large.source_proc.headers), source: <b>Total Annual</b>, total: money(data_large.sources_revenue_total)}
+    ]}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    Package sizes and their percentage from the workable remaining dry source:
+    <CheekyTable headers={data_pilot.package_info.headers} data={data_pilot.package_info.data}/>
+    <CheekyTable headers={data_pilot.source_proc.headers} data={[
+    ...data_pilot.source_proc.data,
+    emptyRow(data_pilot.source_proc.headers),
+    {...emptyRow(data_pilot.source_proc.headers), source: <b>Total Annual</b>, total: money(data_pilot.sources_revenue_total)}
+    ]}/>
+  </TabItem>
+</Tabs>
+
+
+
+### Annual revenue
+<code>
+  - Amazon fees (referral + variable closing. NOT including fulfillment): <b>{data_large.data.revenue_proc.amazon_fee_percent * 100}%</b> <br/>
+</code>
+
+<Tabs groupId="scale" queryString className="unique-tabs">
+  <TabItem value="large_scale" label="Large scale">
+    <CheekyTable headers={data_large.revenue.headers} data={data_large.revenue.data}/>
+  </TabItem>
+  <TabItem value="pilot_scale" label="Pilot scale">
+    <CheekyTable headers={data_pilot.revenue.headers} data={data_pilot.revenue.data}/>
+  </TabItem>
+</Tabs>
+
+
+<details>
+  <summary>All foreseeable and unforeseeable costs as per GPT4</summary>
+
+  | Type of Cost | Description | Foreseeable | Unforeseeable |
+  |-------------------------------|--------------------------------------------------------------------|-------------|---------------|
+  | Equipment Purchase | Freeze-drying, milling, and packaging machines | Yes | No |
+  | Equipment Maintenance | Regular maintenance and repairs of machines | Yes | Yes |
+  | Raw Material Costs | Purchase of berries from suppliers | Yes | No |
+  | Labor Costs | Salaries for employees involved in berry collection and processing | Yes | No |
+  | Utilities | Electricity, water, gas, etc. | Yes | No |
+  | Rent or Mortgage | Costs for the facility where the operations take place | Yes | No |
+  | Licensing and Permits | Obtaining necessary licenses and permits for the business | Yes | No |
+  | Insurance | Insurance coverage for the business, equipment, and employees | Yes | No |
+  | Marketing and Advertising | Expenses related to promoting the product | Yes | No |
+  | E-commerce and Amazon Fees | Fees associated with selling on e-commerce platforms | Yes | No |
+  | Lab Testing and Certification | Costs for lab testing and certification of the product | Yes | No |
+  | Transportation and Logistics | Costs for transporting berries and shipping the final product | Yes | Yes |
+  | Unexpected Downtime | Losses due to unforeseen circumstances (e.g. equipment failure) | No | Yes |
+  | Currency Fluctuations | Changes in exchange rates affecting costs | No | Yes |
+  | Natural Disasters | Losses due to natural disasters (e.g. floods, fires) | No | Yes |
+
+</details>
+
+## Legal
+### Food Certification
+
+##### Certificate and permit options
+
+<Tabs>
+  <TabItem value="b2b" label="B2B Wholesale">
+
+    BRC or ISO9001
+
+    BRC (British Retail Consortium) food certification is a globally recognized standard for food safety and quality
+    management.
+    It is a certification that demonstrates that a company has implemented a food safety management system that
+    meets the requirements of the BRC Global Standard for Food Safety.
+    To get BRC food certification, a company needs to undergo an audit by an accredited certification body.
+    The audit assesses the company's food safety management system, including its policies, procedures, and
+    practices.
+    The audit also evaluates the company's compliance with legal and regulatory requirements, as well as its ability
+    to manage food safety risks.
+    The cost of BRC food certification varies depending on the size and complexity of the company's operations.
+    It typically involves an initial certification fee, as well as ongoing fees for surveillance audits and
+    recertification.
+    The cost can range from a few thousand to tens of thousands of euros.
+    To sell B2B food products in Europe, it is not always necessary to have BRC food certification.
+    However, many retailers and food service companies require their suppliers to have BRC certification as a
+    condition of doing business.
+    Therefore, having BRC certification can be a competitive advantage in the European food market.
+  </TabItem>
+<TabItem value="local" label="Local sale" default>
+
+- [How to get PVD](https://latvija.lv/DzivesSituacijas/uznemejdarbiba/5_Razosana_majas#show7)
+- [PVD cenradis](https://likumi.lv/ta/id/311568-noteikumi-par-kartibu-kada-aprekina-un-veic-maksajumus-par-partikas-un-veterinara-dienesta-valsts-uzraudzibas-un-kontroles)
+
+</TabItem>
+  <TabItem value="worldwide" label="Worldwide e-comm">
+
+    - What, if any, certs are required to sell on Amazon?
+    - A good manufacturing practice (GMP) certificate. The seller must demonstrate compliance with current good manufacturing practices according to standards 21 CFR 111 and 21 CFR 117.
+    - A Certificate of Analysis (CoA) OR evidence of participation in a third-party quality certification program.
+
+  </TabItem>
+</Tabs>
+
+
+##### Documents for application
+import FoodSafetyPlan from "./_docs/food_safety_plan.md";
+
+<FoodSafetyPlan />
+
+### Lab Testing for nutrients and full nutritional value composition
+
+- Where:
+  - Europe labs:
+    - [Eurofins](https://go.eurofinsgenomics.eu)
+    - [SGS](https://www.sgs.com/en/our-services/health-and-nutrition/food)
+    - [Intertek](https://www.intertek.com/food/testing/) - Great profiles
+- Worldwide labs:
+  - [CMA](https://www.cmatesting.org) - China
+- Lab accreditation standards to look for:
+  - [ISO/IEC 17025](https://www.ukas.com/accreditation/standards/laboratory-accreditation/)
+- Prices?
+
+### Package Labeling
+
+<details>
+  <summary>Instructions</summary>
+
+  The following information must be included on the labeling and packaging of food products:
+
+  - **Product name**: This should clearly describe the nature of the product, and be easy to read and understand.
+
+  - **Ingredient list**: This should include a list of all ingredients in the product, in descending order by weight. Allergens should be highlighted in bold or underlined to make them easy to identify.
+
+  - **Net quantity**: This should clearly state the weight, volume, or number of units of the product.
+
+  - **Best before** or use-by date: This should indicate the date by which the product should be consumed for best quality or safety.
+
+  - **Storage instructions**: This should provide instructions on how the product should be stored to maintain its quality and safety.
+
+  - **Name and address of the manufacturer or importer**: This should include the name, address, and contact details of the business responsible for producing or importing the product.
+
+  - **Country of origin**: This should indicate the country where the product was produced or manufactured.
+
+  - Additionally, the labeling and packaging of food products in Latvia **must be in the Latvian language**.
+    If you plan to sell your products outside of Latvia, you may need to include **additional labeling and packaging information in the language(s) of the country or region where you will be selling** your products.
+
+</details>
+
+- Where to print?
+- How to calculate and stamp 'best before' on packages?
+- How to calculate and store batch numbers?
+
+### Business Registration
+
+- SIA or craft food self employed?
+
+<details>
+  <summary>SIA Requirements</summary>
+
+**To form a company (SIA) in Latvia, the following documents are required:**
+
+  1. Application for registration of a limited liability company
+  2. Articles of association.
+      This outlines the company's name, address, purpose, share capital, and management structure. It must be signed by all founding members.
+  3. List of shareholders
+  4. Proof of payment of share capital
+  5. Identification documents of shareholders
+  6. Registration fee receipt
+
+**The fees for registering a company in Latvia are as follows:**
+
+  1. Registration fee: €265
+  2. State fee for registration of a company: €50
+  3. Notary fee for certification of documents: €50-€100
+
+**Annual papers that have to be submitted for a company in Latvia are:**
+
+  1. Annual report
+  2. Annual financial statements
+  3. Corporate income tax return
+
+  The fees for submitting annual papers vary depending on the company's annual turnover. The fees range from €85 to €500.
+
+</details>
+
+- What documents?
+- What fees?
+
+## Risk assessment
+
+- Source material could be contaminated. Other than trusting the source dealer, methods like pre-treating before freeze-drying could be used.
+  - Both ultrasound and [PEF](https://www.researchgate.net/publication/341895817_Pulsed_Electric_Fields_PEF_as_pre-treatment_for_freeze-drying_of_plant_tissues) eliminate bacteria AND speedup drying, but there negative impact is yet to be determined
+  - Source can be thoroughly washed with vinegary water
+  - Source should be "perebran" to eliminate all spoiled
+- End result could not be in high demand
+  - Can improve marketing options
+  - Visit festivals
+  - Visit weekend farmers markets
+  - Try different targeting groups and/or social platforms
+  - Can decrease price
+
+<details>
+  <summary>All risks and mitigations as per GPT4</summary>
+
+  | Risk | Description | Mitigation Strategies |
+  |-----------------------------|------------------------------------------------------------|------------------------------------------------------------------|
+  | Equipment Failure | Breakdown or malfunction of machines | Regular maintenance, invest in high-quality equipment |
+  | Supplier Reliability | Difficulty in sourcing quality berries from suppliers | Establish long-term relationships, diversify suppliers |
+  | Product Quality | Inconsistent or poor product quality | Implement strict quality control processes, lab testing |
+  | Market Competition | Competition from other berry powder producers | Unique selling points, effective marketing strategies |
+  | Regulatory Compliance | Ensuring compliance with food safety and other regulations | Stay informed on regulations, obtain necessary certifications |
+  | Seasonal Variability | Variability in berry availability due to seasonal factors | Diversify berry types, plan inventory accordingly |
+  | Natural Disasters | Impact of natural disasters on business operations | Adequate insurance coverage, emergency response plan |
+  | Employee Turnover | Loss of key employees or high turnover rate | Competitive compensation, fostering a positive work environment |
+  | Currency Fluctuations | Unfavorable changes in exchange rates | Monitor exchange rates, use financial instruments to hedge risks |
+  | E-commerce Platform Changes | Changes in e-commerce platforms' policies or fees | Stay informed, diversify sales channels |
+
+</details>
+
+## Marketing Strategy
+
+1. Develop a social media marketing campaign targeting health-conscious consumers in Europe, with a focus on the German market. Use platforms like Instagram, Facebook, and Twitter to share product information, recipes, and health benefits.
+2. Collaborate with influencers and bloggers in the health and wellness niche to promote the products.
+3. Offer free samples, discounts, and promotions to attract new customers and encourage repeat purchases.
+
+### Demographic
+
+- Age: 18 - 40
+- Gender: Male, Female
+- Interests: fitness and wellness, longevity, life extension, yoga, exercise, beauty, health, smoothie
+- Geographic: Latvia, Lithuania, Estonia, Poland, Germany, France, Spain, Finland
+- Approx audience:
+  - Instagram: 26.9M - 31.6M
+
+## [Standards and Operating Procedures (SOP)](./sop)
+
+## Collaborators and leads
+
+| Title                    | Got contact? |
+|--------------------------|--------------|
+| Food technician          | ✅            |
+| VC                       | ✅            |
+| Drying process mento     |              |
+| Food commerce mentor     |              |
+| E-Comm developer         |              |
+| Social media + marketing |              |
+| Bloggers                 |              |
+| Source material leads    |              |
+| ???                      |              |
+| ???                      |              |
+
+<details>
+  <summary>Where to find mentors, as per GPT4</summary>
+
+  1. **Industry associations and organizations**: Reach out to organizations related to the food industry, agriculture,
+  or organic products in your region. These organizations often have experienced professionals who may be willing to
+  mentor aspiring entrepreneurs.
+  2. **Networking events**: Attend industry-specific conferences, trade shows, and networking events. These events
+  provide an excellent opportunity to meet experienced professionals, potential mentors, and other entrepreneurs in your
+  industry.
+  3. **Online communities**: Join online forums, discussion boards, or social media groups related to your industry. You
+  can connect with professionals and seek mentorship from experienced individuals who share your interests.
+  4. **Entrepreneurship programs**: Many universities, colleges, and organizations offer entrepreneurship programs,
+  incubators, or accelerators that connect aspiring entrepreneurs with experienced mentors. Look for programs in your
+  area or within your industry.
+  5. **Local business organizations**: Reach out to your local Chamber of Commerce or similar business organizations, as
+  they often have mentorship programs or can connect you with potential mentors.
+  6. **Professional connections**: Ask for referrals from your professional network, such as colleagues, friends, or
+  family members. They may know someone with experience in your industry who would be willing to mentor you.
+  7. **LinkedIn**: Use LinkedIn to search for professionals in your industry and send personalized connection requests.
+  Explain your goals and ask if they would be interested in mentoring you or if they can recommend someone who might be.
+  Remember that mentorship is a two-way relationship. Be respectful of your mentor's time, come prepared with thoughtful
+  questions, and show genuine interest in learning from their experience. As you develop a relationship with your
+  mentor, you'll be better equipped to navigate the challenges and opportunities in your business.
+
+</details>
+
+## Conclusion
+
+In conclusion, we believe that our business has significant potential to succeed in the Latvian and Worldwide markets.
+
+~~We have conducted thorough market research and developed a solid business plan and financial model. We are confident that with
+our hard work and dedication, we can establish a successful brand and provide high-quality, convenient, and healthy food
+products to our clients.~~ (NOT YET)
+
+![ai_logo_1](./images/rabundance.png)
+
+## Notes
+- [Forest Berry Nutritional Composition](/nutrition/berries)
+- [Tips to succeed in a berry business](/business/food/berry-business-tips-to-succeed)
+- [Про лесные ягоды](https://peskiadmin.ru/kogda-sobirayut-cherniku-v-lesu-sbor-yagod-yagodnyi-kalendar.html) - Календарь + инфо
+- [Amazon fee calculator](https://feecalc.sellerlabs.com/calc/A1PA6795UKMFR9/B00TF912M2)
+- [Latvia Energy kW/EUR calculator](https://www.elektroenergija.lv/?kwh=1080)

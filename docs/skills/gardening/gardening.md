@@ -7,7 +7,7 @@ tags:
 # Gardening
 
 ::::tip[Level]
-1 / 99
+5/99
 :::info[Experience]
 XXX
 ::::
