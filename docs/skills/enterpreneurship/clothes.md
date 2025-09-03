@@ -1,13 +1,13 @@
 ---
 tags:
   - Skill
-  - Enterppreneurship
+  - Enterpreneurship
   - Clothing
 ---
 
 # Clothing
 
-::::tip[Level]
+::::tip[Sub-skill Level]
 5/99
 :::info[Experience]
 XXX

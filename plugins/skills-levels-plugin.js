@@ -21,7 +21,8 @@ module.exports = function skillsLevelPlugin(context, options) {
 
         if (
           Array.isArray(frontMatter.tags) &&
-          (frontMatter.tags.includes("Skills") || frontMatter.tags.length === 2)
+          frontMatter.tags.includes("Skill") &&
+          frontMatter.tags.length === 2
         ) {
           // Extract level from tip admonition
           const level = extractLevelFromString(raw);

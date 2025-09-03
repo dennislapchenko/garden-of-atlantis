@@ -8,8 +8,6 @@ import path from "path";
 const organizationName = "dennislapchenko";
 const projectName = "garden-of-atlantis";
 
-console.log("remarkKroki is:", remarkKroki);
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Garden of Atlantis",
@@ -26,7 +24,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName,
   projectName,
-
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
@@ -37,6 +34,8 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  staticDirectories: ["public", "static"],
 
   plugins: [
     // path.resolve(__dirname, "plugins/skills-levels.js"),
