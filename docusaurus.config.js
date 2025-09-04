@@ -6,11 +6,12 @@ import { remarkKroki } from "remark-kroki";
 import path from "path";
 
 const organizationName = "dennislapchenko";
+const projectTitle = "Garden of Atlantis";
 const projectName = "garden-of-atlantis";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Garden of Atlantis",
+  title: projectTitle,
   tagline: "Garden of Atlantis: all my skills, all my knowledge, all my quests",
   favicon: "img/favicon.ico",
 
@@ -74,9 +75,9 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: "Garden of Atlantis",
+        title: projectTitle,
         logo: {
-          alt: "garden-of-atlantis",
+          alt: projectName,
           src: "img/alchemical-sun.svg",
         },
         items: [

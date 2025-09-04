@@ -42,8 +42,8 @@ export default function Home() {
                     require("@site/static/img/skill-icons/" + s.title + ".png")
                       .default
                   }
-                  width={64}
-                  height={64}
+                  width={128}
+                  height={128}
                   alt={s.title}
                   style={{
                     borderRadius: "2px",
@@ -78,8 +78,8 @@ export default function Home() {
                     }}
                   />
                 </div>
-                <small style={{ fontSize: "0.9rem" }}>
-                  {current}/{max}
+                <small style={{ fontSize: "1.1rem" }}>
+                  {current} / {max}
                 </small>
               </a>
             </div>
